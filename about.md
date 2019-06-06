@@ -9,7 +9,7 @@ title: About
 Hi there!
 
 I am an undergraduate majoring in Computer Science and Engineering, IIT Kharagpur.
-My interests include Artificial Intelligence, Software and applied Mathematics. 
+My interests include Artificial Intelligence, Software and applied Mathematics.
 I am also an open source developer.
 
 <div class="pagination">
