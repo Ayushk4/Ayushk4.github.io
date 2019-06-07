@@ -19,6 +19,6 @@ The model that will be implemented for NER and POS tagging will be a Neural Netw
 
 Character Representation Layer using CNNs        |  Bi-LSTM-CRF layer with Word Embeddings and Character Representation Input
 :-------------------------:|:-------------------------:
-![Character Representation](../../../assets/2019/Char-rep.png)  |  ![Bi-LSTM CRF layer.](../../../assets/2019/LSTM-CRF-layer.png){:class="img-responsive"}
+![Character Representation](../../../images/2019/Char-rep.png)  |  ![Bi-LSTM CRF layer.](../../../images/2019/LSTM-CRF-layer.png){:class="img-responsive"}
 
 The details of the Model is described in this paper by [Xuezhe Ma and Eduard Hovy](https://arxiv.org/pdf/1603.01354.pdf)
