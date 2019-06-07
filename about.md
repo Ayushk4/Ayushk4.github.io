@@ -6,10 +6,10 @@ title: About
 
 <img class="user-avatar" src="{{ site.owner.avatar }}">
 
-Hi there!
+**Hi there!**
 
-I am an undergraduate majoring in Computer Science and Engineering, IIT Kharagpur.
-My interests include Artificial Intelligence, Software Development and applied Mathematics. I am also an open source enthusiast.
+I am an undergraduate majoring in Computer Science and Engineering, IIT Kharagpur. <br>
+My interests include Artificial Intelligence, Software Development and applied Mathematics.<br> I am also an open source enthusiast.
 
 <div class="pagination">
   {% if site.owner.linkedin %}
