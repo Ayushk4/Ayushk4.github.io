@@ -8,16 +8,21 @@ categories:
 The Coding Period for Google Summer of Code commenced from 27th May.
 
 I started by reading about various tagging schemes used for sequence labelling,
-implemented these and function for converting between them. These have been added to [TextAnalysis.jl](https://github.com/JuliaText/TextAnalysis.jl).
+implemented these and function for converting between them. These have now been added to [TextAnalysis.jl](https://github.com/JuliaText/TextAnalysis.jl).
 
 Then, I worked on adding CoNLL Corpus to [CorpusLoaders.jl](https://github.com/JuliaText/CorpusLoaders.jl).
-This, took longer than expected, as CorpusLoaders.jl had to be updated against the deprecations. As of now, CorpusLoaders.jl, works well on Julia 1.0.
+This, however, took longer than expected, as CorpusLoaders.jl had to be updated against the deprecations.
+As of now, CorpusLoaders.jl, works well on Julia 1.0.
 
-A Tweet Tokenizer was needed by [@ComputerMaestro](https://github.com/ComputerMaestro) for adding sentiment datasets to CorpusLoaders.jl in their PR[#18](https://github.com/JuliaText/CorpusLoaders.jl/pull/18). I had been working on [adding a Tweet Tokenizer](https://github.com/JuliaText/WordTokenizers.jl/pull/13) in WorkTokenizers.jl for some time, which I continued working on in the Community Bonding Period. In these two weeks, I finally finished with it.
+A Tweet Tokenizer was needed by [@ComputerMaestro](https://github.com/ComputerMaestro)
+for adding sentiment datasets to CorpusLoaders.jl in their PR[#18](https://github.com/JuliaText/CorpusLoaders.jl/pull/18).
+I had been working on [adding a Tweet Tokenizer](https://github.com/JuliaText/WordTokenizers.jl/pull/13) in WorkTokenizers.jl for some time,
+which I continued working on during the Community Bonding Period.
+In these two weeks, I finally finished it.
 
 After this, I moved on to adding Linear Chain - Conditional Random Fields.
 I started by reading about CRFs, HMMs, looked up at the existing implementations
-of the same. This remained Work-in-Progress at the end of the second week.
+of the same.
 
 ## Tagging Schemes for Sequence Labelling
 
@@ -218,7 +223,7 @@ julia> tags
 - [Tagging Schemes and Conversion.](https://github.com/JuliaText/TextAnalysis.jl/pull/161)
 - [Support for CoNLL Corpora](https://github.com/JuliaText/CorpusLoaders.jl/pull/20)
 - [Deprecations and fixing levelname_mapping](https://github.com/JuliaText/CorpusLoaders.jl/pull/21)
-- [Conditional Random Fields](https://github.com/JuliaText/TextAnalysis.jl/pull/162) (WIP)
+<!-- - [Conditional Random Fields](https://github.com/JuliaText/TextAnalysis.jl/pull/162) (WIP) -->
 - [Tweet Tokenizer](https://github.com/JuliaText/WordTokenizers.jl/pull/13)
 
 ### Other Contribs
