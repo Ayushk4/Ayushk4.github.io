@@ -223,7 +223,6 @@ julia> tags
 - [Tagging Schemes and Conversion.](https://github.com/JuliaText/TextAnalysis.jl/pull/161)
 - [Support for CoNLL Corpora](https://github.com/JuliaText/CorpusLoaders.jl/pull/20)
 - [Deprecations and fixing levelname_mapping](https://github.com/JuliaText/CorpusLoaders.jl/pull/21)
-<!-- - [Conditional Random Fields](https://github.com/JuliaText/TextAnalysis.jl/pull/162) (WIP) -->
 - [Tweet Tokenizer](https://github.com/JuliaText/WordTokenizers.jl/pull/13)
 
 ### Other Contribs
