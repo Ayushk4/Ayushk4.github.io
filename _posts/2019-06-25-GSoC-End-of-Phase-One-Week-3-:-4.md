@@ -56,7 +56,8 @@ It also failed on Julia 1.0, due to similar, but slightly different reasons.
 Meanwhile, [another issue](https://github.com/JuliaText/WordTokenizers.jl/issues/28) was also raised where it the tokenized sentence began with final periods, instead of coming at the last full stop.
 
 A patch ([#29](https://github.com/JuliaText/WordTokenizers.jl/pull/29)) was sent fixing both the above issues and updating the testset.
-However one of the new tests still seemed to fail for Julia 1.1 due to a [small difference](https://github.com/JuliaText/WordTokenizers.jl/pull/29#issuecomment-504311770) b/w the 2 versions. This was then updated for Julia 1.1.
+However one of the new tests seemed to fail for Julia 1.1 due to a [small difference](https://github.com/JuliaText/WordTokenizers.jl/pull/29#issuecomment-504311770) b/w the 2 versions.
+This was then fixed and WordTokenizers.jl updated for Julia 1.1.
 
 ## Summarizing work done
 
