@@ -8,8 +8,15 @@ title: About
 
 **Hi there!**
 
-I am an undergraduate majoring in Computer Science and Engineering, IIT Kharagpur. <br>
-My interests include Artificial Intelligence, Software Development and applied Mathematics.<br> I am also an open source enthusiast.
+I am an undergraduate majoring in Computer Science and Engineering, IIT Kharagpur, currently in my third year.
+<br>
+My interests includes Artificial Intelligence, Software Development and applied Mathematics.
+I am especially interested in the applications of Deep Learning.
+
+I am also an open source developer and contributor to various projects ranging from web applications to machine learning.
+As a part of Google Summer of Code, 2019 - I work on various packages in [JuliaText](https://github.com/JuliaText).
+I am a member of [Kharagpur Open Source Society, IIT Kharagpur](https://github.com/kossiitkgp)
+and maintainer at [Metakgp](https://github.com/metakgp).
 
 <div class="pagination">
   {% if site.owner.linkedin %}
