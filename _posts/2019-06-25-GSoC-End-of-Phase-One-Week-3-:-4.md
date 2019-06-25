@@ -78,8 +78,9 @@ Over the course of the GSoC - Phase One so far,
 - Faster Preprocessing in TextAnalysis.jl
 
 ## What's ahead
-The API for NER and POS, will have CorpusLoaders.jl, WordTokenizers.jl and TextAnalysis.jl as dependencies.
-CRF will be required for the model, which now is working.
-In the coming 3 weeks, I will work on training of the Bi-LSTM-CNN-CRF model for NER tagging,
+NER and POS models, will have CorpusLoaders.jl, WordTokenizers.jl and TextAnalysis.jl as dependencies.
+CRF will also be required for the model.
+
+With all these dependencies met. I move on to NER Tagging. In the coming 3 weeks, I will work on training of the Bi-LSTM-CNN-CRF model for NER tagging,
 writing an API for the same and test it on variety of datasets.
 After, this, I move onto the same for POS tagging.
