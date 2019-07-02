@@ -2,6 +2,7 @@
 layout: post
 title: "GSoC, Coding Period, Week 1 - 2"
 date: 2019-06-13
+tags: [Google Summer of Code, GSoC, Natural Language Processing]
 comments: true
 categories:
 ---

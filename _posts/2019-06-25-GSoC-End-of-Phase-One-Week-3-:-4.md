@@ -3,6 +3,7 @@ layout: post
 title: "GSoC, End of Phase One, Week 3 - 4."
 date: 2019-06-25
 comments: true
+tags: [Google Summer of Code, GSoC, Deep Learning, Natural Language Processing, Machine Learning]
 categories:
 ---
 Phase One of Google Summer of Code concluded on 24th June.

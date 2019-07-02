@@ -2,6 +2,7 @@
 layout: post
 title: "Summer of Code with Julia"
 date: 2019-06-05
+tags: [Google Summer of Code, GSoC]
 comments: true
 categories:
 ---
