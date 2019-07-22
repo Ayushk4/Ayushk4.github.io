@@ -7,7 +7,7 @@ tags: [Google Summer of Code, GSoC, Deep Learning, Natural Language Processing, 
 categories:
 ---
 Phase Two of Google Summer of Code comes to an end today.
-The last two weeks of GSoC were full of fun and learning various stuff.
+The last two weeks of GSoC were full of learning various stuff.
 
 * Sequence Labelling model on Named Entity Recognition task
 
