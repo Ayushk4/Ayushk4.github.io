@@ -9,17 +9,18 @@ categories:
 
 At the end of the second phase,
 the BiLSTM-CNN-CRF model gave good F1 score on Named Entity Recognition (NER).
-With this done, I proceeded with the API for NER model.
+With this done, I proceeded with writing the API for Named Entity Tagging.
 
-Before jumping into writing the API, I looked at various other similar pre-trained Machine Learning models provided by [Metalhead](https://github.com/FluxML/Metalhead.jl) and [TextAnalysis](https://github.com/JuliaText/TextAnalysis.jl).
-To manage the dependency of the API on model weights, after discussing with my mentors, [DataDeps](https://github.com/oxinabox/DataDeps.jl) was used since offered various advantages like handling download corruption, supporting re-download.
+Before jumping into writing the API, I looked at various other similar APIs provided by [Metalhead](https://github.com/FluxML/Metalhead.jl) and [TextAnalysis](https://github.com/JuliaText/TextAnalysis.jl).
+As a part of the API, downloading of the model weights needed to be taken care of. After discussing this with my mentors, [DataDeps](https://github.com/oxinabox/DataDeps.jl) was used for this, since it offered various advantages like handling download corruption, supporting re-download etc.
 
-I switched the Average Perceptron Tagger of TextAnalysis to use `DataDeps` for downloading weights. And APIs were written for `Document` and `Corpus` types.
-I then proceeded to write the API supporting NER tagging over sentences as well as sequences of tokens. The API was later added to support various `Document` and `Corpus` types as provided by the `TextAnalysis` package.
+I added `DataDeps` to the Average Perceptron Tagger for downloading weights. Noticing that it lacked APIs for `Document` and `Corpus` types, I also added these.
+Then, I proceeded to write the API supporting NER tagging over sentences as well as sequences of tokens. The API was later added to support various `Document` and `Corpus` types as provided by the `TextAnalysis` package.
 
-After writing the API, I tested the NER API on various input and datasets, and the results were great. It seemed to give 0.926, 0.89 f1 scores on dev and test sets of `CoNLL-2003` [(link)](https://github.com/Ayushk4/NER.jl/blob/master/valid/CoNLL.ipynb). The tests on inputs from `Groningen Meaning Bank` 1.1.0 [(link)](https://github.com/Ayushk4/NER.jl/blob/master/valid/GMB.ipynb), gave an f1 of about 0.79. However, GMB Corpus, not being a gold standard one, had some ambiguities when compared to CoNLL. The results of `WikiGold` Corpus were decent with f1 of 0.712 [(link)](https://github.com/Ayushk4/NER.jl/blob/master/valid/WikiGold.ipynb).
+After writing the API, I tested the NER API on various input and datasets, and the results were great. It gave 0.926, 0.89 f1 scores on dev and test sets of `CoNLL-2003` [(link)](https://github.com/Ayushk4/NER.jl/blob/master/valid/CoNLL.ipynb). The tests `Groningen Meaning Bank` 1.1.0 [(link)](https://github.com/Ayushk4/NER.jl/blob/master/valid/GMB.ipynb), gave an f1 of about 0.79. However, GMB Corpus, not being a gold standard one, had some ambiguities when compared to CoNLL. The results of `WikiGold` Corpus were decent with f1 of 0.712 [(link)](https://github.com/Ayushk4/NER.jl/blob/master/valid/WikiGold.ipynb), being much better than the ones by SpaCy or NLTK as per the results given in [this paper](https://www.aclweb.org/anthology/W16-2703).
+
 [@thebhatman](https://github.com/thebhatman) and I also tried out some input sentences against the API. The notebook is available [here](https://github.com/Ayushk4/NER.jl/blob/master/valid/Random_sentences_tryouts.ipynb).
-Here are some examples -
+Here are some examples of the API in action -
 
 ```julia
 julia> using TextAnalysis
@@ -59,8 +60,8 @@ julia> ner("Google, Yahoo and Mercari vs Manjunath Bhat.")
  "O"
 ```
 
-The NER model, owing to the usage of CRFs, decodes globally. Since the character level features are also used to predict the tag, the model works well for out of vocabulary words.
-However, it doesn't label my name as a person in certain sentences. 😞
+The NER model, owing to the usage of CRFs, decodes globally hence tagging 'Manjunath Bhat' as an organisation in the above example, based on the contect. In the API, the character level features are also generated and used, thereby making the model perform well for out of vocabulary words.
+However, much to my disappointment, the API doesn't label my name as a person in most sentences. 😞
 
 ```julia
 julia> ner("Is my name Ayushk4 or Ayush?")
@@ -76,7 +77,7 @@ julia> ner("Is my name Ayushk4 or Ayush?")
 
 ```
 
-Apart from NER, I made a few changes to `CorpusLoaders` package, in the form of fixing docs, changing CI tests and adding a Project.toml. While working on it, I learned more about `Documenter.jl` and the process of docs deploying.
+Apart from the API, I also worked on `CorpusLoaders` package, contributing in the form of doc fixes, fixing CI tests and adding a Project.toml. While working on it, I learned more about `Documenter.jl` and the deploying of docs.
 
 The Sequence Labelling model was trained on [Part-of-Speech Tagging](https://github.com/Ayushk4/POS.jl)
 Within a few epochs of training, it gave decent results.
