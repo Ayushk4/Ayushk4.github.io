@@ -8,8 +8,9 @@ categories:
 ---
 
 Hello there,
-Google Summer of Code, 2019 is soon coming to an end.
-In this post, I would like to summarize my work done so far, and discuss what's ahead.
+
+Google Summer of Code 2019 is soon coming to an end.
+In this post, I would like to summarize my work done so far and discuss what's ahead.
 
 <style>
 img {
@@ -25,7 +26,7 @@ img {
 
 # <u> Summary of work done </u>
 
-Over the course of past few months,
+Over the past few months,
 I worked towards developing and improving [WordTokenizers.jl](https://github.com/JuliaText/WordTokenizers.jl),
 [TextAnalysis.jl](https://github.com/JuliaText/TextAnalysis.jl), [CorpusLoaders.jl](https://github.com/JuliaText/CorpusLoaders.jl) along with adding `Conditional Random Fields`
 as well as building APIs for `Named Entity Recognition` and `Part of Speech Tagging`.
@@ -47,8 +48,8 @@ We discuss only an overview of the major works done on each domain, leaving out 
 
 3. WordTokenizers.jl
 - [Tweet Tokenizer and Lexers for TokenBuffer API](https://github.com/JuliaText/WordTokenizers.jl/pull/13)
-- [Fix Tok Tok Tokenizer](https://github.com/JuliaText/WordTokenizers.jl/pull/29)
-- [Handle Final Periods in tok-tok ](https://github.com/JuliaText/WordTokenizers.jl/pull/33)
+- [Fix toktok tokenizer](https://github.com/JuliaText/WordTokenizers.jl/pull/29)
+- [Handle Final Periods in tok-tok tokenizer](https://github.com/JuliaText/WordTokenizers.jl/pull/33)
 
 4. CorpusLoaders.jl
 - [Support for CoNLL 2003 Corpora](https://github.com/JuliaText/CorpusLoaders.jl/pull/20)
@@ -58,8 +59,8 @@ We discuss only an overview of the major works done on each domain, leaving out 
 
 The following repositories were also created during GSoC'19 -
 
-- [WordTokenizers.jl_analyse](https://github.com/Ayushk4/WordTokenizers.jl_analyse): Made while analysing tweet tokenizer and comparing speed of tokenizers in `WordTokenizers.jl`.
-- [NER.jl](https://github.com/Ayushk4/NER.jl): Contains various sequence labelling models and performance of NER API on various datasets.
+- [WordTokenizers.jl_analyse](https://github.com/Ayushk4/WordTokenizers.jl_analyse): Made while analysing tweet tokenizer. Also compares the speed of tokenizers in `WordTokenizers.jl` against other libraries.
+- [NER.jl](https://github.com/Ayushk4/NER.jl): Contains sequence labelling models implemented and performance of NER API on various datasets.
 - [POS.jl](https://github.com/Ayushk4/POS.jl): POS model and performance of POS API on various datasets.
 
 <style>
@@ -77,23 +78,20 @@ The following repositories were also created during GSoC'19 -
 
 ## Sequence Labelling Models
 
-Conditional Random Fields have proven to be better at modelling sequential data than Hidden Markov Models,
+Conditional Random Fields have proven to be better at modelling sequential data than Hidden Markov Models
 since the labelling is done globally rather than independently at each state.
 Linear Chain - Conditional Random Fields was implemented and now works well over flux layers.
 
-A `BiLSTM-CNN-CRF model` is implemented for seqeunce labelling tasks of
+A `BiLSTM-CNN-CRF model` was implemented for sequence labelling tasks of
 Named Entity Recognition and Part of Speech Tagging.
-It is a neural model that uses
-Linear Chain - Conditional Random Fields for decoding the output.
-The input at each timestep to the model consists of `fine-tuned GloVe Word Embeddings` and Character Embeddings.
-`Character level representation` is generated using Convolution and pooling layers
-on Character Embeddings.
-Then the Character representation and Word Embeddings are input into Bi-LSTM layers to get the output.
-A big part of time I spent on this went into taking care of batches.
-Since one minibatch consisted of various input sentences made up of words and their character onehot vectors, leading to various levels of iterations.  
+It was a neural model that used `fine-tuned GloVe Word Embeddings` and `Character level representation` as input and  decoded using `Linear Chain - Conditional Random Fields`.
+A big part of the time I spent on this went into taking care of batches.
+Since one minibatch consisted of various input sentences made up of words and their one-hot matrix of characters, leading to multiple levels of iterations.
 
-Finally the NER gave an accuracy of about ~90% percent on CoNLL compared to the claimed ~91%.
+After re-implementing Conditional Random Fields layer twice and a lot debugging,
+an accuracy of about 90% was finally achieved on CoNLL compared to the claimed ~91%.
 It was also tested on various other datasets [(link)](https://github.com/Ayushk4/NER.jl/tree/master/valid).
+Here are some input sentences ran by **@bhatman** and me on the NER API.
 <iframe src="../../../misc_assets/2019/NER_NB.html" width="80%" height="500">
 </iframe>
 
@@ -101,8 +99,8 @@ The Linear Chain - Conditional Random Fields has also been tested and
 can now be used with Flux layers.
 
 A part of speech tagger was also implemented and an API for made for the same.
-The POS API the obtained accurcy of ~91% on CoNLL 2003 against the claimed 97.5% accuracy. [(link)](https://github.com/Ayushk4/POS.jl/tree/master/valid)
-It still remains to be investigated and improved.
+The POS API the obtained accuracy of ~91% on CoNLL 2003 against the claimed 97.5% accuracy. [(link)](https://github.com/Ayushk4/POS.jl/tree/master/valid)
+It remains to be investigated upon and improved.
 
 JuliaText now provides with APIs for Part of Speech Tagging and Named Entity Recognition.
 These APIs and CRF currently are being kept in [TextAnalysis.jl](https://github.com/JuliaText/TextAnalysis.jl).
@@ -113,90 +111,90 @@ These APIs and CRF currently are being kept in [TextAnalysis.jl](https://github.
 I had been working on a **Tweet Tokenizer** since January.
 After a re-write, this was finally finished in June.
 While working the tweet tokenizer _various lexers_ were written for working with `TokenBuffer` API.
-As of now the package lets the users to build their custom tokenizers
-using the TokenBuffer API and its various lexer functions.
+As of now, the package lets the users build their custom tokenizers
+using the TokenBuffer API and its several lexer functions.
 
-[Here](https://github.com/Ayushk4/WordTokenizers.jl_analyse/blob/master/speed/Speed_wordtokenizers.jl_spacy_nltk.ipynb) is a performance analysis comparing the Tokenizers of _Spacy, NLTK and WordTokenizers_ in julia.
-The package performs much better than these, while providing a lot more tokenizers and means to create custom tokenizers.
+[Here](https://github.com/Ayushk4/WordTokenizers.jl_analyse/blob/master/speed/Speed_wordtokenizers.jl_spacy_nltk.ipynb) is a performance analysis comparing the Tokenizers of _Spacy, NLTK and WordTokenizers_ in Julia.
+The package performs much better while also providing a lot more tokenizers as well as means to create custom tokenizers.
 
 ## TextAnalysis.jl
 
 Just as the name suggests, `TextAnalysis.jl` provides with the tools for text analysis.
-During the community bonding period,
 I managed to improve the codebase by adding docstrings to the codebase,
-documenting and fixing numerous bugs.
-Code for Average Perceptron Part of Speech Tagger was changed to using DataDeps.jl for managing data dependency and various APIs were written for all the `Document` types offered by TextAnalysis.jl.
+and improving documentation fixing the various bugs encountered on the way.
+Code for Average Perceptron Part of Speech Tagger was changed to using DataDeps.jl for managing data dependency, and various APIs were written for all the `Document` types offered by TextAnalysis.jl.
 
 New features included **Conversion between Tagging Schemes**, **Latent Semantic Analysis**,
-porting of **BM-25**, **Word Co occurrence matrix** and speeding up **ROUGE-N**.
+porting of **BM-25**, **Word Co-occurrence matrix** and speeding up **ROUGE-N**.
 I also started to work on a faster Pre Processing API using an approach similar to the `TokenBuffer`,
-used by WordTokenizers.jl.
-This however remains Work-in-Progress currently.
+used by WordTokenizers.jl. This, however, remains Work-in-Progress.
 
 ## CorpusLoaders.jl
 
-`CorpusLoaders.jl` provides with loaders forvarious text Corpora,
-providing features such as lazy loading and using `DataDeps.jl` for managing data dependency.
-The various corpora that I used while testing the NER and POS APIs like
-**CoNLL 2000**, **CoNLL 2003** and **WikiGold** were also added to CorpusLoaders.jl.
-The project also needed multiple issues to be addressed such as deploying of docs, Fixing CI tests.
-With these fixed, a new release was tagged.
+`CorpusLoaders.jl` provides with loaders for various text Corpora,
+with lazy loading and using `DataDeps.jl` for managing data dependency.
+The several corpora that I used while testing the NER and POS APIs like
+**CoNLL 2000**, **CoNLL 2003** and **WikiGold** were added to CorpusLoaders.jl.
+The package also needed multiple issues to be addressed, such as deploying of docs, Fixing CI tests.
+These were taken care of one by one.
 
 # <u> What's ahead </u>
 
-Clearly, the work got deviated a little from my original proposal to write APIs for
+The work got deviated a little from my original proposal to write APIs for
 Named Entity Recognition and Part of Speech Tagging.
-But, I beleive it was for the betterment of the ecosystem.
+But, I believe it was for the betterment of the ecosystem.
 
-With this said, while a lot has been achieved and done, the ending of GSoC also serves as a beginning in many ways.
-Some of things I would like to do in the near future are -
+With a lot has been achieved and done, the ending of GSoC also serves as a beginning in many ways.
+Here are some of the things I would like to do soon.
 
-- Writing APIs for fine tuning the NER and POS APIs.
+- Writing APIs for fine-tuning the NER and POS APIs.
 - Smaller models for NER and testing in domains of TweetNER and BioNER.
 - Improving the performance of POS API.
 - Testing CRFs over BERT for Named Entity Recognition.
-- Faster pre processing in TextAnalysis.
+- Faster pre-processing in TextAnalysis.
 - Checking and fixing for the performance bottlenecks in Tweet Tokenizer and TokenBuffer lexers.
 
 # <u> Why consider contributing to Julia packages </u>
 
-Contributing to open source packages provides good opportunities to learn.
+Working on open-source packages provides excellent opportunities to learn.
 Here are my two cents on why you should consider contributing to Julia packages.
 
 ### <u> Writing packages is simpler than ever </u>
 
-To get high performance packages in high-level dynamic typed languages like Python, the code is written in C and C++.
+Writing packages or code that require high performance, like a new layer in Deep Learning is difficult in high-level dynamic typed languages like Python.
+To get speed, the packages and layers have to be written in C or C++.
 However in Julia, you can write the packages and libraries in Julia itself, without compromising on speed.
-This also makes the maintaining packages like outrageous.
+This makes maintaining packages a lot less outrageous.
 
 ### <u> Diverse and Excellent Community </u>
 
 Owing to the fact that Julia lets easy writing of packages,
-package ecosystems in various domains have grown.
-People from various domains are involved with development of packages in multiple areas.
+multiple ecosystems in various domains have grown.
+People from various domains are involved with the development of these packages.
+You can also reach out for julia related help in a dedicated channel on the slack workspace.
 
 # <u> Acknowledgement </u>
 
-Firstly, I would like to thank **Google** and **JuliaLang** for giving me this amazing opportunity to work on Open Source this summer
+Firstly, I would like to thank **Google** and **JuliaLang** for giving me this fantastic opportunity to work on Open Source this summer.
 I am grateful to my mentors
 **@oxinabox (Lyndon White)** and **@aviks (Avik Sengupta)**
 for guiding me through my project.
 Finally, I would also like to thanks fellow GSoC students
 **@thebhatman**, **@ComputerMaestro**, **@shreyas-kowshik**
-as well the **amazing JuliaLang Community** for helping me whenever I got stuck
+as well the fantastic **JuliaLang Community** for helping me whenever I got stuck
 and making the GSoC journey fun. 😄
 
 --------------------
---------------------
 
-To sum up, the summer was full of learning new things.
-My knowledge deepened about various topics in Deep Learning, Natural Language Processing among few to name.
-I also used GSoC as an excuse to learn Jekyll 😉 and build this minimalistic blog-site for myself.
-Looking back, it feels that these past 4 months passed way too quickly.
+To sum up, the summer was full of learning new things,
+some about writing good software, some about writing better Julia code.
+My knowledge also deepened about various topics in Deep Learning, Natural Language Processing, among few to name.
+I also used GSoC as an excuse to learn Jekyll 😉 and built this minimalistic blog-site for myself.
+Looking back, it feels that these past four months passed way too quickly.
 I still remember anticipating for proposal acceptance results like it was yesterday.
 
-However, there were repercussions of doing GSoC.
-I am now very much dependent on the julialang slack's slackbot for reminders of sorts 😛.
+However, there was a repercussion of doing GSoC with _The Julia Language_.
+I am now very much dependent on the JuliaLang slack's slackbot for reminders of sorts 😛.
 
 Here are some more detailed blogs for the work done in each week.
 You might wanna take a look at these -
