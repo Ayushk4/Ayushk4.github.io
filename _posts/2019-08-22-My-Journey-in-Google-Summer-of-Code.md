@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "My Journey in Google Summer of Code, 2019"
-date: 2019-08-20
+date: 2019-08-22
 tags: [Google Summer of Code, GSoC]
 comments: true
 categories:
@@ -73,12 +73,22 @@ The following repositories were also created during GSoC'19 -
   ol{
     margin-left:20px;
   }
-
+  #two{
+    height: 50%;
+    width: 50%;
+  }
 </style>
 
 ## Sequence Labelling Models
 
-Conditional Random Fields have proven to be better at modelling sequential data than Hidden Markov Models
+JuliaText now provides with APIs for Part of Speech Tagging and Named Entity Recognition.
+These APIs and CRF currently are being kept in [TextAnalysis.jl](https://github.com/JuliaText/TextAnalysis.jl).
+
+- Here is a table comparing the NER API performance. The accuracy and F1 scores are much better being a neural based tagger. However, it takes upto thrice the time to tag compared to SpaCy
+
+<img id="two" src="../../../images/2019/ner_compare.png" alt="Performance Comparison against other NLP Libraries" width="500" height="500">
+
+- **Conditional Random Fields** have proven to be better at modelling sequential data than Hidden Markov Models
 since the labelling is done globally rather than independently at each state.
 Linear Chain - Conditional Random Fields was implemented and now works well over flux layers.
 
@@ -102,8 +112,7 @@ A part of speech tagger was also implemented and an API for made for the same.
 The POS API the obtained accuracy of ~91% on CoNLL 2003 against the claimed 97.5% accuracy. [(link)](https://github.com/Ayushk4/POS.jl/tree/master/valid)
 It remains to be investigated upon and improved.
 
-JuliaText now provides with APIs for Part of Speech Tagging and Named Entity Recognition.
-These APIs and CRF currently are being kept in [TextAnalysis.jl](https://github.com/JuliaText/TextAnalysis.jl).
+
 
 ## WordTokenizers.jl
 
@@ -116,6 +125,8 @@ using the TokenBuffer API and its several lexer functions.
 
 [Here](https://github.com/Ayushk4/WordTokenizers.jl_analyse/blob/master/speed/Speed_wordtokenizers.jl_spacy_nltk.ipynb) is a performance analysis comparing the Tokenizers of _Spacy, NLTK and WordTokenizers_ in Julia.
 The package performs much better while also providing a lot more tokenizers as well as means to create custom tokenizers.
+
+<img id="two" src="../../../images/2019/tknzrs_plot.png" alt="Performance of Tokenizers in WordTokenizers.jl" width="500" height="500">
 
 ## TextAnalysis.jl
 
@@ -171,7 +182,7 @@ This makes maintaining packages a lot less outrageous.
 Owing to the fact that Julia lets easy writing of packages,
 multiple ecosystems in various domains have grown.
 People from various domains are involved with the development of these packages.
-You can also reach out for julia related help in a dedicated channel on the slack workspace.
+You can also reach out for julia related help in their respective channels or _#helpdesk_ on the slack workspace.
 
 # <u> Acknowledgement </u>
 
