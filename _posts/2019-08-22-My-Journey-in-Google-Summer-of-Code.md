@@ -44,7 +44,7 @@ We discuss only an overview of the major works done on each domain, leaving out 
 - [Updates to Avg Perceptron Tagger](https://github.com/JuliaText/TextAnalysis.jl/pull/166)
 - [ROUGE-N, LSA, porting BM-25 and Word Cooccurrence matrix](https://github.com/JuliaText/TextAnalysis.jl/pull/165)
 - [Tagging Schemes Conversion APIs](https://github.com/JuliaText/TextAnalysis.jl/pull/161)
-- [Docstring to Codebase](https://github.com/JuliaText/TextAnalysis.jl/pull/150)
+- [Documentation / Docstrings revamp](https://github.com/JuliaText/TextAnalysis.jl/pull/150)
 
 3. WordTokenizers.jl
 - [Tweet Tokenizer and Lexers for TokenBuffer API](https://github.com/JuliaText/WordTokenizers.jl/pull/13)
@@ -59,7 +59,7 @@ We discuss only an overview of the major works done on each domain, leaving out 
 
 The following repositories were also created during GSoC'19 -
 
-- [WordTokenizers.jl_analyse](https://github.com/Ayushk4/WordTokenizers.jl_analyse): Made while analysing tweet tokenizer. Also compares the speed of tokenizers in `WordTokenizers.jl` against other libraries.
+- [WordTokenizers.jl_analyse](https://github.com/Ayushk4/WordTokenizers.jl_analyse): Made while analysing tweet tokenizer. Also compares the speed of tokenizers in WordTokenizers.jl against other libraries.
 - [NER.jl](https://github.com/Ayushk4/NER.jl): Contains sequence labelling models implemented and performance of NER API on various datasets.
 - [POS.jl](https://github.com/Ayushk4/POS.jl): POS model and performance of POS API on various datasets.
 
@@ -84,7 +84,7 @@ The following repositories were also created during GSoC'19 -
 JuliaText now provides with APIs for Part of Speech Tagging and Named Entity Recognition.
 These APIs and CRF currently are being kept in [TextAnalysis.jl](https://github.com/JuliaText/TextAnalysis.jl).
 
-- Here is a table comparing the NER API performance. The accuracy and F1 scores are much better being a neural based tagger. However, it takes upto thrice the time to tag compared to SpaCy
+- Here is a table comparing the NER API performance. The accuracy and F1 scores are much better being a neural based tagger. However, it takes upto thrice the time to tag compared to SpaCy. Since the other NER Taggers, don't have a specific NER tag for `MISC`, it hasn't been considered for F1 score.
 
 <img id="two" src="../../../images/2019/ner_compare.png" alt="Performance Comparison against other NLP Libraries" width="500" height="500">
 
@@ -146,24 +146,27 @@ used by WordTokenizers.jl. This, however, remains Work-in-Progress.
 with lazy loading and using `DataDeps.jl` for managing data dependency.
 The several corpora that I used while testing the NER and POS APIs like
 **CoNLL 2000**, **CoNLL 2003** and **WikiGold** were added to CorpusLoaders.jl.
-The package also needed multiple issues to be addressed, such as deploying of docs, Fixing CI tests.
+The package also needed multiple issues to be addressed,
+such as deploying of docs, Fixing CI tests.
 These were taken care of one by one.
 
 # <u> What's ahead </u>
 
-The work got deviated a little from my original proposal to write APIs for
+The work got deviated a little from my original proposal to solely writing APIs for
 Named Entity Recognition and Part of Speech Tagging.
 But, I believe it was for the betterment of the ecosystem.
 
-With a lot has been achieved and done, the ending of GSoC also serves as a beginning in many ways.
-Here are some of the things I would like to do soon.
+While a lot has been achieved, the ending of GSoC also serves as a beginning in many ways.
+Here are some of the things I would like to work on soon.
 
-- Writing APIs for fine-tuning the NER and POS APIs.
+- Writing APIs for further training the NER and POS models with one's own dataset.
 - Smaller models for NER and testing in domains of TweetNER and BioNER.
 - Improving the performance of POS API.
 - Testing CRFs over BERT for Named Entity Recognition.
 - Faster pre-processing in TextAnalysis.
 - Checking and fixing for the performance bottlenecks in Tweet Tokenizer and TokenBuffer lexers.
+
+I would also like to work on other ecosystems of Flux, DiffEq and JuliaGPU in the near future.
 
 # <u> Why consider contributing to Julia packages </u>
 
@@ -182,7 +185,7 @@ This makes maintaining packages a lot less outrageous.
 Owing to the fact that Julia lets easy writing of packages,
 multiple ecosystems in various domains have grown.
 People from various domains are involved with the development of these packages.
-You can also reach out for julia related help in their respective channels or _#helpdesk_ on the slack workspace.
+You can also reach us out for help or julia package/libraries related discussions ( or gripes 😉 ) in the respective channels or _#helpdesk_ on the slack workspace  ([Invitation link](https://slackinvite.julialang.org/)) or discourse.
 
 # <u> Acknowledgement </u>
 
@@ -190,7 +193,7 @@ Firstly, I would like to thank **Google** and **JuliaLang** for giving me this f
 I am grateful to my mentors
 **@oxinabox (Lyndon White)** and **@aviks (Avik Sengupta)**
 for guiding me through my project.
-Finally, I would also like to thanks fellow GSoC students
+I would also like to thanks fellow Summer of Code students
 **@thebhatman**, **@ComputerMaestro**, **@shreyas-kowshik**
 as well the fantastic **JuliaLang Community** for helping me whenever I got stuck
 and making the GSoC journey fun. 😄
@@ -210,8 +213,9 @@ I am now very much dependent on the JuliaLang slack's slackbot for reminders of 
 Here are some more detailed blogs for the work done in each week.
 You might wanna take a look at these -
 
-- [Week 9 - 11:](https://ayushk4.github.io/2019/08/13/GSoC-Into-the-Final-Phase-Week-9-11.html)
-- [Week 7 - 8:](https://ayushk4.github.io/2019/07/21/GSoC-End-of-Phase-Two-Week-7-8.html)
-- [Week 5 - 6:](https://ayushk4.github.io/2019/07/12/GSoC-Models-for-Sequence-Labeling-Week-5-6.html)
-- [Week 3 - 4:](https://ayushk4.github.io/2019/06/25/GSoC-End-of-Phase-One-Week-3-4.html)
-- [Week 2 - 1:](https://ayushk4.github.io/2019/06/13/GSoC-Into-the-Coding-Period-Week-1-2.html)
+- [Week 9 - 11](https://ayushk4.github.io/2019/08/13/GSoC-Into-the-Final-Phase-Week-9-11.html)
+- [Week 7 - 8](https://ayushk4.github.io/2019/07/21/GSoC-End-of-Phase-Two-Week-7-8.html)
+- [Week 5 - 6](https://ayushk4.github.io/2019/07/12/GSoC-Models-for-Sequence-Labeling-Week-5-6.html)
+- [Week 3 - 4](https://ayushk4.github.io/2019/06/25/GSoC-End-of-Phase-One-Week-3-4.html)
+- [Week 2 - 1](https://ayushk4.github.io/2019/06/13/GSoC-Into-the-Coding-Period-Week-1-2.html)
+- [Week 0](https://ayushk4.github.io/2019/06/05/Google-Summer-of-Code.html)
