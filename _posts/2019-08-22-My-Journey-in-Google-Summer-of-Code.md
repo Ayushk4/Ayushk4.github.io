@@ -84,7 +84,7 @@ The following repositories were also created during GSoC'19 -
 JuliaText now provides with APIs for Part of Speech Tagging and Named Entity Recognition.
 These APIs and CRF currently are being kept in [TextAnalysis.jl](https://github.com/JuliaText/TextAnalysis.jl).
 
-- Here is a table comparing the NER API performance. The accuracy and F1 scores are much better being a neural based tagger. However, it takes upto thrice the time to tag compared to SpaCy. Since the other NER Taggers, don't have a specific NER tag for `MISC`, it hasn't been considered for F1 score.
+- Here is a table comparing the NER API performance. The accuracy and F1 scores are much better being a neural based tagger. However, it takes upto thrice the time to tag compared to SpaCy. Since the other NER Taggers, don't have a specific NER tag for `MISC`, it hasn't been considered for F1 score. (Here, P = Precision, R = Recall and NER API is the API written)
 
 <img id="two" src="../../../images/2019/ner_compare.png" alt="Performance Comparison against other NLP Libraries" width="500" height="500">
 
