@@ -123,7 +123,7 @@ While working the tweet tokenizer _various lexers_ were written for working with
 As of now, the package lets the users build their custom tokenizers
 using the TokenBuffer API and its several lexer functions.
 
-[Here](https://github.com/Ayushk4/WordTokenizers.jl_analyse/blob/master/speed/Speed_wordtokenizers.jl_spacy_nltk.ipynb) is a performance analysis comparing the Tokenizers of _Spacy, NLTK and WordTokenizers_ in Julia.
+[Here](https://github.com/Ayushk4/WordTokenizers.jl_analyse/blob/master/speed/Timings_Benchmarks_Compare.ipynb) is a performance analysis comparing the Tokenizers of _Spacy, NLTK and WordTokenizers_ in Julia.
 The package performs much better while also providing a lot more tokenizers as well as means to create custom tokenizers.
 
 <img id="two" src="../../../images/2019/tknzrs_plot.png" alt="Performance of Tokenizers in WordTokenizers.jl" width="500" height="500">
