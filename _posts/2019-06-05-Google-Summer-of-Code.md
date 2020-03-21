@@ -9,7 +9,7 @@ categories:
 
 I am happy to share the news that my proposal got accepted in Google Summer of Code, 2019 under **The JuliaLang organization**. I will be working this summer on implementing and testing APIs for Named Entity Recognition and Part of Speech Tagging under the Flux projects.
 
-Here is a list of the major things I will be working on-
+Here is a list of the major things I will be working on -
 
 - Linear Chain Conditional Random Fields (CRF):
 - Named Entity Recognition:
