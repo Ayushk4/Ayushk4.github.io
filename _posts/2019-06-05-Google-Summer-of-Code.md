@@ -11,7 +11,7 @@ I am happy to share the news that my proposal got accepted in Google Summer of C
 
 Here is a list of the major things I will be working on-
 
-- Linear Chain Conditional Random Fields (CRF):
+- Linear Chain Conditional Random Fields (CRF)
 - Named Entity Recognition:
 - Part of Speech Tagging:
 
