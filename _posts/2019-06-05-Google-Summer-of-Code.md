@@ -15,7 +15,7 @@ Here is a list of the major things I will be working on-
 - Named Entity Recognition:
 - Part of Speech Tagging:
 
-The model that will be implemented for NER and POS tagging will be a Neural Network using Bi-LSTM-CNN-CRFs as follows-
+The model that will be implemented for NER and POS tagging will be a Neural Network using Bi-LSTM-CNN-CRFs as follows -
 
 
 Character Representation Layer using CNNs        |  Bi-LSTM-CRF layer with Word Embeddings and Character Representation Input
