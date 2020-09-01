@@ -1,0 +1,88 @@
+### Site Settings ###
+title               : Ayushk4
+description         : >-
+
+baseurl             : ""                     # Change to empty quotes if you are hosting your site at <your-username>.github.io directly
+remote_theme        : ayushk4/portfolYOU       # theme 
+
+
+
+### Plugins ###
+plugins:
+  - jemoji
+
+
+### Navbar Settings ###
+nav_exclude:                                            # The following path is excluded from navbar
+  - pages/tags.html
+  - pages/404.html
+  - pages/index.md
+
+
+
+### Author Info ###
+author:
+  name              : Ayush Kaushal
+  image             : https://avatars3.githubusercontent.com/u/34215911?s=400&u=c1b19b8c083df088983c31dcb81bc92f39cacc00&v=4
+# behance           : your_username
+# dribbble          : your_username
+  email             : <username> [at] gmail [dot] com where <username>=ayushk4
+  facebook          : ayush.kaushal1
+  github            : ayushk4
+# gitlab            : your_username
+#  instagram         : tejasvaidhya/
+  linkedin          : ayushk4/
+#  medium            : your_username
+# soundcloud        : your_username
+# spotify           : your_username
+# stackoverflow     : your_user_id
+# tumblr            : your_username.tumblr.com
+# twitch            : your_username
+# twitter           : your_username
+# vimeo             : your_username
+# youtube           : your_channel_name
+
+### Disqus
+#disqus: portfolio-bnhbmol6a5
+
+
+### Posts ###
+permalink: /blog/:title
+
+markdown: kramdown
+kramdown:
+   math_engine: mathjax
+
+### Collections ###
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name
+  softwares:
+    output: true
+    permalink: /softwares/:name
+
+### Defaults for collections ###
+defaults:
+  - scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: "page"
+  - scope:
+      path: ""
+      type: "softwares"
+    values:
+      layout: "page"
+  - scope:                                              # For Documentation Only
+      path: ""                                          # For Documentation Only
+      type: "posts"                                  
+    values:
+      comments: true
+      
+### Exclude from processing ###
+exclude:
+  - README.md
+  - CONTRIBUTING.md
+  - LICENSE
+  - "*.log"
