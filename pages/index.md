@@ -13,7 +13,7 @@ I am interested in research in Natural Language Processing and Machine Learning.
 
 I am fortunate to be guided by Prof. Humphrey Shi (UOregon) for my ongoing research on Vision+Language tasks. I have previous research experiences at IBM Research India on Detection and Removing Bias in news article text and Google Summer of Code on practical neural models for sequence labelling.
 
-I am pursuing my bachelor thesis under the guidance of Prof. Niloy Ganguly (CNeRG Lab) in the domain of Fairness in ML. My previous research works with them include Explainable Rumour Detection and Stance Detection.
+I am pursuing my bachelor thesis under the guidance of Prof. Niloy Ganguly (CNeRG Lab, IIT Kharagpur) in the domain of Fairness in ML. My previous research works with them include Explainable Rumour Detection and Stance Detection.
 
 
 <br>
@@ -30,11 +30,6 @@ I am pursuing my bachelor thesis under the guidance of Prof. Niloy Ganguly (CNeR
 </ul>
 <br>
 
-## Publications and Talks
-<ul>
-<li>JOSS paper</li>
-<li>JuliaCon Talk</li>
-</ul>
 
 <div class="row">
 {% include about/timeline.html title="Research Experience" source=site.data.education-timeline %}
@@ -42,6 +37,14 @@ I am pursuing my bachelor thesis under the guidance of Prof. Niloy Ganguly (CNeR
 *details of projects can be found* [here](projects/)
 
 <br>
+## Publications and Talks
+<ul>
+<li> <b>JuliaCon 2020 Conference Talk</b>: I gave a contributed talk on packages I wrote on for Deep Learning based Natural Language Processing.</li>
+<li> <b>Basic Tools for Tokenizing Natural Language in Julia</b><br>
+    <b>Ayush Kaushal</b>, Lyndon White, Mike Innes, Rohit Kumar,<br>
+    <i>Journal of Open Source Software, 2020 </i></li>
+</ul>
+
 <br>
 ### Research Projects      
 
