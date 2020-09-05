@@ -2,7 +2,7 @@
   link: https://www.humphreyshi.com/
   location: University of Oregon 
   role: Remote Researcher
-  from: May 2020
+  from: June 2020
   to: Present
   description: Referring expression comprehension via generation task.
   tools: [Deep Learning, Multimodal Machine Learning, Vision and Language]
@@ -21,7 +21,7 @@
   location: IIT Kharagpur, India
   role: Undergraduate Researcher
   from: Jan 2020
-  to: May 2020
+  to: Present
   description: Proposed a 3-level explainable approach for rumour detection. Improved stance detection task by integrating semantics via semantic dependency parser.
   tools: [Natural Language Processing, Deep Learning, Social Computing, Explainable AI]
 
