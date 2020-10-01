@@ -1,6 +1,7 @@
 ---
 name: Explainable Rumour Detection
 tools: [Natural Language Processing, Deep Learning, Explainable AI]
-image: /assets/img/rumour_model.png
-description: Statistical methods and pretrained Deep Learning APIs for Text Analysis
+image: ../images/rumour_model.png
+description: Early rumour detection by enhancing a tree-recursive neural network with thread-level attention, textual attention mechanism and user representation with attention with interpretability.
+external_url: ../fake_news_emnlp.pdf
 ---

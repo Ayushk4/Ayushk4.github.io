@@ -1,37 +1,47 @@
-- entity: Synergetic Holistic Intelligence Lab
-  link: https://www.humphreyshi.com/
-  location: University of Oregon 
-  role: Remote Researcher
-  from: June 2020
+- entity: Undergraduate Researcher
+  link:
+  location:
+  role: <a href="http://www.facweb.iitkgp.ac.in/~niloy/">Department of Computer Science and Engineering</a><small>, Indian Institute of Technology Kharagpur</small>
+  from: January 2020
   to: Present
-  description: Referring expression comprehension via generation task.
-  tools: [Deep Learning, Multimodal Machine Learning, Vision and Language]
+  description:
+    - • <b>Semantics for Stance Detection:</b> Integrated semantics interaction using graph attention over the semantic dependency graph for stance detection. This led to performance at par with the Bert models. Despite less less than 1/20 of parameters
+    - • <b>Explainable Tweet Verification:</b> Carried out experiments and implementations for three level explainable approach for tweet verification. Submitted to EMNLP 2020
+  tools: [Natural Language Processing, Deep Learning, Explainable AI]
 
-- entity: IBM Research Labs 
-  link: https://github.com/Ayushk4/Resume/blob/master/certificates%20and%20related%20documents/IBM_GRM_Ayush_Kaushal.pdf
-  location: India
-  role: Remote Researcher
+- entity: Remote Researcher
+  link:
+  location:
+  role: <a href="https://www.humphreyshi.com/">Synergetic Holistic Intelligence Lab</a>, <small>University of Oregon</small>
+  from: April 2020
+  to: Present
+  description:
+    - • Built a show-attend-tell inspired Referring Expression generation model, delivering state of the art performance, despite being much simpler.
+    - • Explored using referring expression generation in adversarial settings for improving comprehension task performance.
+  tools: [Deep Learning, Vision and Language, Video Processing]
+
+- entity: Remote Researcher
+  link: 
+  location:
+  role: <a href="https://github.com/Ayushk4/Resume/blob/master/certificates/IBM_GRM_Ayush_Kaushal.pdf">IBM Research Labs</a><small>, India</small>
   from: May 2020
   to:  June 2020
-  description: Proposed the first system for detection and removal of biases in news articles
-  tools: [Natural Language Generation, Bias in ML, Explainable AI, Deep Learning]
-
-- entity: CNeRG Lab
-  link: 
-  location: IIT Kharagpur, India
-  role: Undergraduate Researcher
-  from: Jan 2020
-  to: Present
-  description: Proposed a 3-level explainable approach for rumour detection. Improved stance detection task by integrating semantics via semantic dependency parser.
-  tools: [Natural Language Processing, Deep Learning, Social Computing, Explainable AI]
-
-- entity: Google Summer of Code, 2019
-  link: https://summerofcode.withgoogle.com/archive/2019/projects/4945754462879744/
-  location: 
-  role: Student Research Developer
-  from: May 2019
-  to: Aug 2019
   description:
-    - "Deep Learning models for Sequence labelling and packages for Natural Language Processing."  
-  tools: [Natural Language Generation, Deep Learning, Research Software, Julia]
+    - • Formulated the <b>novel task</b> and created the first system for propaganda identification and removal without information loss in news articles.
+    - • Incorporated <b>token-level explainability</b> by token-level propaganda detection and the corresponding de-propagandizing technique used.
+    - • Proposed auxiliary tasks of sentiment identification and VAD score for architecture agnostic <b>F1 gains of +3 to +4%</b>.
+    - • Devised techniques for lossless propaganda removal, namely classify-delete and style-transfer-rewrite, by thorough study of biastypes.
+  tools: [Natural Language Generation, Explainable AI, Deep Learning]
+
+- entity:
+  link:
+  location: 
+  role: <a href="https://summerofcode.withgoogle.com/archive/2019/projects/4945754462879744/">Google Summer of Code, 2019</a>
+  from: May 2019
+  to: August 2019
+  description:
+    - • Leading Contributor and Maintainer for NLP Research packages of WordTokenizers and TextAnalysis with total <b>300+ GitHub Stars</b>.
+    - • Formulated novel regex-free approach for custom multilingual tokenizers upto <b>4 times faster</b> than SpaCy, NLTK.
+    - • Proposed end-to-end CRF-LSTM model for general-purpose NER, POS tagger with <b>93.1, 91.2 F1</b> on CoNLL’03, surpassing SpaCy and NLTK on 3 datasets
+  tools: [Natural Language Processing, Deep Learning, Research Software]
 

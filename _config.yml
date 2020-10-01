@@ -47,11 +47,11 @@ author:
 
 
 ### Posts ###
-permalink: /blog/:title
+#permalink: /blog/:title
 
-markdown: kramdown
-kramdown:
-   math_engine: mathjax
+#markdown: kramdown
+#kramdown:
+#   math_engine: mathjax
 
 ### Collections ###
 collections:
@@ -74,11 +74,11 @@ defaults:
       type: "softwares"
     values:
       layout: "page"
-  - scope:                                              # For Documentation Only
-      path: ""                                          # For Documentation Only
-      type: "posts"                                  
-    values:
-      comments: true
+#  - scope:                                              # For Documentation Only
+#      path: ""                                          # For Documentation Only
+#      type: "posts"                                  
+#    values:
+#      comments: true
       
 ### Exclude from processing ###
 exclude:
@@ -86,3 +86,4 @@ exclude:
   - CONTRIBUTING.md
   - LICENSE
   - "*.log"
+  - temp_blog.html
