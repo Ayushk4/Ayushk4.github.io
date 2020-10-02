@@ -8,5 +8,7 @@ weight: 1
   - arduino-visitor-counter */
 ---
 
+Following are the research projects I have worked on.
+
 {% include projects/index.html %}
 

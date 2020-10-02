@@ -4,6 +4,10 @@ permalink: /2019/08/22/My-Journey-in-Google-Summer-of-Code.html
 weight: 1
 ---
 
+
+### Check out my [project page at Google's GSoC website](https://summerofcode.withgoogle.com/archive/2019/projects/4945754462879744/)
+
+
 Hi there! 👋,
 
 I had a wonderful time working at Google Summer of Code 2019 this summer. 
@@ -58,10 +62,13 @@ similary for POS. The POS tagger performs 0.902 F1 on CoNLL-2003.
 
 I also worked on a novel regex free approach for high-speed `WordTokenizers` package providing with statistical and (custom) rule-based tokenizers for multiple languages.
 
-This work has been published at [the Journal of Open Source Software](https://www.theoj.org/joss-papers/joss.01956/10.21105.joss.01956.pdf).
 
 Following is a performance analysis comparing the Tokenizers of _Spacy, NLTK with our Tokenizers_.
 
 <img id="tffwo" src="../../../images/tknzrs_plot.png" alt="Performance of Our Tokenizers" style="width:500px;">
+
+This work has been published at [the Journal of Open Source Software](https://www.theoj.org/joss-papers/joss.01956/10.21105.joss.01956.pdf).
+
+<iframe src="https://www.theoj.org/joss-papers/joss.01956/10.21105.joss.01956.pdf" width="100%" height="750px">
 
 
