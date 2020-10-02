@@ -57,7 +57,7 @@ author:
 collections:
   projects:
     output: true
-    permalink: /projects/:name
+    permalink: /research/:name
   softwares:
     output: true
     permalink: /softwares/:name

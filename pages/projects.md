@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Projects
-permalink: /projects/
+title: Research
+permalink: /research/
 weight: 1
 /*remote_projects: 
   - git-for-wizards

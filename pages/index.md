@@ -52,7 +52,7 @@ I am pursuing my bachelor thesis under the guidance of Prof. Niloy Ganguly (CNeR
 <div class="row">
 {% include about/timeline.html title="Research Experience" source=site.data.education-timeline %}
 </div >
-*details of projects can be found* [here](projects/)
+*details of the projects can be found* [here](research/)
 
 
 
