@@ -5,14 +5,13 @@ weight: 1
 ---
 
 
-### Check out my [project page at Google's GSoC website](https://summerofcode.withgoogle.com/archive/2019/projects/4945754462879744/)
-
-
 Hi there! 👋,
 
 I had a wonderful time working at Google Summer of Code 2019 this summer. 
 
 Here, I would like to give share some of my work done. I will giving a talk on the NLP packages I worked on, at the [JuliaCon 2020 Conference](https://live.juliacon.org/talk/Z8WWNV).
+
+Check out my [project page at Google's GSoC website](https://summerofcode.withgoogle.com/archive/2019/projects/4945754462879744/)
 
 <style>
 img {
