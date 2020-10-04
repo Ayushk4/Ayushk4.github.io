@@ -33,7 +33,7 @@ I am pursuing my bachelor thesis under the guidance of Prof. Niloy Ganguly (CNeR
 ## Publications and Talks
 <ul>
 <li> <b>Leveraging Event Specific and Chunk Span information to Extract COVID Events from Tweets</b><br>
-    <b>Ayush Kaushal<sup> * </sup> </b>and Tejas Vaidhya<sup>*</sup><br>
+    <b>Ayush Kaushal</b> and Tejas Vaidhya<br>
    To appear <i>EMNLP 2020 Noisy User Generated Text Workshop </i></li>
 <li> <b>Basic Tools for Tokenizing Natural Language in Julia</b><br>
     <b>Ayush Kaushal</b>, Lyndon White, Mike Innes, Rohit Kumar,<br>
@@ -42,7 +42,7 @@ I am pursuing my bachelor thesis under the guidance of Prof. Niloy Ganguly (CNeR
     <b>Ayush Kaushal</b><br>
     <i>JuliaCon 2020 Conference</i></li>
 <!-- <li> <b>BERT for </b><br>
-     <b>Ayush Kaushal<sup> * </sup> </b>and Tejas Vaidhya<sup>*</sup><br>
+     Tejas Vaidhya and <b>Ayush Kaushal</b><br>
    arXiv preprint [arxiv-number] </i></li>
 -->
 </ul>
