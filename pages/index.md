@@ -17,7 +17,7 @@ I am pursuing my bachelor thesis under the guidance of Prof. Niloy Ganguly (CNeR
 
 <br>
 
-<h4 style="text-indent:-1.5em;font-weight:bold">News!</h4>
+<h4 style="text-indent:-0.0em;font-weight:bold">News!</h4>
 
 - **October 2020:** 1 paper accepted to EMNLP 2020, Workshop on Noisy User-generated Text.
 - **September 2020:** Ranked 1st at the leaderboard for EMNLP 2020, W-NUT workshop Shared Task 3 on Extracting COVID Events from tweets.
@@ -64,7 +64,6 @@ I am pursuing my bachelor thesis under the guidance of Prof. Niloy Ganguly (CNeR
 
 {% include projects/index.html %}
 
-#### I also moonlight as an open source developer, you can check out my packages and softwares [here](softwares/)
 
 <br>
 <br>
