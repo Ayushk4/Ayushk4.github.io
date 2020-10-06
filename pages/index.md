@@ -19,7 +19,7 @@ I am pursuing my bachelor thesis under the guidance of Prof. Niloy Ganguly (CNeR
 
 <h4 style="text-indent:-0.0em;font-weight:bold">News!</h4>
 
-- **October 2020:** 1 paper accepted to EMNLP 2020, Workshop on Noisy User-generated Text.
+- **October 2020:** 2 papers accepted at EMNLP 2020, Workshops.
 - **September 2020:** Ranked 1st at the leaderboard for EMNLP 2020, W-NUT workshop Shared Task 3 on Extracting COVID Events from tweets.
 - **August 2020:** I have been selected to attend the <a href="https://sites.google.com/view/aisummerschool2020">Google AI Research</a> School, 2020 for Natural Language Understanding Track.
 - **June 2020:** I will be giving a <a href="https://pretalx.com/juliacon2020/talk/Z8WWNV/">talk at JuliaCon</a> Conference 2020 on the NLP packages I worked at Google-SoC last summers.<!-- - **May 2020:** I am a project mentor at <a href="https://summerofcode.withgoogle.com/projects/#5015442659213312">Google Summer of Code</a> for the project - Albert and statistical language models. -->
@@ -34,17 +34,16 @@ I am pursuing my bachelor thesis under the guidance of Prof. Niloy Ganguly (CNeR
 <ul>
 <li> <b>Leveraging Event Specific and Chunk Span information to Extract COVID Events from Tweets</b><br>
     <b>Ayush Kaushal</b> and Tejas Vaidhya<br>
-   To appear <i>EMNLP 2020 Noisy User Generated Text Workshop </i></li>
+   To appear <i>EMNLP 2020 Noisy User Generated Text Workshop</i></li>
+<li> <b>Domain specific BERT representation for Named Entity Recognition of lab protocol</b><br>
+    Tejas Vaidhya and <b>Ayush Kaushal</b><br>
+   To appear <i>EMNLP 2020 Noisy User-generated Text Workshop</i></li>
 <li> <b>Basic Tools for Tokenizing Natural Language in Julia</b><br>
     <b>Ayush Kaushal</b>, Lyndon White, Mike Innes, Rohit Kumar,<br>
     <i>Journal of Open Source Software, 2020 </i></li>
 <li> <b>Talk on Natural Language Processing in Julia</b><br>
     <b>Ayush Kaushal</b><br>
     <i>JuliaCon 2020 Conference</i></li>
-<!-- <li> <b>BERT for </b><br>
-     Tejas Vaidhya and <b>Ayush Kaushal</b><br>
-   arXiv preprint [arxiv-number] </i></li>
--->
 </ul>
 
 <br>
