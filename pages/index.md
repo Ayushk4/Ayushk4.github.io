@@ -19,7 +19,7 @@ I am pursuing my bachelor thesis under the guidance of Prof. Niloy Ganguly (CNeR
 
 <h4 style="text-indent:-0.0em;font-weight:bold">News!</h4>
 
-- **November 2020:** I will be giving an oral presentation for my work accepted to EMNLP 2020, Workshop.
+- **November 2020:** I will be giving an oral presentation for my work accepted at EMNLP 2020, Workshop.
 - **October 2020:** 2 papers accepted at EMNLP 2020, Workshops.
 - **September 2020:** Ranked 1st at the leaderboard for EMNLP 2020, W-NUT workshop Shared Task 3 on Extracting COVID Events from tweets.
 - **August 2020:** I have been selected to attend the <a href="https://sites.google.com/view/aisummerschool2020">Google AI Research</a> School, 2020 for Natural Language Understanding Track.
@@ -35,10 +35,10 @@ I am pursuing my bachelor thesis under the guidance of Prof. Niloy Ganguly (CNeR
 <ul>
 <li> <b>Leveraging Event Specific and Chunk Span information to Extract COVID Events from Tweets</b><br>
     <b>Ayush Kaushal</b> and Tejas Vaidhya<br>
-	<b><u>Oral Presentation</u></b> <i>EMNLP 2020 Noisy User Generated Text Workshop</i></li> [paper](https://www.aclweb.org/anthology/2020.wnut-1.79) [code](https://github.com/Ayushk4/extract_covid_entity)
+	<b><u>Oral Presentation</u></b> <i>EMNLP 2020 Noisy User Generated Text Workshop</i> <a href="https://www.aclweb.org/anthology/2020.wnut-1.79">[paper]</a> <a href="https://github.com/Ayushk4/extract_covid_entity">[code]</a> </li>
 <li> <b>Domain specific BERT representation for Named Entity Recognition of lab protocol</b><br>
     Tejas Vaidhya and <b>Ayush Kaushal</b><br>
-   To appear <i>EMNLP 2020 Noisy User-generated Text Workshop</i></li> [paper](https://www.aclweb.org/anthology/2020.wnut-1.34/) [code](https://github.com/tejasvaidhyadev/NER_Lab_Protocols)
+   To appear <i>EMNLP 2020 Noisy User-generated Text Workshop</i> <a href="https://www.aclweb.org/anthology/2020.wnut-1.34">[paper]</a> <a href="https://github.com/tejasvaidhyadev/NER_Lab_Protocols">[code]</a> </li>
 <li> <b>Basic Tools for Tokenizing Natural Language in Julia</b><br>
     <b>Ayush Kaushal</b>, Lyndon White, Mike Innes, Rohit Kumar,<br>
     <i>Journal of Open Source Software, 2020 </i></li>
