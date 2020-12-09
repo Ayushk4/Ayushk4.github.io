@@ -68,6 +68,9 @@ I am pursuing my bachelor thesis under the guidance of Prof. Niloy Ganguly (CNeR
 <br>
 <br>
 ### Contact
+
+Pronouns: <i>he/him</i>
+
 <i>Email: username at gmail dot com ; where username = ayushk4</i><br>
 
 <br>
