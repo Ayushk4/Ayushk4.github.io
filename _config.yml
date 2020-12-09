@@ -58,9 +58,9 @@ collections:
   projects:
     output: true
     permalink: /research/:name
-  softwares:
+  opensource:
     output: true
-    permalink: /softwares/:name
+    permalink: /opensource/:name
 
 ### Defaults for collections ###
 defaults:
