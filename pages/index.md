@@ -11,9 +11,9 @@ I am Ayush Kaushal, a senior undergraduate student at Indian Institute of Techno
 
 My research interests are in Natural Language Processing and Machine Learning. In the past I developed various NLP-ML [packages and softwares](softwares/).
 
-I am fortunate to be guided by Prof. Humphrey Shi (UOregon) for my ongoing research on Vision+Language tasks. I have previous research experiences at IBM Research India on Detection and Removing bias in news articles and Google's Summer of Code on practical neural models for sequence labelling.
+I am fortunate to be guided by Prof. Humphrey Shi (UOregon) for my ongoing research on Vision+Language tasks. I have previous research experiences at IBM Research India on Detection and Removing bias in news articles and 2019 Google Summer of Code on practical neural models for sequence labelling.
 
-I am pursuing my bachelor thesis under the guidance of Prof. Niloy Ganguly (CNeRG Lab, IIT Kharagpur) in the domain of Fairness in ML. My previous research works were on Explainable Rumour Detection, integrating semantics for robust Stance Detection and biases in stance detection datasets.
+I am pursuing my bachelor thesis under the guidance of Prof. Niloy Ganguly (CNeRG Lab, IIT Kharagpur) on exploring Semantics and external knowledge basis for Stance Detection. My previous research works were on Explainable Rumour Detection, Semantics for robust Stance Detection and biases in stance detection datasets.
 
 <br>
 
