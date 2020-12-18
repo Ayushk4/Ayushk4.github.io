@@ -2,18 +2,20 @@
   link:
   location:
   role: <a href="http://www.facweb.iitkgp.ac.in/~niloy/">Department of Computer Science and Engineering</a><small>, Indian Institute of Technology Kharagpur</small>
-  from: January 2020
-  to: Present
+  from: Jan 2020 — April 2020 & Sept 2020 — Nov 2020 & Jan 2021
+  to: April 2021
   description:
-    - • <b>Semantics for Stance Detection:</b> Integrated semantics interaction using graph attention over the semantic dependency graph for stance detection. This led to performance at par with the Bert models. Despite less less than 1/20 of parameters
-    - • <b>Explainable Tweet Verification:</b> Carried out experiments and implementations for three level explainable approach for tweet verification. Submitted to EMNLP 2020
+    - Pursuing Bachelor's Thesis as a part of my undergraduate coursework`:`
+    - • <b>Semantics for Stance Detection:</b> Integrated semantics interaction using graph attention over the semantic dependency graph for stance detection. This led to performance at par with the Bert models.
+    - • <b>Explainable Tweet Verification:</b> Carried out experiments and implementations for three level explainable approach for tweet verification. Submitted to EMNLP 2020.
+    - • <b>Bias in Stance Detection Datasets:</b> Discovered rampant biases in twitter stance datasets and subsequently de-biased them. 
   tools: [Natural Language Processing, Deep Learning, Explainable AI]
 
 - entity: Remote Researcher
   link:
   location:
   role: <a href="https://www.humphreyshi.com/">Synergetic Holistic Intelligence Lab</a>, <small>University of Oregon</small>
-  from: April 2020
+  from: June 2020
   to: Present
   description:
     - • Built a show-attend-tell inspired Referring Expression generation model, delivering state of the art performance, despite being much simpler.
@@ -24,8 +26,8 @@
   link: 
   location:
   role: <a href="https://github.com/Ayushk4/Resume/blob/master/certificates/IBM_GRM_Ayush_Kaushal.pdf">IBM Research Labs</a><small>, India</small>
-  from: May 2020
-  to:  June 2020
+  from: 
+  to: 
   description:
     - • Formulated the <b>novel task</b> and created the first system for propaganda identification and removal without information loss in news articles.
     - • Incorporated <b>token-level explainability</b> by token-level propaganda detection and the corresponding de-propagandizing technique used.

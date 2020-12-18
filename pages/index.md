@@ -3,51 +3,37 @@ layout: default
 permalink: /
 ---
 {% include landing.html %}
-
 ## **About Me**
 
-Hi There! :wave:<br>
-I am Ayush Kaushal, a senior undergraduate student at Indian Institute of Technology, Kharagpur majoring in Computer Science and Engineering. 
-
-My research interests are in Natural Language Processing and Machine Learning. In the past I developed various NLP-ML [packages and softwares](softwares/).
-
-I am fortunate to be guided by Prof. Humphrey Shi (UOregon) for my ongoing research on Vision+Language tasks. I have previous research experiences at IBM Research India on Detection and Removing bias in news articles and 2019 Google Summer of Code on practical neural models for sequence labelling.
-
-I am pursuing my bachelor thesis under the guidance of Prof. Niloy Ganguly (CNeRG Lab, IIT Kharagpur) on exploring Semantics and external knowledge basis for Stance Detection. My previous research works were on Explainable Rumour Detection, Semantics for robust Stance Detection and biases in stance detection datasets.
-
+<div style="font-size:20px">
+Hi There! :wave:
+<br><br>
+I am an aspiring researcher in the areas of Machine Learning and its applications to Natural Language Processing, Multimodal Learning and Social Computing. I am pursuing my Bachelor Thesis under the guidance of Prof. Niloy Ganguly (CNeRG Lab, IIT Kharagpur) at the intersection of NLP, Deep Learning and Social Computing.
+<br><br>
+I am currently researching on Multimodal Learning at SHI Labs, University of Oregon. I previously have interned at IBM Research Labs, and Google Summer of Code in the domains of Deep Learning and Natural Language Procesing. Years ago, as a college freshman and sophomore, I developed various open source packages.
 <br>
+<br>
+<br>
+<br>
+</div>
+<h4 style="text-indent:-0.0em;font-weight:bold; font-size:25px">News!</h4>
 
-<h4 style="text-indent:-0.0em;font-weight:bold">News!</h4>
 
-- **November 2020:** I will be giving an oral presentation for my work accepted at EMNLP 2020, Workshop.
-- **October 2020:** 2 papers accepted at EMNLP 2020, Workshops.
-- **September 2020:** Ranked 1st at the leaderboard for EMNLP 2020, W-NUT workshop Shared Task 3 on Extracting COVID Events from tweets.
-- **August 2020:** I have been selected to attend the <a href="https://sites.google.com/view/aisummerschool2020">Google AI Research</a> School, 2020 for Natural Language Understanding Track.
-- **June 2020:** I will be giving a <a href="https://pretalx.com/juliacon2020/talk/Z8WWNV/">talk at JuliaCon</a> Conference 2020 on the NLP packages I worked at Google-SoC last summers.<!-- - **May 2020:** I am a project mentor at <a href="https://summerofcode.withgoogle.com/projects/#5015442659213312">Google Summer of Code</a> for the project - Albert and statistical language models. -->
-- **February 2020:** Mentored high-school students in <a href="https://codein.withgoogle.com/archive/"> Google Code In</a>, 2019. 3 of my students selected among 6 finalists. Congrats to them!
-- **January 2020:** 1 [Paper](https://www.theoj.org/joss-papers/joss.01956/10.21105.joss.01956.pdf) accepted at Journal of Open Source Software for the work during Google's - SoC  last year.
-- **December 2019:** Awarded <a href="https://github.com/Ayushk4/Resume/blob/master/certificates%20and%20related%20documents/Mitacs_Research_Scholarship.pdf">Globalink Research Scholarship</a> by MITACS and Indo-Canada Shastri.
-- **August 2019:** Had a wonderful summer at <a href="https://summerofcode.withgoogle.com/archive/2019/projects/4945754462879744/">Google Summer of Code</a>, researching on Deep neural networks for sequence labelling and implementing for NLP research packages. 
+<ul style="font-size:19.6px">
+<li> <b>November 2020:</b> 1 Oral and 1 poster at EMNLP 2020, W-NUT Workshop and won its Shared Task 3.</li>
+<li> <b>August 2020:</b> I have been selected to attend <a href="https://sites.google.com/view/aisummerschool2020">Google AI Research</a> School 2020 for Natural Language Understanding Track.</li>
+<li> <b>April 2020:</b> I will be giving a <a href="https://pretalx.com/juliacon2020/talk/Z8WWNV/">talk at JuliaCon</a> Conference 2020 on the NLP packages I developed during Google SoC'19.</li>
+<!-- - **May 2020:** I am a project mentor at <a href="https://summerofcode.withgoogle.com/projects/#5015442659213312">Google Summer of Code</a> for the project - Albert and statistical language models. -->
+<li> <b>February 2020:</b> Mentored students in <a href="https://codein.withgoogle.com/archive/"> Google Code In</a>, 2019. 3 of my students were selected as 6 finalists!</li>
+<li> <b>January 2020:</b> 1 <a href="https://www.theoj.org/joss-papers/joss.01956/10.21105.joss.01956.pdf">Paper</a> accepted at Journal of Open Source Software for the work during Google's - SoC  last year.</li>
+<li> <b>December 2019:</b> Awarded <a href="https://github.com/Ayushk4/Resume/blob/master/certificates%20and%20related%20documents/Mitacs_Research_Scholarship.pdf">Globalink Research Scholarship</a> by MITACS and Indo-Canada Shastri.</li>
+<li> <b>August 2019:</b> Had a wonderful summer at <a href="https://summerofcode.withgoogle.com/archive/2019/projects/4945754462879744/">Google Summer of Code</a>, researching on Deep neural networks for sequence labelling and developing NLP research packages. </li>
 
+</ul>
 <br>
 
 ## Publications and Talks
-<ul>
-<li> <b>Leveraging Event Specific and Chunk Span information to Extract COVID Events from Tweets</b><br>
-    <b>Ayush Kaushal</b> and Tejas Vaidhya<br>
-	<b><u>Oral Presentation</u></b> <i>EMNLP 2020 Noisy User Generated Text Workshop</i> <a href="https://www.aclweb.org/anthology/2020.wnut-1.79">[paper]</a> <a href="https://github.com/Ayushk4/extract_covid_entity">[code]</a> </li>
-<li> <b>Domain specific BERT representation for Named Entity Recognition of lab protocol</b><br>
-    Tejas Vaidhya and <b>Ayush Kaushal</b><br>
-   To appear <i>EMNLP 2020 Noisy User-generated Text Workshop</i> <a href="https://www.aclweb.org/anthology/2020.wnut-1.34">[paper]</a> <a href="https://github.com/tejasvaidhyadev/NER_Lab_Protocols">[code]</a> </li>
-<li> <b>Basic Tools for Tokenizing Natural Language in Julia</b><br>
-    <b>Ayush Kaushal</b>, Lyndon White, Mike Innes, Rohit Kumar,<br>
-    <i>Journal of Open Source Software, 2020 </i></li>
-<li> <b>Talk on Natural Language Processing in Julia</b><br>
-    <b>Ayush Kaushal</b><br>
-    <i>JuliaCon 2020 Conference</i></li>
-</ul>
 
-<br>
 
 <div class="row">
 {% include about/timeline.html title="Research Experience" source=site.data.education-timeline %}
@@ -68,8 +54,6 @@ I am pursuing my bachelor thesis under the guidance of Prof. Niloy Ganguly (CNeR
 <br>
 <br>
 ### Contact
-
-Pronouns: <i>he/him</i>
 
 <i>Email: username at gmail dot com ; where username = ayushk4</i><br>
 
