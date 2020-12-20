@@ -22,7 +22,7 @@ img {
   height: 30%;
 }
 </style>
-<img src="../../../images/gsoc_logo.png" alt="Google Summer of Code">
+<img src="../../../images/GSoC_Julia_Logo.png" alt="Google Summer of Code">
 
 ## Acknowledgement
 
