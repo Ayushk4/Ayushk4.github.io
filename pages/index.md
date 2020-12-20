@@ -7,7 +7,7 @@ permalink: /
 <div style="font-size:20px;margin-left:50px;">
 Hi There! :wave:
 <br><br>
-I am an aspiring researcher in the areas of Machine Learning and its applications to Natural Language Processing, Multimodal Learning and Social Computing. My Bachelor Thesis is under the guidance of Prof. Niloy Ganguly at CNeRG Lab, IIT Kharagpur.
+I am an aspiring researcher in the areas of Machine Learning and its applications to Natural Language Processing, Multimodal Learning and Social Computing. My Bachelor Thesis is under the guidance of <a href="https://scholar.google.com/citations?user=hCbFmUUAAAAJ&hl=en">Prof. Niloy Ganguly</a> at CNeRG Lab, IIT Kharagpur.
 <br><br>
 I am currently researching on Multimodal Learning at SHI Labs, University of Oregon. I previously have interned at IBM Research Labs, and Google Summer of Code in the domains of Deep Learning and Natural Language Procesing. Years ago, as a college freshman and sophomore, I developed various <a href="softwares/">open source packages</a>.
 <br>
