@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Resume
+title:  
 weight: 3
-# external_url: https://github.com/ayushk4
+external_url: https://github.com/ayushk4
 ---
 ## Coming Soon.
