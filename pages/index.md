@@ -20,9 +20,9 @@ I am currently researching on Multimodal Learning at SHI Labs, University of Ore
 <h4 style="text-indent:-0.0em;font-weight:bold;font-size:25px;margin-left:50px;margin-bottom:20px;margin-right:0px;margin-top:0px">News!</h4>
 
 <ul style="font-size:19.6px;margin-left:45px">
-<li> <b>March 2021:</b> 1 paper accepted at NAACL-HLT 2021.</li>
-<li> <b>January 2021:</b> Our submission to SemEval 2021-8 SubTask-2 stood runner up.</li>
-<li> <b>November 2020:</b> 1 Oral and 1 poster at EMNLP 2020, W-NUT Workshop and won its Shared Task 3.</li>
+<li> <b>March 2021:</b> 1 first-author paper accepted at NAACL-HLT 2021.</li>
+<li> <b>January 2021:</b> Our submission to <a href="https://competitions.codalab.org/competitions/25770">SemEval 2021-8 SubTask-2</a> stood runner up.</li>
+<li> <b>November 2020:</b> <a href="https://arxiv.org/abs/2012.10052">1 Oral</a> and <a href="https://arxiv.org/abs/2012.11145">1 poster</a> at EMNLP 2020, W-NUT Workshop and won its <a herf="http://noisy-text.github.io/2020/extract_covid19_event-shared_task.html">Shared Task 3</a>.</li>
 <li> <b>August 2020:</b> I was selected to attend <a href="https://sites.google.com/view/aisummerschool2020">Google AI Research</a> School 2020 for Natural Language Understanding Track.</li>
 <li> <b>May 2020:</b> I will be giving a <a href="https://pretalx.com/juliacon2020/talk/Z8WWNV/">talk at JuliaCon</a> Conference 2020 on NLP packages I developed during Google SoC'19.</li>
 <!-- - **May 2020:** I am a project mentor at <a href="https://summerofcode.withgoogle.com/projects/#5015442659213312">Google Summer of Code</a> for the project - Albert and statistical language models. -->
