@@ -1,8 +1,8 @@
 ### Site Settings ###
 title               : Ayush Kaushal
 description         : >-
-                      Final Year Computer Science Undergraduate,
-                      Indian Institute of Technology Kharagpur.
+                      Incoming Computer Science Graduate,
+                      University of Texas at Austin.
 baseurl             : ""                     # Change to empty quotes if you are hosting your site at <your-username>.github.io directly
 remote_theme        : ayushk4/portfolYOU       # theme 
 
