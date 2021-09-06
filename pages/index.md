@@ -7,9 +7,9 @@ permalink: /
 <div style="font-size:20px;margin-left:50px;">
 Hi There! :wave:
 <br><br>
-I am an aspiring researcher in the areas Natural Language Processing, Multimodal Learning, Social Computing and their applications. My Bachelor Thesis is under the guidance of <a href="https://scholar.google.com/citations?user=hCbFmUUAAAAJ&hl=en">Prof. Niloy Ganguly</a> at CNeRG Lab, IIT Kharagpur.
+I am a Master of Science student at the University of Texas at Austin's Computer Science Department. I am interested in Machine Learning and its applications to Tasks involving Natural Languages and Computer Code. I graduated from Indian Institute of Technology Kharagpur with B.Tech. (Bachelor's of Technology) in Computer Science and Engineering. My Bachelor Thesis was under the guidance of <a href="https://scholar.google.com/citations?user=hCbFmUUAAAAJ&hl=en">Prof. Niloy Ganguly</a> at CNeRG Lab, IIT Kharagpur which was acclaimed among the Best Bachelor's Thesis and a part of it being accepted to NAACL'21.
 <br><br>
-I am currently researching on Multimodal Learning at SHI Labs, University of Oregon. I previously have interned at IBM Research Labs, and Google Summer of Code in the domains of Deep Learning and Natural Language Procesing. Years ago, as a college freshman and sophomore, I developed various <a href="softwares/">open source packages</a>.
+My reacher experience includes Causality in Machine Translation (ETH Zürich - Summer 2021), Multimodal Learning (SHI Labs, University of Oregon - Fall 2020), NLP for Social Good (IBM Research Labs - Summer 2020) and NLP Packages (Google Summer of Code - Summer 2019). During my early undergraduate years, I developed various <a href="softwares/">open source</a> softwares and packages.
 <br>
 </div>
 
@@ -20,16 +20,19 @@ I am currently researching on Multimodal Learning at SHI Labs, University of Ore
 <h4 style="text-indent:-0.0em;font-weight:bold;font-size:25px;margin-left:50px;margin-bottom:20px;margin-right:0px;margin-top:0px">News!</h4>
 
 <ul style="font-size:19.6px;margin-left:45px">
-<li> <b>March 2021:</b> 1 first-author paper accepted at NAACL-HLT 2021.</li>
-<li> <b>January 2021:</b> Our submission to <a href="https://competitions.codalab.org/competitions/25770">SemEval 2021-8 SubTask-2</a> stood runner up.</li>
-<li> <b>November 2020:</b> <a href="https://arxiv.org/abs/2012.10052">1 Oral</a> and <a href="https://arxiv.org/abs/2012.11145">1 poster</a> at EMNLP 2020, W-NUT Workshop and won its <a herf="http://noisy-text.github.io/2020/extract_covid19_event-shared_task.html">Shared Task 3</a>.</li>
-<li> <b>August 2020:</b> I was selected to attend <a href="https://sites.google.com/view/aisummerschool2020">Google AI Research</a> School 2020 for Natural Language Understanding Track.</li>
-<li> <b>May 2020:</b> I will be giving a <a href="https://pretalx.com/juliacon2020/talk/Z8WWNV/">talk at JuliaCon</a> Conference 2020 on NLP packages I developed during Google SoC'19.</li>
-<!-- - **May 2020:** I am a project mentor at <a href="https://summerofcode.withgoogle.com/projects/#5015442659213312">Google Summer of Code</a> for the project - Albert and statistical language models. -->
-<li> <b>February 2020:</b> Mentored students in <a href="https://codein.withgoogle.com/archive/"> Google Code In</a>, 2019. 3 of my students were selected as 6 finalists!</li>
-<li> <b>January 2020:</b> 1 <a href="https://www.theoj.org/joss-papers/joss.01956/10.21105.joss.01956.pdf">Paper</a> accepted at Journal of Open Source Software for the work during Google's - SoC  last year.</li>
-<li> <b>December 2019:</b> Awarded <a href="https://github.com/Ayushk4/Resume/blob/master/certificates%20and%20related%20documents/Mitacs_Research_Scholarship.pdf">Globalink Research Scholarship</a> by MITACS and Indo-Canada Shastri.</li>
-<li> <b>August 2019:</b> Had a wonderful summer at <a href="https://summerofcode.withgoogle.com/archive/2019/projects/4945754462879744/">Google Summer of Code</a>, researching on Deep neural networks for sequence labelling and developing NLP research packages. </li>
+	<li> <b>June 2021:</b> Had a wonderful time attending the virtual NAACL 2021 and presenting (3 + 3 minute) my paper.</li>
+	<li> <b>May 2021:</b> My Bachelor's Thesis titled "Towards Target Aware Twitter Stance Detection" selected among the Best Thesis.</li>
+	<li> <b>April 2021:</b> I will be joining the Computer Science Department at UT Austin as a Master's student.</li>
+	<li> <b>March 2021:</b> 1 first-author paper accepted at NAACL-HLT 2021.</li>
+	<li> <b>January 2021:</b> Our submission to <a href="https://competitions.codalab.org/competitions/25770">SemEval 2021-8 SubTask-2</a> stood runner up.</li>
+	<li> <b>November 2020:</b> <a href="https://arxiv.org/abs/2012.10052">1 Oral</a> and <a href="https://arxiv.org/abs/2012.11145">1 poster</a> at EMNLP 2020, W-NUT Workshop and won its <a herf="http://noisy-text.github.io/2020/extract_covid19_event-shared_task.html">Shared Task 3</a>.</li>
+	<li> <b>August 2020:</b> I was selected to attend <a href="https://sites.google.com/view/aisummerschool2020">Google AI Research</a> School 2020 for Natural Language Understanding Track.</li>
+	<li> <b>May 2020:</b> I will be giving a <a href="https://pretalx.com/juliacon2020/talk/Z8WWNV/">talk at JuliaCon</a> Conference 2020 on NLP packages I developed during Google SoC'19.</li>
+	<li> <b>April 2020:</b> I am a project mentor at <a href="https://summerofcode.withgoogle.com/projects/#5015442659213312">Google Summer of Code</a> for the project - Albert and statistical language models.
+	<li> <b>February 2020:</b> Mentored students in <a href="https://codein.withgoogle.com/archive/"> Google Code In</a>, 2019. 3 of my students were selected as 6 finalists!</li>
+	<li> <b>January 2020:</b> 1 <a href="https://www.theoj.org/joss-papers/joss.01956/10.21105.joss.01956.pdf">Paper</a> accepted at Journal of Open Source Software for the work during Google's - SoC  last year.</li>
+	<li> <b>December 2019:</b> Awarded <a href="https://github.com/Ayushk4/Resume/blob/master/certificates%20and%20related%20documents/Mitacs_Research_Scholarship.pdf">Globalink Research Scholarship</a> by MITACS and Indo-Canada Shastri.</li>
+	<li> <b>August 2019:</b> Had a wonderful summer at <a href="https://summerofcode.withgoogle.com/archive/2019/projects/4945754462879744/">Google Summer of Code</a>, researching on Deep neural networks for sequence labelling and developing NLP research packages. </li>
 
 </ul>
 
