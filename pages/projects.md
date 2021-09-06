@@ -12,13 +12,35 @@ weight: 1
 <br>
 <h2 style="margin:50px"> Publications and Talks </h2>
 
+
 <ul style="font-size:20px;margin:50px">
+      <li><a target="_blank" href="https://aclanthology.org/2021.naacl-main.303.pdf">
+        "<i style="font-family:sans-serif">t-</i>WTWT: Asserting the Role of Targets for Detecting Stance inTweets"</a>, Ayush Kaushal, Avirup Saha and Niloy Ganguly <br>
+              <i>NAACL 2021</i><a style="float:right; color:#3491fe;" data-toggle="collapse" data-target="#biasstance"><u>More</u> </a>
+      </li>
+        <div id="biasstance" class="collapse" style="font-size:15px;margin:50px">
+          The stance detection task aims at detecting the stance of a tweet or a text for a target. These targets can be named entities or free-form sentences (claims). Though the task involves reasoning of the tweet with respect to a target, we find that it is possible to achieve high accuracy on several publicly available Twitter stance detection datasets without looking at the target sentence. Specifically, a simple tweet classification model achieved human-level performance on the WT–WT dataset and more than two-third accuracy on various other datasets. We investigate the existence of biases in such datasets to find the potential spurious correlations of sentiment-stance relations and lexcal choice associated with the stance category. Furthermore, we propose a new large dataset free of such biases and demonstrate its aptness on the existing stance detection systems. Our empirical findings show much scope for research on the stance detection task and proposes several considerations for creating future stance detection datasets.
+          <br> <br>
+          {% include elements/button.html link="https://github.com/Ayushk4/bias-stance" text="Code" %} {% include elements/button.html link="https://github.com/Ayushk4/stance-dataset" text="Dataset" %} {% include elements/button.html link="https://aclanthology.org/2021.naacl-main.303.pdf" text="Pdf" %} {% include elements/button.html link="https://aclanthology.org/2021.naacl-main.303.bib" text="Cite" %} {% include elements/button.html link="https://docs.google.com/presentation/d/11kM4MJ4ct1GtdFuzko-Ou8wN5QxqhmL6hXG3WBrPevk/edit?usp=sharing" text="Slides" %} {% include elements/button.html link="https://drive.google.com/file/d/1L6BW887fOtZZ2d9jnB6Jl_Gqnu6LnLMX/view?usp=sharing" text="Poster" %}
+        </div>
+        <br>
+
     <li><a target="_blank" href="https://www.aclweb.org/anthology/2020.wnut-1.79.pdf">
               "Leveraging Event Specific and Chunk Span features to Extract COVID Events from tweets"</a>, Ayush Kaushal and Tejas Vaidhya <br>
               <i> <b><u>Oral Presentation</u></b> at the 6th Workshop on Noisy User-generated Text (W-NUT) at the 2020 Conference on Emperical Methods in Natural Language Processing (EMNLP)</i> <u><b>Shared Task Winners</b></u><a style="float:right; color:#3491fe;" data-toggle="collapse" data-target="#covid"><u>More</u> </a>
       </li>
         <div id="covid" class="collapse" style="font-size:15px;margin:50px">Twitter has acted as an important source of information during disasters and pandemic, especially during the times of COVID-19. In this paper, we describe our system entry for <i>WNUT 2020 Shared Task-3</i>. The task was aimed at automating the extraction of a variety of COVID-19 related events from Twitter, such as individuals who recently contracted the virus, someone with symptoms who were denied testing and believed remedies against the infection. The system consists of separate multi-task models for slot-filling subtasks and sentence-classification subtasks while leveraging the useful sentence-level information for the corresponding event. The system uses COVID-Twitter-Bert with attention-weighted pooling of candidate slot-chunk features to capture the useful information chunks. The system ranks <b>1st at the leader-board</b> with F1 of 0.6598, without using any ensembles or additional datasets. <br> <br>
           {% include elements/button.html link="https://github.com/Ayushk4/extract_covid_entity" text="Code" %} {% include elements/button.html link="https://www.aclweb.org/anthology/2020.wnut-1.79.pdf" text="Pdf" %} {% include elements/button.html link="https://www.aclweb.org/anthology/2020.wnut-1.79.bib" text="Cite" %} {% include elements/button.html link="https://docs.google.com/presentation/d/13DDY6VSmrVPBddTjWb3rThYRFlRDE_9fi4iyBrhJev4/edit?usp=sharing" text="Slides" %} {% include elements/button.html link="https://github.com/noisy-text/noisy-text.github.io/blob/master/2020/posters/WNUT2020_91_poster%20-%20Tejas%20vaidhya.pdf" text="Poster" %}
+      </div>
+        <br>
+
+  
+      <li><a target="_blank" href="https://aclanthology.org/2021.semeval-1.46.pdf">
+              "Multi-Staged Language Models for Extracting Measurements, their Attributes and Relations"</a>, Neel Karia*, Ayush Kaushal* and Faraaz Mallick* <br>
+              <i> The 15th International Workshop on Semantic Evaluation (SemEval-2021) at the ACL-IJCNLP 2021</i> <u><b>Second runner-up for Sub-Task2</b></u><a style="float:right; color:#3491fe;" data-toggle="collapse" data-target="#semeval21"><u>More</u> </a>
+      </li>
+        <div id="semeval21" class="collapse" style="font-size:15px;margin:50px">SemEval-2021 Task 8: MeasEval aims at improving the machine understanding of measurements in scientific texts through a set of entity and semantic relation extraction sub-tasks on identifying quantity spans along with various attributes and relationships. This paper describes our system, consisting of a three-stage pipeline, that leverages pre-trained language models to extract the quantity spans in the text, followed by intelligent templates to identify units and modifiers. Finally, it identifies the quantity attributes and their relations using language models boosted with a feature re-using hierarchical architecture and multi-task learning. Our submission significantly outperforms the baseline, with the best model from the post-evaluation phase delivering more than 100% increase on F1 (Overall) from the baseline. <br> <br>
+          {% include elements/button.html link="https://github.com/Ayushk4/SE-T8" text="Code" %} {% include elements/button.html link="https://aclanthology.org/2021.semeval-1.46.pdf" text="Pdf" %} {% include elements/button.html link="https://aclanthology.org/2021.semeval-1.46.bib" text="Cite" %} {% include elements/button.html link="https://ayushk4.github.io/Coming-Soon" text="Slides" %}
       </div>
         <br>
 
@@ -67,15 +89,7 @@ weight: 1
         </div>
         <br>
 
-    <li><a target="_blank" href="https://drive.google.com/file/d/1czsvXBNTUgN9S5I44JOYoghNwbeajOGF/view?usp=sharing">
-              "Stance Detection is not Classification: Increasing the Role of Target Entities for Detecting Stance"</a>, Ayush Kaushal, Avirup Saha and Niloy Ganguly <br>
-              <i>Under Review</i><a style="float:right; color:#3491fe;" data-toggle="collapse" data-target="#biasstance"><u>More</u> </a>
-      </li>
-        <div id="biasstance" class="collapse" style="font-size:15px;margin:50px">
-          The stance detection task aims at detecting the stance of a tweet or a text with respect to a target. These targets can be named entities or free-form sentences (claims). Though the task by nature involves reasoning of the tweet with respect to a target, we find that it is possible to achieve high accuracy on several publicly available Twitter stance detection datasets without looking at the target sentence. Specifically, a simple tweet classification model achieved human-level performance on the WT-WT dataset and more than two-third accuracy on a variety of other datasets. We carry out an investigation into the existence of biases in such datasets to find the potential spurious correlations of sentiment-stance relations and lexical choice associated with stance category. Furthermore, we propose a new bias-free dataset, the largest of its kind with 100k+ tweet-target pairs and evaluate its usefulness using the existing stance detection systems. Our results show much scope for research on stance detection systems.
-          <br> <br>
-          {% include elements/button.html link="../research/#Coming-Soon" text="Pdf"%}
-        </div>
+
 
 </ul>
 
