@@ -12,11 +12,10 @@ weight: 1
 <br>
 <h2 style="margin:50px"> Publications and Talks </h2>
 
-
 <ul style="font-size:20px;margin:50px">
       <li><a target="_blank" href="https://aclanthology.org/2021.naacl-main.303.pdf">
-        "<i style="font-family:sans-serif">t-</i>WTWT: Asserting the Role of Targets for Detecting Stance inTweets"</a>, Ayush Kaushal, Avirup Saha and Niloy Ganguly <br>
-              <i>NAACL 2021</i><a style="float:right; color:#3491fe;" data-toggle="collapse" data-target="#biasstance"><u>More</u> </a>
+        "<i style="font-family:sans-serif">t-</i>WTWT: Asserting the Role of Targets for Detecting Stance in Tweets"</a>, Ayush Kaushal, Avirup Saha and Niloy Ganguly <br>
+              <i>Proceedings of the 2021 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies (<b>NAACL-HLT 2021</b>)</i><a style="float:right; color:#3491fe;" data-toggle="collapse" data-target="#biasstance"><u>More</u> </a>
       </li>
         <div id="biasstance" class="collapse" style="font-size:15px;margin:50px">
           The stance detection task aims at detecting the stance of a tweet or a text for a target. These targets can be named entities or free-form sentences (claims). Though the task involves reasoning of the tweet with respect to a target, we find that it is possible to achieve high accuracy on several publicly available Twitter stance detection datasets without looking at the target sentence. Specifically, a simple tweet classification model achieved human-level performance on the WT–WT dataset and more than two-third accuracy on various other datasets. We investigate the existence of biases in such datasets to find the potential spurious correlations of sentiment-stance relations and lexcal choice associated with the stance category. Furthermore, we propose a new large dataset free of such biases and demonstrate its aptness on the existing stance detection systems. Our empirical findings show much scope for research on the stance detection task and proposes several considerations for creating future stance detection datasets.
@@ -37,7 +36,7 @@ weight: 1
   
       <li><a target="_blank" href="https://aclanthology.org/2021.semeval-1.46.pdf">
               "Multi-Staged Language Models for Extracting Measurements, their Attributes and Relations"</a>, Neel Karia*, Ayush Kaushal* and Faraaz Mallick* <br>
-              <i> The 15th International Workshop on Semantic Evaluation (SemEval-2021) at the ACL-IJCNLP 2021</i> <u><b>Second runner-up for Sub-Task2</b></u><a style="float:right; color:#3491fe;" data-toggle="collapse" data-target="#semeval21"><u>More</u> </a>
+              <i> 15th International Workshop on Semantic Evaluation (SemEval'21) at ACL-IJCNLP'21</i> <u><b>Second Runner-up</b></u><a style="float:right; color:#3491fe;" data-toggle="collapse" data-target="#semeval21"><u>More</u> </a>
       </li>
         <div id="semeval21" class="collapse" style="font-size:15px;margin:50px">SemEval-2021 Task 8: MeasEval aims at improving the machine understanding of measurements in scientific texts through a set of entity and semantic relation extraction sub-tasks on identifying quantity spans along with various attributes and relationships. This paper describes our system, consisting of a three-stage pipeline, that leverages pre-trained language models to extract the quantity spans in the text, followed by intelligent templates to identify units and modifiers. Finally, it identifies the quantity attributes and their relations using language models boosted with a feature re-using hierarchical architecture and multi-task learning. Our submission significantly outperforms the baseline, with the best model from the post-evaluation phase delivering more than 100% increase on F1 (Overall) from the baseline. <br> <br>
           {% include elements/button.html link="https://github.com/Ayushk4/SE-T8" text="Code" %} {% include elements/button.html link="https://aclanthology.org/2021.semeval-1.46.pdf" text="Pdf" %} {% include elements/button.html link="https://aclanthology.org/2021.semeval-1.46.bib" text="Cite" %} {% include elements/button.html link="https://ayushk4.github.io/Coming-Soon" text="Slides" %}
@@ -62,7 +61,7 @@ weight: 1
 
 
     <li><a target="_blank" href="https://www.theoj.org/joss-papers/joss.01956/10.21105.joss.01956.pdf">
-              "Basic Tools for Tokenizing Natural Language in Julia."</a>, Ayush Kaushal, Lyndon White, Mike Innes and Rohit Kumar <br>
+              "Basic Tools for Tokenizing Natural Language in Julia."</a>, Ayush Kaushal, Lyndon White, Mike Innes, Rohit Kumar <br>
               <i> The Journal of Open Source Software (JOSS) 2020</i> <a style="float:right;color:#3491fe" data-toggle="collapse" data-target="#joss2020"><u>More</u></a>
       </li>
         <div id="joss2020" class="collapse" style="font-size:15px;margin:50px">
@@ -76,10 +75,25 @@ weight: 1
         <br>
 
 
+    <li><a target="_blank" href="https://drive.google.com/file/d/1iNqtbP9h9d6acqpS8cw-BwzAib2Ldf3C/view?usp=sharing">
+              "Towards Target Aware Twitter Stance Detection."</a>, Ayush Kaushal<br>
+              <i> Bachelor's Thesis, IIT Kharagpur</i> <a style="float:right;color:#3491fe" data-toggle="collapse" data-target="#bachelorsthesis"><u>More</u></a>
+      </li>
+        <div id="bachelorsthesis" class="collapse" style="font-size:15px;margin:50px">
+        <!-- <div align="center">
+            <img id="mobile-img" src="../images/Bio-BERT.png" width="50%" border="0" height="50%" alt=""><br>
+            </div> -->
+            In this project, we first study the role of the target entities in detecting stance and based on our findings move towards target aware stance detection systems. We mainly analyse the various publicly available stance detection datasets on tweets. In these datasets, the text is a tweet and targets are either fixed entities or naturally occurring free-form sentences. Empirical findings show that despite the task requiring significant amount of understanding of the target being considered, one can easily achieve impressive performance by doing simple target-agnostic classification over a tweet. Specifically, we observe that a simple tweet classification model achieved near-human upper bound performance on a large scale dataset (WT-WT). These classification models can also achieve more than two-third of accuracy on 6 other Twitter stance detection datasets. Then, an analysis of some of the datasets is carried out to explain the existence of such biases in such datasets. We find some spurious correlations between tweet sentiment and stance classes. These datasets additionally have a set of lexical choices associated with their respective stance category. Consequently, we propose novel methods to augment the var ious existing stance detection dataset to inhibit target oblivious models from performing well and evaluated the dataset’s usefulness on the stance detection baseline models. With these proper benchmarks, we propose and experiment with several target aware stance detection models and show that taking into consideration, the target aware cues, the models deliver state of the art performance. Finally, we create a leaderboard for the newly created datasets and make our code, datasets and pre-trained models publicly available.
+            <br> <br>
+            {% include elements/button.html link="https://drive.google.com/file/d/1iNqtbP9h9d6acqpS8cw-BwzAib2Ldf3C/view?usp=sharing" text="Pdf" %} {% include elements/button.html link="https://drive.google.com/open?id=1iNqtbP9h9d6acqpS8cw-BwzAib2Ldf3C&disco=AAAAO4n2YTs" text="Code" %} {% include elements/button.html link="https://docs.google.com/presentation/d/1gZChpzpNbAcRGG6dyYhkTXHRL-WTDAz2/edit?usp=sharing&ouid=104189619769587518485&rtpof=true&sd=true" text="Slides" %} {% include elements/button.html link="https://drive.google.com/drive/folders/1FmngtkX1AJR2IAT8SPeWQYtKXVrtc0Me?usp=sharing" text="MidTerm" %}
+        </div>
+        <br>
+
+
 
     <li><a target="_blank" href="https://live.juliacon.org/talk/Z8WWNV">
               "Natural Language Processing in Julia."</a>, Ayush Kaushal <br>
-              <i> Full Talk: JuliaCon 2020 Conference</i> <a style="float:right;color:#3491fe" data-toggle="collapse" data-target="#juliacontalk"><u>More</u></a>
+              <i> 30 min Talk: JuliaCon 2020 Conference</i> <a style="float:right;color:#3491fe" data-toggle="collapse" data-target="#juliacontalk"><u>More</u></a>
       </li>
         <div id="juliacontalk" class="collapse" style="font-size:15px;margin:50px">
           The JuliaText ecosystem provides various packages for working with human languages. In this talk, I showed the usage of these JuliaText packages with Flux.jl for Natural Language Processing (NLP) with a focus on deep learning-based approaches. The attendees will gain working knowledge about how to apply the package for NLP in Julia. The talk will encompass Tokenizers, Word Embeddings, Recurrent Neural Networks and Transformer based Language models.
@@ -88,9 +102,6 @@ weight: 1
 
         </div>
         <br>
-
-
-
 </ul>
 
 <h2 style="margin:50px"> Other Selected Projects </h2>
