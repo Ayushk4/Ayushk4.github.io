@@ -24,7 +24,7 @@ permalink: /
 <div style="font-size:20px;margin-left:50px;"> -->
 Hi There! :wave:
 <br><br>
-I am a Masters in Computer Science student at the University of Texas at Austin. I am interested in Machine Learning and its applications to Natural Language Processing and Social Good. I am very interested in transformer based models and large scale pretraining. 
+I am a Masters in Computer Science student at the University of Texas at Austin. I am interested in Machine Learning and its applications to Natural Language Processing and Social Good. I am very interested in transformer based models and large scale pretraining.
 
 I did my Bachelor's degree in Computer Science from Indian Institute of Technology Kharagpur (2017-21). My Bachelor Thesis was under the guidance of <a href="https://scholar.google.com/citations?user=hCbFmUUAAAAJ&hl=en">Prof. Niloy Ganguly</a> on Twitter Stance Detection. It was acclaimed among the Best Bachelor's <a href="https://drive.google.com/drive/u/0/folders/1FmngtkX1AJR2IAT8SPeWQYtKXVrtc0Me">Thesis</a> and a portion of it was <a href="https://aclanthology.org/2021.naacl-main.303.pdf">published</a> to NAACL'21.
 
