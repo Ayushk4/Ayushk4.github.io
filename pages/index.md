@@ -24,12 +24,16 @@ permalink: /
 <div style="font-size:20px;margin-left:50px;"> -->
 Hi There! :wave:
 <br><br>
-I am a Masters in Computer Science student at the University of Texas at Austin. I am interested in Machine Learning and its applications to Natural Language Processing and Social Good. I am very interested in transformer based models and large scale pretraining.
-
+I am a Masters in Computer Science student at the University of Texas at Austin. I am passionate about Machine Learning and Deep Learning solutions to real-world problems and use-cases. My inclination is towards data in the text, image and audio modalities and I am very interested in large scale pretraining of transformer-based models.
+<br><br>
+I have experiences in Machine Learning applications to Natural Language Processing, Computer Vision, Speech Processing and Multimodal Learning. I have been fortunate to have the opportunity to work and excel on projects during my internships at IBM Research Labs and Google Summer of Code. Academic research at IIT Kharagpur and University of Oregon has helped me get a deeper understanding of the subject. My proficiency in Machine Learning is demonstrated through several publications at the top-tier venues.
+<br><br>
+My experiences developing <a href="softwares/">Open Source software</a> strengthened my software engineering skills and knowledge of systems. These software were presented at the JuliaCon 2020 conference and in the Journal of Open Source software.
+<br><br>
+I have won numerous hackathons and competitions in Machine Learning and AI-related areas - Cogito's 2021 low-latency Speech emotion recognition competition, EMNLP 2020' W-NUT Covid challenge, AllenNLP 2021 hackathon, and Opensoft 2018.
+<br><br>
 I did my Bachelor's degree in Computer Science from Indian Institute of Technology Kharagpur (2017-21). My Bachelor Thesis was under the guidance of <a href="https://scholar.google.com/citations?user=hCbFmUUAAAAJ&hl=en">Prof. Niloy Ganguly</a> on Twitter Stance Detection. It was acclaimed among the Best Bachelor's <a href="https://drive.google.com/drive/u/0/folders/1FmngtkX1AJR2IAT8SPeWQYtKXVrtc0Me">Thesis</a> and a portion of it was <a href="https://aclanthology.org/2021.naacl-main.303.pdf">published</a> to NAACL'21.
 
-<br><br>
-My reseach experience includes Machine Translation and MDL in NLP (ETH Zürich - Summer 2021), Multimodal Learning (SHI Labs, University of Oregon - Fall 2020), NLP for Social Good (IBM Research Labs - Summer 2020) and Sequence Labelling (Google Summer of Code - Summer 2019). During my early undergraduate years, I developed various <a href="softwares/">open source</a> softwares and packages.
 <br>
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons/css/academicons.min.css">     
@@ -49,7 +53,10 @@ My reseach experience includes Machine Translation and MDL in NLP (ETH Zürich -
 </ul>
 
 ## **News** 
-- **June 2021**:  Had a wonderful time attending the virtual [NAACL 2021](https://2021.naacl.org/) and presenting (3 + 3 minutes) my paper.
+- **September 2021**: Our prompt-engineered GPT-3 based solution for text simplication system won the best design award at AllenNLP' 2021 Hackathon.
+- **August 2021**: I am happy to share that our team won the Cogito's 2021 Hackathon on low-latency Speech Emotion Recognition.
+- **July 2021**: I will be attending the weeklong Deepmind's Eastern European ML School, look forward to interacting with everyone.
+- **June 2021**: Had a wonderful time attending the virtual [NAACL 2021](https://2021.naacl.org/) and presenting (3 + 3 minutes) my paper.
 - **May 2021**: My <a href="https://drive.google.com/drive/u/0/folders/1FmngtkX1AJR2IAT8SPeWQYtKXVrtc0Me">Bachelor's Thesis</a> titled "Towards Target Aware Twitter Stance Detection" selected among Best Thesis
 - **April 2021**: I will be joining the UT Austin's Computer Science Department this fall as a Master's student.
 - **March 2021**: 1 first-author [paper](https://aclanthology.org/2021.naacl-main.303/) accepted at NAACL-HLT 2021.
