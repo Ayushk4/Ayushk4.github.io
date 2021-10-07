@@ -53,7 +53,7 @@ I did my Bachelor's degree in Computer Science from Indian Institute of Technolo
 </ul>
 
 ## **News** 
-- **September 2021**: Our prompt-engineered GPT-3 based solution for text simplication system won the best design award at AllenNLP' 2021 Hackathon.
+- **September 2021**: Our system improving GPT-3 for text simplication won the best design award at AllenNLP 2021 Hackathon.
 - **August 2021**: I am happy to share that our team won the Cogito's 2021 Hackathon on low-latency Speech Emotion Recognition.
 - **July 2021**: I will be attending the weeklong Deepmind's Eastern European ML School, look forward to interacting with everyone.
 - **June 2021**: Had a wonderful time attending the virtual [NAACL 2021](https://2021.naacl.org/) and presenting (3 + 3 minutes) my paper.
