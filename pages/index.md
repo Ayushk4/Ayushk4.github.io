@@ -52,7 +52,7 @@ I did my Bachelor's degree in Computer Science from Indian Institute of Technolo
 
 ## **News** 
 - **August 2022**: Concluded my Research Internship at Google Search on efficient NLU and prefix generalization. Details and paper coming soon!
-- **March 2022**: One Oral accepted at NAACL 22, co-authored with <a href="https://mahowak.github.io/">Prof. Kyle Mahowald</a> on analysing character information in LLMs like GPT.
+- **March 2022**: One Oral accepted at <a href="https://aclanthology.org/2022.naacl-main.179/">NAACL 22</a>, co-authored with <a href="https://mahowak.github.io/">Prof. Kyle Mahowald</a> on analysing character information in LLMs like GPT.
 - **Novemeber 2021**: One paper accepted in <a href="https://aclanthology.org/2021.emnlp-main.748/">EMNLP 2021</a> on implication of causal direction of data in NLP.
 - **October 2021**: My Computer Vision system on X-ray based lung diseased detection won the Tredence's Last Mile Hacker Challenge.
 - **September 2021**: Our system on GPT-3 for text simplication won the best design award at AllenNLP 2021 Hackathon.
