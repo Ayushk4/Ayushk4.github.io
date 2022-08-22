@@ -24,13 +24,11 @@ permalink: /
 <div style="font-size:20px;margin-left:50px;"> -->
 Hi There! :wave:
 <br><br>
-I am a Masters in Computer Science student at the University of Texas at Austin. I am passionate about Machine Learning and Deep Learning solutions to real-world problems and use-cases. My inclination is towards data in the text, image and audio modalities and I am very interested in large scale pretraining of transformer-based models.
+I am a Masters in Computer Science student at the University of Texas at Austin. I am passionate about Machine Learning and Deep Learning solutions to real-world problems. My inclination is towards data in the text, image and audio modalities and I am very interested in making large language models feasible for deployment.
 <br><br>
-I have experiences in Machine Learning applications to Natural Language Processing, Computer Vision, Speech Processing and Multimodal Learning. I have been fortunate to have the opportunity to work and excel on projects during my internships at IBM Research Labs and Google Summer of Code. Academic research at IIT Kharagpur and University of Oregon has helped me get a deeper understanding of the subject. My proficiency in Machine Learning is demonstrated through several publications at the top-tier venues.
+My experiences in Machine Learning stems from my research internships at Google, IBM, ETH Zurich, University of Oregon and IIT Kharagpur. I am grateful to all my co-authors and mentors to help me excel in these internships.
 <br><br>
-My experiences developing <a href="softwares/">Open Source software</a> strengthened my software engineering skills and knowledge of systems. These software were presented at the JuliaCon 2020 conference and in the Journal of Open Source software.
-<br><br>
-I have won numerous hackathons and competitions in Machine Learning and AI-related areas - Cogito's 2021 low-latency Speech emotion recognition competition, EMNLP 2020' W-NUT Covid challenge, AllenNLP 2021 hackathon, and Opensoft 2018.
+As an undergraudate, I developed various <a href="softwares/">Open Source software</a> - including web applications and NLP/ML pacakges in Julia programming languages. I presented these at the JuliaCon 2020 conference and in the Journal of Open Source software. I have also won numerous hackathons and competitions in Machine Learning and AI-related areas - Cogito's 2021, EMNLP 2020' W-NUT Covid challenge, AllenNLP 2021 hackathon, and Opensoft 2018.
 <br><br>
 I did my Bachelor's degree in Computer Science from Indian Institute of Technology Kharagpur (2017-21). My Bachelor Thesis was under the guidance of <a href="https://scholar.google.com/citations?user=hCbFmUUAAAAJ&hl=en">Prof. Niloy Ganguly</a> on Twitter Stance Detection. It was acclaimed among the Best Bachelor's <a href="https://drive.google.com/drive/u/0/folders/1FmngtkX1AJR2IAT8SPeWQYtKXVrtc0Me">Thesis</a> and a portion of it was <a href="https://aclanthology.org/2021.naacl-main.303.pdf">published</a> to NAACL'21.
 
@@ -38,7 +36,7 @@ I did my Bachelor's degree in Computer Science from Indian Institute of Technolo
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons/css/academicons.min.css">     
     <br> <br> 
-   <pre><a href="https://scholar.google.com/citations?user=HPXkux0AAAAJ&hl=en"> <i class="ai ai-google-scholar ai-2x"></i> </a>  <a href="https://github.com/ayushk4"> <i class="fab fa-2x fa-github"></i></a>   <a href="https://www.linkedin.com/in/ayushk4"> <i class="fab fa-2x fa-linkedin" href="url"></i> </a></pre>
+   <pre><a href="https://scholar.google.com/citations?user=HPXkux0AAAAJ&hl=en"> <i class="ai ai-google-scholar ai-2x"></i> </a>  <a href="https://github.com/ayushk4"> <i class="fab fa-2x fa-github"></i></a>   <a href="https://www.linkedin.com/in/ayushkaushal4"> <i class="fab fa-2x fa-linkedin" href="url"></i> </a></pre>
   </div>
 </div>
 <br>
@@ -53,7 +51,11 @@ I did my Bachelor's degree in Computer Science from Indian Institute of Technolo
 </ul>
 
 ## **News** 
-- **September 2021**: Our system improving GPT-3 for text simplication won the best design award at AllenNLP 2021 Hackathon.
+- **August 2022**: I had a wonderful summer as a Research Intern at Google Search on efficient NLU and prefix generalization. More details and paper coming soon!
+- **March 2022**: One paper accepted as an Oral to NAACL 22, co-authored with <a href="https://mahowak.github.io/">Prof. Kyle Mahowald</a>, analysing the character information in LLMs like GPT-J.
+- **Novemeber 2021**: One paper accepted in <a href="https://aclanthology.org/2021.emnlp-main.748/">EMNLP 2021</a> on implication of causal direction of data in NLP.
+- **October 2021**: My Computer Vision system on X-ray based lung diseased detection won the Tredence's Last Mile Hacker Challenge.
+- **September 2021**: Our system on GPT-3 for text simplication won the best design award at AllenNLP 2021 Hackathon.
 - **August 2021**: I am happy to share that our team won the Cogito's 2021 Hackathon on low-latency Speech Emotion Recognition.
 - **July 2021**: I will be attending the weeklong Deepmind's Eastern European ML School, look forward to interacting with everyone.
 - **June 2021**: Had a wonderful time attending the virtual [NAACL 2021](https://2021.naacl.org/) and presenting (3 + 3 minutes) my paper.
@@ -99,8 +101,30 @@ ___
 
 
 <ul>
-      <li><a target="_blank" href="https://aclanthology.org/2021.naacl-main.303.pdf">
-        "<i style="font-family:sans-serif">t</i> WT—WT: Asserting the Role of Targets for Detecting Stance in Tweets"</a> <br><i> Ayush Kaushal, Avirup Saha and Niloy Ganguly </i><br>
+      <li><a target="_blank" href="https://aclanthology.org/2022.naacl-main.179/">
+        "What do tokens know about their characters and how do they know it?"</a> <br><i> Ayush Kaushal and Kyle Mahowald </i><br>
+              Proceedings of the 2022 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies (<b>NAACL-HLT 2022</b>)
+              <br>
+              {% include elements/button.html link="https://github.com/Ayushk4/character-probing-pytorch" text="Code" %} {% include elements/button.html link="https://aclanthology.org/2022.naacl-main.179.pdf" text="Pdf" %} {% include elements/button.html link="https://aclanthology.org/2022.naacl-main.179.bib" text="Cite" %}
+              <a style="float:right; color:#3491fe;" data-toggle="collapse" data-target="#biasstance"><u>More</u> </a>
+        </li>
+        <div id="covid" class="collapse" style="font-size:15px;margin:50px">Pre-trained language models (PLMs) that use subword tokenization schemes can succeed at a variety of language tasks that require character-level information, despite lacking explicit access to the character composition of tokens. Here, studying a range of models (e.g., GPT- J, BERT, RoBERTa, GloVe), we probe what word pieces encode about character-level information by training classifiers to predict the presence or absence of a particular alphabetical character in a token, based on its embedding (e.g., probing whether the model embedding for “cat” encodes that it contains the character “a”). We find that these models robustly encode character-level information and, in general, larger models perform better at the task. We show that these results generalize to characters from non-Latin alphabets (Arabic, Devanagari, and Cyrillic). Then, through a series of experiments and analyses, we investigate the mechanisms through which PLMs acquire English-language character information during training and argue that this knowledge is acquired through multiple phenomena, including a systematic relationship between particular characters and particular parts of speech, as well as natural variability in the tokenization of related strings.
+		<br> <br>	
+    <li><a target="_blank" href="https://drive.google.com/file/d/1oAn378KMU-cIUrXcVc0clZ_7PuwlX_Zb/view?usp=sharing">
+              "Causal Direction in Data Matters: Implications of Causal and Anticausal Learning in NLP",</a> <br> <i>Zhijing Jin, Julius von Kügelgen, Jingwei Ni, Tejas Vaidhya, Ayush Kaushal, Mrinmaya Sachan and Bernhard Schoelkopf </i><br>
+              <u><b>Long Paper</b></u> at the 2021 Conference on Emperical Methods in Natural Language Processing (EMNLP 2021)
+              <br>
+              {% include elements/button.html link="https://drive.google.com/file/d/1JKvfPqNUGg-RDtj2-6tq9NLYg6P_xqxL/view?usp=sharing" text="Code" %} {% include elements/button.html link="https://drive.google.com/file/d/1oAn378KMU-cIUrXcVc0clZ_7PuwlX_Zb/view?usp=sharing" text="Pdf" %} {% include elements/button.html link="https://ayushk4.github.io/Coming-Soon" text="Cite" %} {% include elements/button.html link="https://ayushk4.github.io/Coming-Soon" text="Poster" %}
+              
+              <a style="float:right; color:#3491fe;" data-toggle="collapse" data-target="#covid"><u>More</u> </a>
+      </li>
+        <div id="covid" class="collapse" style="font-size:15px;margin:50px">The principle of independent causal mechanisms (ICM) states that generative processes of real world data consist of independent modules which do not influence or inform each other. While this idea has led to fruitful developments in the field of causal inference, it is not widely-known in the NLP community. In this work, we argue that the causal direction of the data collection process bears nontrivial implications that can explain a number of published NLP findings, such as differences in semi-supervised learning (SSL) and domain adaptation (DA) performance across different settings. We categorize common NLP tasks according to their causal direction and empirically assay the validity of the ICM principle for text data using minimum description length. We conduct an extensive meta-analysis of over 100 published SSL and 30 DA studies, and find that the results are consistent with our expectations based on causal insights. This work presents the first attempt to analyze the ICM principle in NLP, and provides constructive suggestions for future modeling choices.
+. <br> <br>
+      </div>
+        <br>
+
+       <li><a target="_blank" href="https://aclanthology.org/2021.naacl-main.303.pdf">
+        "Asserting the Role of Targets for Detecting Stance in Tweets"</a> <br><i> Ayush Kaushal, Avirup Saha and Niloy Ganguly </i><br>
               Proceedings of the 2021 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies (<b>NAACL-HLT 2021</b>)
               <br>
               {% include elements/button.html link="https://github.com/Ayushk4/bias-stance" text="Code" %} {% include elements/button.html link="https://aclanthology.org/2021.naacl-main.303.pdf" text="Pdf" %} {% include elements/button.html link="https://aclanthology.org/2021.naacl-main.303.bib" text="Cite" %} {% include elements/button.html link="https://docs.google.com/presentation/d/11kM4MJ4ct1GtdFuzko-Ou8wN5QxqhmL6hXG3WBrPevk/edit?usp=sharing" text="Slides" %} {% include elements/button.html link="https://drive.google.com/file/d/1L6BW887fOtZZ2d9jnB6Jl_Gqnu6LnLMX/view?usp=sharing" text="Poster" %}
@@ -117,18 +141,6 @@ ___
               <b><u>Oral Presentation</u></b> at the 6th Workshop on Noisy User-generated Text (W-NUT) at the 2020 Conference on Emperical Methods in Natural Language Processing (EMNLP 2020) <u><b>Shared Task Winners</b></u>
               <br>
               {% include elements/button.html link="https://github.com/Ayushk4/extract_covid_entity" text="Code" %} {% include elements/button.html link="https://www.aclweb.org/anthology/2020.wnut-1.79.pdf" text="Pdf" %} {% include elements/button.html link="https://www.aclweb.org/anthology/2020.wnut-1.79.bib" text="Cite" %} {% include elements/button.html link="https://docs.google.com/presentation/d/13DDY6VSmrVPBddTjWb3rThYRFlRDE_9fi4iyBrhJev4/edit?usp=sharing" text="Slides" %} {% include elements/button.html link="https://github.com/noisy-text/noisy-text.github.io/blob/master/2020/posters/WNUT2020_91_poster%20-%20Tejas%20vaidhya.pdf" text="Poster" %}
-              
-              <a style="float:right; color:#3491fe;" data-toggle="collapse" data-target="#covid"><u>More</u> </a>
-      </li>
-        <div id="covid" class="collapse" style="font-size:15px;margin:50px">Twitter has acted as an important source of information during disasters and pandemic, especially during the times of COVID-19. In this paper, we describe our system entry for <i>WNUT 2020 Shared Task-3</i>. The task was aimed at automating the extraction of a variety of COVID-19 related events from Twitter, such as individuals who recently contracted the virus, someone with symptoms who were denied testing and believed remedies against the infection. The system consists of separate multi-task models for slot-filling subtasks and sentence-classification subtasks while leveraging the useful sentence-level information for the corresponding event. The system uses COVID-Twitter-Bert with attention-weighted pooling of candidate slot-chunk features to capture the useful information chunks. The system ranks <b>1st at the leader-board</b> with F1 of 0.6598, without using any ensembles or additional datasets. <br> <br>
-      </div>
-        <br>
-
-    <li><a target="_blank" href="https://drive.google.com/file/d/1oAn378KMU-cIUrXcVc0clZ_7PuwlX_Zb/view?usp=sharing">
-              "Causal Direction in Data Matters: Implications of Causal and Anticausal Learning in NLP",</a> <br> <i>Zhijing Jin, Julius von Kügelgen, Jingwei Ni, Tejas Vaidhya, Ayush Kaushal, Mrinmaya Sachan and Bernhard Schoelkopf </i><br>
-              <u><b>Long Paper</b></u> at the 2021 Conference on Emperical Methods in Natural Language Processing (EMNLP 2021)
-              <br>
-              {% include elements/button.html link="https://drive.google.com/file/d/1JKvfPqNUGg-RDtj2-6tq9NLYg6P_xqxL/view?usp=sharing" text="Code" %} {% include elements/button.html link="https://drive.google.com/file/d/1oAn378KMU-cIUrXcVc0clZ_7PuwlX_Zb/view?usp=sharing" text="Pdf" %} {% include elements/button.html link="https://ayushk4.github.io/Coming-Soon" text="Cite" %} {% include elements/button.html link="https://ayushk4.github.io/Coming-Soon" text="Poster" %}
               
               <a style="float:right; color:#3491fe;" data-toggle="collapse" data-target="#covid"><u>More</u> </a>
       </li>
@@ -218,10 +230,10 @@ ___
 
         </div>
         <br>
-</ul>
+</>
 
 
-<h2> Other Selected Projects </h2>
+<<h2> Other Selected Projects </h2>
 
 {% include projects/index.html %}
 
