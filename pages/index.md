@@ -51,8 +51,8 @@ I did my Bachelor's degree in Computer Science from Indian Institute of Technolo
 </ul>
 
 ## **News** 
-- **August 2022**: I had a wonderful summer as a Research Intern at Google Search on efficient NLU and prefix generalization. More details and paper coming soon!
-- **March 2022**: One paper accepted as an Oral to NAACL 22, co-authored with <a href="https://mahowak.github.io/">Prof. Kyle Mahowald</a>, analysing the character information in LLMs like GPT-J.
+- **August 2022**: Concluded my Research Internship at Google Search on efficient NLU and prefix generalization. More details and paper coming soon!
+- **March 2022**: One Oral paper accepted at NAACL 22, co-authored with <a href="https://mahowak.github.io/">Prof. Kyle Mahowald</a>, analysing the character information in LLMs like GPT-J.
 - **Novemeber 2021**: One paper accepted in <a href="https://aclanthology.org/2021.emnlp-main.748/">EMNLP 2021</a> on implication of causal direction of data in NLP.
 - **October 2021**: My Computer Vision system on X-ray based lung diseased detection won the Tredence's Last Mile Hacker Challenge.
 - **September 2021**: Our system on GPT-3 for text simplication won the best design award at AllenNLP 2021 Hackathon.
@@ -109,7 +109,9 @@ ___
               <a style="float:right; color:#3491fe;" data-toggle="collapse" data-target="#biasstance"><u>More</u> </a>
         </li>
         <div id="covid" class="collapse" style="font-size:15px;margin:50px">Pre-trained language models (PLMs) that use subword tokenization schemes can succeed at a variety of language tasks that require character-level information, despite lacking explicit access to the character composition of tokens. Here, studying a range of models (e.g., GPT- J, BERT, RoBERTa, GloVe), we probe what word pieces encode about character-level information by training classifiers to predict the presence or absence of a particular alphabetical character in a token, based on its embedding (e.g., probing whether the model embedding for “cat” encodes that it contains the character “a”). We find that these models robustly encode character-level information and, in general, larger models perform better at the task. We show that these results generalize to characters from non-Latin alphabets (Arabic, Devanagari, and Cyrillic). Then, through a series of experiments and analyses, we investigate the mechanisms through which PLMs acquire English-language character information during training and argue that this knowledge is acquired through multiple phenomena, including a systematic relationship between particular characters and particular parts of speech, as well as natural variability in the tokenization of related strings.
-		<br> <br>	
+		<br> <br> 
+	</div>
+	<br>
     <li><a target="_blank" href="https://drive.google.com/file/d/1oAn378KMU-cIUrXcVc0clZ_7PuwlX_Zb/view?usp=sharing">
               "Causal Direction in Data Matters: Implications of Causal and Anticausal Learning in NLP",</a> <br> <i>Zhijing Jin, Julius von Kügelgen, Jingwei Ni, Tejas Vaidhya, Ayush Kaushal, Mrinmaya Sachan and Bernhard Schoelkopf </i><br>
               <u><b>Long Paper</b></u> at the 2021 Conference on Emperical Methods in Natural Language Processing (EMNLP 2021)
@@ -230,10 +232,10 @@ ___
 
         </div>
         <br>
-</>
+</ul>
 
 
-<<h2> Other Selected Projects </h2>
+<h2> Other Selected Projects </h2>
 
 {% include projects/index.html %}
 
