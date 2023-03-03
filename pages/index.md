@@ -85,7 +85,6 @@ ___
 
 <!-- ## Publications and Talks -->
 
-Please Check <a href="https://scholar.google.com/citations?user=HPXkux0AAAAJ&hl=en"> Google Scholar </a> or <a href="www.twitter.com/_ayushkaushal"> Twitter </a> for latest info.
 <!-- <div class="row">
 #{% include about/timeline.html title="Research Experience" source=site.data.education-timeline %}
 </div >
