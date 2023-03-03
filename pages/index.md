@@ -26,7 +26,7 @@ Hi There! :wave:
 <br><br>
 I am a Graduate Student at University of Texas at Austin. I am currently working on getting models more powerful than GPT-3 running on our personal device and solve real-world problems using it. (Spoilers: It will be done by mid-March'23).
 <br><br>
-Previously, I have done various research projects at Google (efficient neural models), IBM, ETH Zurich, University of Oregon and IIT Kharagpur. My publications are at EACL'23, NAACL'22 & 21, EMNLP, etc. But my most exciting work is to be released. Following on Twitter to get notified.
+Previously, I have done various research projects at Google (efficient neural models), IBM, ETH Zurich, University of Oregon and IIT Kharagpur. My publications are at EACL'23, NAACL'22 & 21, EMNLP, etc. But my most exciting work is what I am currently working on. Follow on Twitter to get notified once released.
 <br><br>
 As an undergraduate, I developed various Open Source softwares in Julia language surrounding the Machine Learning & NLP ecosystem.
 <br><br>
