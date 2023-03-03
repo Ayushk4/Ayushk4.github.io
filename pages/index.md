@@ -24,19 +24,18 @@ permalink: /
 <div style="font-size:20px;margin-left:50px;"> -->
 Hi There! :wave:
 <br><br>
-I am a Masters in Computer Science student at the University of Texas at Austin. I am passionate about Machine Learning and Deep Learning solutions to real-world problems. My inclination is towards data in the text, image and audio modalities and I am very interested in making large language models feasible for deployment.
+I am a Graduate Student at University of Texas at Austin. I am currently working on getting models more powerful than GPT-3 running on our personal device and solve real-world problems using it. (Spoilers: It will be done by mid-March'23).
 <br><br>
-My experiences in Machine Learning stems from my research internships at Google, IBM, ETH Zurich, University of Oregon and IIT Kharagpur. I am grateful to all my co-authors and mentors to help me excel in these internships.
+Previously, I have done various research projects at Google (efficient neural models), IBM, ETH Zurich, University of Oregon and IIT Kharagpur. My publications are at EACL'23, NAACL'22 & 21, EMNLP, etc. But my most exciting work is to be released. Following on Twitter to get notified.
 <br><br>
-As an undergraudate, I developed various <a href="softwares/">Open Source software</a> - including web applications and NLP/ML packages in Julia programming languages. I presented these at the JuliaCon 2020 conference and in the Journal of Open Source software. I have also won numerous hackathons and competitions in Machine Learning and AI-related areas - Cogito's 2021, EMNLP 2020' W-NUT Covid challenge, AllenNLP 2021 hackathon, and Opensoft 2018.
+As an undergraduate, I developed various Open Source softwares in Julia language surrounding the Machine Learning & NLP ecosystem.
 <br><br>
-I did my Bachelor's degree in Computer Science from Indian Institute of Technology Kharagpur (2017-21). My Bachelor Thesis was under the guidance of <a href="https://scholar.google.com/citations?user=hCbFmUUAAAAJ&hl=en">Prof. Niloy Ganguly</a> on Twitter Stance Detection. It was acclaimed among the Best Bachelor's <a href="https://drive.google.com/drive/u/0/folders/1FmngtkX1AJR2IAT8SPeWQYtKXVrtc0Me">Thesis</a> and a portion of it was <a href="https://aclanthology.org/2021.naacl-main.303.pdf">published</a> to NAACL'21.
 
 <br>
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons/css/academicons.min.css">     
     <br> <br> 
-   <pre><a href="https://scholar.google.com/citations?user=HPXkux0AAAAJ&hl=en"> <i class="ai ai-google-scholar ai-2x"></i> </a>  <a href="https://github.com/ayushk4"> <i class="fab fa-2x fa-github"></i></a>   <a href="https://www.linkedin.com/in/ayushkaushal4"> <i class="fab fa-2x fa-linkedin" href="url"></i> </a></pre>
+   <pre><a href="https://scholar.google.com/citations?user=HPXkux0AAAAJ&hl=en"> <i class="ai ai-google-scholar ai-2x"></i> </a>  <a href="https://github.com/ayushk4"> <i class="fab fa-2x fa-github"></i></a>   <a href="https://www.linkedin.com/in/ayushkaushal4"> <i class="fab fa-2x fa-linkedin" href="url"></i> </a>   <a href="https://www.twitter.com/_ayushkaushal"> <i class="fab fa-2x fa-twitter" href="url"></i> </a></pre>
   </div>
 </div>
 <br>
@@ -46,11 +45,10 @@ I did my Bachelor's degree in Computer Science from Indian Institute of Technolo
 
 <ul style="font-size:19.6px;margin-left:45px">
 
-
-
 </ul>
 
 ## **News** 
+- **Jan 2023**: My paper from my time at Google has been accepted at EACL'23. See you in May at Dubrovnik.
 - **August 2022**: Concluded my Research Internship at Google Search on efficient NLU and prefix generalization. Details and paper coming soon!
 - **March 2022**: One Oral accepted at <a href="https://aclanthology.org/2022.naacl-main.179/">NAACL 22</a>, co-authored with <a href="https://mahowak.github.io/">Prof. Kyle Mahowald</a> on analysing character information in LLMs like GPT.
 - **Novemeber 2021**: One paper accepted in <a href="https://aclanthology.org/2021.emnlp-main.748/">EMNLP 2021</a> on implication of causal direction of data in NLP.
@@ -87,7 +85,7 @@ ___
 
 <!-- ## Publications and Talks -->
 
-
+Please Check <a href="https://scholar.google.com/citations?user=HPXkux0AAAAJ&hl=en"> Google Scholar </a> or <a href="www.twitter.com/_ayushkaushal"> Twitter </a> for latest info.
 <!-- <div class="row">
 #{% include about/timeline.html title="Research Experience" source=site.data.education-timeline %}
 </div >
