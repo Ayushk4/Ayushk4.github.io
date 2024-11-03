@@ -24,11 +24,11 @@ permalink: /
 <div style="font-size:20px;margin-left:50px;"> -->
 Hi There! :wave:
 <br><br>
-I am a Graduate Student at University of Texas at Austin. I am currently working on getting models more powerful than GPT-3 running on our personal device and solve real-world problems using it. (Spoilers: It will be done by mid-March'23).
+I am a Graduate Student at University of Texas at Austin. I am currently researching with Prof. Irina Rish (Mila Institute, University of Montreal) on efficient foundation model training and inference along the directions of [low-bitwidth language modeling](https://arxiv.org/abs/2407.12327), [model compression](https://arxiv.org/abs/2309.14021) and [continual pretraining](https://blog.nolano.ai/Hi-NOLIN/).
 <br><br>
-Previously, I have done various research projects at Google (efficient neural models), IBM, ETH Zurich, University of Oregon and IIT Kharagpur. My publications are at EACL'23, NAACL'22 & 21, EMNLP, etc. But my most exciting work is what I am currently working on. Follow on Twitter to get notified once released.
+Prior to this, I was researching at Google, Mountain View on [Efficient Transformer Architecture for Beyond Turn-Based Interactivity](https://aclanthology.org/2023.eacl-main.31/) with [Shyam Upadhyay](http://shyamupa.com/), [Aditya Gupta](https://scholar.google.com/citations?user=iSAeYoIAAAAJ&hl=en) and [Manaal Faruqui](https://www.manaalfaruqui.com/). Before that, I worked on [Interpretability in LLMs](https://aclanthology.org/2022.naacl-main.179/) with [Prof. Kyle Mahowald](https://mahowak.github.io/) at UT Austin. Even further back, I researched at ETH Zurich on [Causal NLP](https://aclanthology.org/2021.emnlp-main.748/), [University of Oregon](https://www.shi-labs.com/) on Multimodal NLP, IBM India on AI Application and IIT Kharagpur on [Robustness and Evaluation of NLP Models](https://aclanthology.org/2021.naacl-main.303/).
 <br><br>
-As an undergraduate, I developed various Open Source softwares in Julia language surrounding the Machine Learning & NLP ecosystem.
+As an undergraduate, I developed various Open Source softwares in Julia language surrounding the [Machine Learning](https://github.com/FluxML) & [NLP](https://github.com/JuliaText) ecosystem.
 <br><br>
 
 <br>
@@ -40,8 +40,21 @@ As an undergraduate, I developed various Open Source softwares in Julia language
 </div>
 <br>
 
+### *** WEBSITE UNDER MAINTENANCE *** In the meantime, enjoy these fun facts:
 
-<!-- <h4 style="text-indent:-0.0em;font-weight:bold;font-size:25px;margin-left:50px;margin-bottom:20px;margin-right:0px;margin-top:0px">News!</h4> -->
+* Scalable Foundation Model Training:
+    * Maximum NVIDIA GPUs I've scaled is 6144 NVIDIA GPUs for Hi-NOLIN model.
+    * The same for AMD is 2048 GCD (1024 GPUs) on Frontier Supercomputer.
+    * The weirdest hardware configuration I dealt with had "6" GPUs per node and IBM CPUs (which is neither x86 nor ARM, but Power CPU Architecture).
+* Neural Network (NN) Training (small scale):
+    * Trained atleast one NN on atleast one GPU of each NVIDIA microarchitecture generation from Kepler to Hopper.
+    * Trained atleast one NN on atleast one GPU from NVIDIA, AMD, Gaudi, Google TPU chips.
+    * Trained atleast one NN on atleast one CPU from Intel, AMD and Apple M-series Chip.
+* Wrote the first open implementation to run 4-bit LLaMa models [on Mac CPU](https://github.com/NolanoOrg/llama-int4-quant).
+* Preferred language for neural networks: Python >>> Julia > JS > C/C++ > English.
+
+
+<!-- 
 
 <ul style="font-size:19.6px;margin-left:45px">
 
@@ -81,16 +94,6 @@ As an undergraduate, I developed various Open Source softwares in Julia language
 <br>
 
 ___
-
-
-<!-- ## Publications and Talks -->
-
-<!-- <div class="row">
-#{% include about/timeline.html title="Research Experience" source=site.data.education-timeline %}
-</div >
-*details of the projects can be found* [here](research/)
-
- -->
 
 
 
@@ -169,10 +172,6 @@ ___
               <a style="float:right;color:#3491fe" data-toggle="collapse" data-target="#wetlab"><u>More</u></a>
       </li>
         <div id="wetlab" class="collapse" style="font-size:15px;margin:50px">
-        <!-- <br>
-        <div align="center">
-            <img id="mobile-img" src="../images/Bio-BERT.png" width="50%" border="0" height="50%" alt=""><br>
-            </div> -->
             Supervised models trained to predict properties from representations, have been achieving high accuracy on a variety of tasks. For instance, the BERT family seems to work exceptionally well on the downstream task from NER tagging to the range of other linguistic tasks. But the vocabulary used in the medical field contains a lot of different tokens used only in the medical industry such as the name of different diseases, devices, organisms, medicines, etc. that makes it difficult for traditional BERT model to create contextualized embedding. In this paper, we are going to illustrate the System for Named Entity Tagging based on Bio-Bert. Experimental results show that our model gives substantial improvements over the baseline and stood the fourth runner up in terms of F1 score, and first runner up in terms of Recall among 13 teams with just 2.21 F1 score behind the best one.
             <br> <br>
         </div>
@@ -187,9 +186,6 @@ ___
               <a style="float:right;color:#3491fe" data-toggle="collapse" data-target="#joss2020"><u>More</u></a>
       </li>
         <div id="joss2020" class="collapse" style="font-size:15px;margin:50px">
-        <!-- <div align="center">
-            <img id="mobile-img" src="../images/Bio-BERT.png" width="50%" border="0" height="50%" alt=""><br>
-            </div> -->
             WordTokenizers.jl is a tool to help users of the Julia programming language work with natural language. WordTokenizers.jl provides a flexible API for defining fast tokenizers and sentence segmentors. Using this API several standard tokenizers and sentence segmenters have been implemented, allowing researchers and practitioners to focus on the higher details of their NLP tasks. WordTokenizers.jl uses a TokenBuffer API and its various lexers for fast word tokenization. TokenBuffer turns the string into a readable stream. A desired set of TokenBuffer lexers are used to read characters from the stream and flush out into an array of tokens. The package provides the following tokenizers made using this API. WordTokenizers.jl is currently being used by packages like TextAnalysis.jl, Transformers.jl and CorpusLoaders.jl for tokenizing text.
             <br> <br>
         </div>
@@ -204,9 +200,6 @@ ___
               <a style="float:right;color:#3491fe" data-toggle="collapse" data-target="#bachelorsthesis"><u>More</u></a>
       </li>
         <div id="bachelorsthesis" class="collapse" style="font-size:15px;margin:50px">
-        <!-- <div align="center">
-            <img id="mobile-img" src="../images/Bio-BERT.png" width="50%" border="0" height="50%" alt=""><br>
-            </div> -->
             The stance of a text is the attitude or standpoint of the author towards an entity or a debate topic. Stance Detection is the Natural Language Understanding (NLU) task to automatically detect the stance of a text for a given target. The targets are either named entities such as policies, politicians, or as free-form sentences such as popular debate topics, rumoured online claims or article headlines. Over the past few years, a considerable attention has been given to research on Stance Detection Systems. Several large scale datasets have also been proposed on a variety of domains to promote the progress of the field and to provide reliable benchmarks.
 
             In this project, we first study the role of the target entities in detecting stance and based on our findings move towards target aware stance detection systems. We mainly analyse the various publicly available stance detection datasets on tweets. In these datasets, the text is a tweet and targets are either fixed entities or naturally occurring free-form sentences. Empirical findings show that despite the task requiring significant amount of understanding of the target being considered, one can easily achieve impressive performance by doing simple target-agnostic classification over a tweet. Specifically, we observe that a simple tweet classification model achieved near-human upper bound performance on a large scale dataset (WT-WT). These classification models can also achieve more than two-third of accuracy on 6 other Twitter stance detection datasets. Then, an analysis of some of the datasets is carried out to explain the existence of such biases in such datasets. We find some spurious correlations between tweet sentiment and stance classes. These datasets additionally have a set of lexical choices associated with their respective stance category. Consequently, we propose novel methods to augment the var ious existing stance detection dataset to inhibit target oblivious models from performing well and evaluated the dataset’s usefulness on the stance detection baseline models. With these proper benchmarks, we propose and experiment with several target aware stance detection models and show that taking into consideration, the target aware cues, the models deliver state of the art performance. Finally, we create a leaderboard for the newly created datasets and make our code, datasets and pre-trained models publicly available.
@@ -241,4 +234,4 @@ ___
 <div style="margin-left:30px">
 <i>Email: username at gmail dot com ; where username = ayushk4</i><br>
 
-
+ -->
