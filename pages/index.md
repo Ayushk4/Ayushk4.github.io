@@ -43,13 +43,13 @@ As an undergraduate, I developed various Open Source softwares in Julia language
 ### *** WEBSITE UNDER MAINTENANCE *** In the meantime, enjoy these fun facts:
 
 * Scalable Foundation Model Training:
-    * Maximum NVIDIA GPUs I've scaled is 6144 NVIDIA GPUs for Hi-NOLIN model.
+    * Maximum NVIDIA GPUs I've scaled to was 6144 for Hi-NOLIN model.
     * The same for AMD is 2048 GCD (1024 GPUs) on Frontier Supercomputer.
     * The weirdest hardware configuration I dealt with had "6" GPUs per node and IBM CPUs (which is neither x86 nor ARM, but Power CPU Architecture).
 * Neural Network (NN) Training (small scale):
     * Trained atleast one NN on atleast one GPU of each NVIDIA microarchitecture generation from Kepler to Hopper.
-    * Trained atleast one NN on atleast one GPU from NVIDIA, AMD, Gaudi, Google TPU chips.
-    * Trained atleast one NN on atleast one CPU from Intel, AMD and Apple M-series Chip.
+    * Trained atleast one NN on atleast one AI/Graphics accelerator from NVIDIA, AMD, Gaudi, Google TPU chips.
+    * Trained atleast one NN on atleast one CPU from Intel, AMD, PowerPC and Apple Silicon.
 * Wrote the first open implementation to run 4-bit LLaMa models [on Mac CPU](https://github.com/NolanoOrg/llama-int4-quant).
 * Preferred language for neural networks: Python >>> Julia > JS > C/C++ > English.
 
