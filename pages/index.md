@@ -229,7 +229,6 @@ ___
 
  -->
 
-<!-- {% include projects/index.html %} -->
 
 
 <h3 style="margin-left:25px;margin-bottom:0px;margin-top:50px"> Contact</h3>
