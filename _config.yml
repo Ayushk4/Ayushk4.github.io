@@ -55,26 +55,26 @@ author:
 #   math_engine: mathjax
 
 ### Collections ###
-collections:
-  projects:
-    output: true
-    permalink: /research/:name
-  softwares:
-    output: true
-    permalink: /softwares/:name
+# collections:
+#   projects:
+#     output: true
+#     permalink: /research/:name
+#   softwares:
+#     output: true
+#     permalink: /softwares/:name
 
 ### Defaults for collections ###
-defaults:
-  - scope:
-      path: ""
-      type: "projects"
-    values:
-      layout: "page"
-  - scope:
-      path: ""
-      type: "softwares"
-    values:
-      layout: "page"
+# defaults:
+#   - scope:
+#       path: ""
+#       type: "projects"
+#     values:
+#       layout: "page"
+#   - scope:
+#       path: ""
+#       type: "softwares"
+#     values:
+#       layout: "page"
 #  - scope:                                              # For Documentation Only
 #      path: ""                                          # For Documentation Only
 #      type: "posts"                                  
