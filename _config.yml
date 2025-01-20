@@ -80,7 +80,7 @@ author:
 #      type: "posts"                                  
 #    values:
 #      comments: true
-      
+
 ### Exclude from processing ###
 exclude:
   - README.md

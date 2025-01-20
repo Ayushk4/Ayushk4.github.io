@@ -8,133 +8,237 @@ weight: 1
   - arduino-visitor-counter */
 ---
 
-
 <br>
-<h2 style="margin:50px"> Publications and Talks </h2>
+<h2 style="margin:50px"> Publications </h2>
 
 <ul>
-      <li><a target="_blank" href="https://aclanthology.org/2021.naacl-main.303.pdf">
-        "<i style="font-family:sans-serif">t</i> WT—WT: Asserting the Role of Targets for Detecting Stance in Tweets"</a> <br><i> Ayush Kaushal, Avirup Saha and Niloy Ganguly </i><br>
-              Proceedings of the 2021 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies (<b>NAACL-HLT 2021</b>)
-              <br>
-              {% include elements/button.html link="https://github.com/Ayushk4/bias-stance" text="Code" %} {% include elements/button.html link="https://aclanthology.org/2021.naacl-main.303.pdf" text="Pdf" %} {% include elements/button.html link="https://aclanthology.org/2021.naacl-main.303.bib" text="Cite" %} {% include elements/button.html link="https://docs.google.com/presentation/d/11kM4MJ4ct1GtdFuzko-Ou8wN5QxqhmL6hXG3WBrPevk/edit?usp=sharing" text="Slides" %} {% include elements/button.html link="https://drive.google.com/file/d/1L6BW887fOtZZ2d9jnB6Jl_Gqnu6LnLMX/view?usp=sharing" text="Poster" %}
-              <a style="float:right; color:#3491fe;" data-toggle="collapse" data-target="#biasstance"><u>More</u> </a>
-        </li>
-        <div id="biasstance" class="collapse" style="font-size:15px;margin:50px">
-          The stance detection task aims at detecting the stance of a tweet or a text for a target. These targets can be named entities or free-form sentences (claims). Though the task involves reasoning of the tweet with respect to a target, we find that it is possible to achieve high accuracy on several publicly available Twitter stance detection datasets without looking at the target sentence. Specifically, a simple tweet classification model achieved human-level performance on the WT–WT dataset and more than two-third accuracy on various other datasets. We investigate the existence of biases in such datasets to find the potential spurious correlations of sentiment-stance relations and lexcal choice associated with the stance category. Furthermore, we propose a new large dataset free of such biases and demonstrate its aptness on the existing stance detection systems. Our empirical findings show much scope for research on the stance detection task and proposes several considerations for creating future stance detection datasets.
-          <br> <br>
-        </div>
-        <br>
+  <!-- Scaling Laws for Training Low BitWidth Language Models -->
 
-    <li><a target="_blank" href="https://www.aclweb.org/anthology/2020.wnut-1.79.pdf">
-              "Leveraging Event Specific and Chunk Span features to Extract COVID Events from tweets"</a> <br> <i>Ayush Kaushal and Tejas Vaidhya </i><br>
-              <b><u>Oral Presentation</u></b> at the 6th Workshop on Noisy User-generated Text (W-NUT) at the 2020 Conference on Emperical Methods in Natural Language Processing (EMNLP 2020) <u><b>Shared Task Winners</b></u>
-              <br>
-              {% include elements/button.html link="https://github.com/Ayushk4/extract_covid_entity" text="Code" %} {% include elements/button.html link="https://www.aclweb.org/anthology/2020.wnut-1.79.pdf" text="Pdf" %} {% include elements/button.html link="https://www.aclweb.org/anthology/2020.wnut-1.79.bib" text="Cite" %} {% include elements/button.html link="https://docs.google.com/presentation/d/13DDY6VSmrVPBddTjWb3rThYRFlRDE_9fi4iyBrhJev4/edit?usp=sharing" text="Slides" %} {% include elements/button.html link="https://github.com/noisy-text/noisy-text.github.io/blob/master/2020/posters/WNUT2020_91_poster%20-%20Tejas%20vaidhya.pdf" text="Poster" %}
-              
-              <a style="float:right; color:#3491fe;" data-toggle="collapse" data-target="#covid"><u>More</u> </a>
-      </li>
-        <div id="covid" class="collapse" style="font-size:15px;margin:50px">Twitter has acted as an important source of information during disasters and pandemic, especially during the times of COVID-19. In this paper, we describe our system entry for <i>WNUT 2020 Shared Task-3</i>. The task was aimed at automating the extraction of a variety of COVID-19 related events from Twitter, such as individuals who recently contracted the virus, someone with symptoms who were denied testing and believed remedies against the infection. The system consists of separate multi-task models for slot-filling subtasks and sentence-classification subtasks while leveraging the useful sentence-level information for the corresponding event. The system uses COVID-Twitter-Bert with attention-weighted pooling of candidate slot-chunk features to capture the useful information chunks. The system ranks <b>1st at the leader-board</b> with F1 of 0.6598, without using any ensembles or additional datasets. <br> <br>
-      </div>
-        <br>
+  <!-- Spectra 2 -->
+  <li><a target="_blank" href="https://ayushk4.github.io/spectra/">
+    "Spectra 2: TriLMs are LLaMa Competitive "</a>
+    <br><i><u><b>Ayush Kaushal*</b></u>, Tejas Vaidhya*, Vineeth Jain, Irina Rish</i><br>
+    Under Review at the 42nd International Conference on Machine Learning (ICML 2025)
+    <br>
+     {% include elements/button.html link="https://ayushk4.github.io/spectra" text="Project Page" %}
+    <!-- <a style="float:right;color:#3491fe" data-toggle="collapse" data-target="#spectra2"><u>More</u></a> -->
+  </li>
+  <!-- <div id="spectra2" class="collapse" style="font-size:15px;margin:50px">
+    Rapid advancements in GPU computational power has outpaced memory capacity and bandwidth growth, creating bottlenecks in Large Language Model (LLM) inference. Post-training quantization is the leading method for addressing memoryrelated bottlenecks in LLM inference, but it suffers from significant performance degradation below 4-bit precision. This paper addresses these challenges by investigating the pretraining of low-bitwidth models specifically Ternary Language Models (TriLMs) as an alternative to traditional floating-point models (FloatLMs) and their post-training quantized versions (QuantLMs). We present Spectra LLM suite, the first open suite of LLMs spanning multiple bit-widths, including FloatLMs, QuantLMs, and TriLMs, ranging from 99M to 3.9B parameters trained on 300B tokens. Our comprehensive evaluation demonstrates that TriLMs offer superior scaling behavior in terms of model size (in bits). Surprisingly, at scales exceeding one billion parameters, TriLMs consistently outperform their QuantLM and FloatLM counterparts for a given bit size across various benchmarks. Notably, the 3.9B parameter TriLM matches the performance of the FloatLM 3.9B across all benchmarks, despite having fewer bits than FloatLM 830M. Overall, this research provides valuable insights into the feasibility and scalability of low-bitwidth language models, paving the way for the development of more efficient LLMs.
+    <br> <br>
+  </div>
+  <br> -->
 
-    <li><a target="_blank" href="https://drive.google.com/file/d/1oAn378KMU-cIUrXcVc0clZ_7PuwlX_Zb/view?usp=sharing">
-              "Causal Direction in Data Matters: Implications of Causal and Anticausal Learning in NLP",</a> <br> <i>Zhijing Jin, Julius von Kügelgen, Jingwei Ni, Tejas Vaidhya, Ayush Kaushal, Mrinmaya Sachan and Bernhard Schoelkopf </i><br>
-              <u><b>Long Paper</b></u> at the 2021 Conference on Emperical Methods in Natural Language Processing (EMNLP 2021)
-              <br>
-              {% include elements/button.html link="https://drive.google.com/file/d/1JKvfPqNUGg-RDtj2-6tq9NLYg6P_xqxL/view?usp=sharing" text="Code" %} {% include elements/button.html link="https://drive.google.com/file/d/1oAn378KMU-cIUrXcVc0clZ_7PuwlX_Zb/view?usp=sharing" text="Pdf" %} {% include elements/button.html link="https://ayushk4.github.io/Coming-Soon" text="Cite" %} {% include elements/button.html link="https://ayushk4.github.io/Coming-Soon" text="Poster" %}
-              
-              <a style="float:right; color:#3491fe;" data-toggle="collapse" data-target="#covid"><u>More</u> </a>
-      </li>
-        <div id="covid" class="collapse" style="font-size:15px;margin:50px">Twitter has acted as an important source of information during disasters and pandemic, especially during the times of COVID-19. In this paper, we describe our system entry for <i>WNUT 2020 Shared Task-3</i>. The task was aimed at automating the extraction of a variety of COVID-19 related events from Twitter, such as individuals who recently contracted the virus, someone with symptoms who were denied testing and believed remedies against the infection. The system consists of separate multi-task models for slot-filling subtasks and sentence-classification subtasks while leveraging the useful sentence-level information for the corresponding event. The system uses COVID-Twitter-Bert with attention-weighted pooling of candidate slot-chunk features to capture the useful information chunks. The system ranks <b>1st at the leader-board</b> with F1 of 0.6598, without using any ensembles or additional datasets. <br> <br>
-      </div>
-        <br>
+  <!-- Spectra -->
+  <li><a target="_blank" href="https://openreview.net/forum?id=TJo6aQb7mK/">
+    "Spectra: Surprising Effectiveness of Pretraining Ternary Language Models at Scale"</a>
+    <br><i><u><b>Ayush Kaushal*</b></u>, Tejas Vaidhya*, Arnab Kumar Mondal, Tejas Pandey, Aaryan Bhagat, Irina Rish</i><br>
+    Under Review at the Thirteenth International Conference on Learning Representations (ICLR 2025)
+    <br>
+     {% include elements/button.html link="https://huggingface.co/SpectraSuite" text="Models" %} {% include elements/button.html link="https://openreview.net/forum?id=TJo6aQb7mK" text="OpenReview" %} {% include elements/button.html link="https://openreview.net/pdf?id=TJo6aQb7mK" text="Pdf" %} {% include elements/button.html link="https://arxiv.org/abs/2407.12327" text="ArXiv" %}
+    <a style="float:right;color:#3491fe" data-toggle="collapse" data-target="#spectra"><u>More</u></a>
+  </li>
+  <div id="spectra" class="collapse" style="font-size:15px;margin:50px">
+    Rapid advancements in GPU computational power has outpaced memory capacity and bandwidth growth, creating bottlenecks in Large Language Model (LLM) inference. Post-training quantization is the leading method for addressing memoryrelated bottlenecks in LLM inference, but it suffers from significant performance degradation below 4-bit precision. This paper addresses these challenges by investigating the pretraining of low-bitwidth models specifically Ternary Language Models (TriLMs) as an alternative to traditional floating-point models (FloatLMs) and their post-training quantized versions (QuantLMs). We present Spectra LLM suite, the first open suite of LLMs spanning multiple bit-widths, including FloatLMs, QuantLMs, and TriLMs, ranging from 99M to 3.9B parameters trained on 300B tokens. Our comprehensive evaluation demonstrates that TriLMs offer superior scaling behavior in terms of model size (in bits). Surprisingly, at scales exceeding one billion parameters, TriLMs consistently outperform their QuantLM and FloatLM counterparts for a given bit size across various benchmarks. Notably, the 3.9B parameter TriLM matches the performance of the FloatLM 3.9B across all benchmarks, despite having fewer bits than FloatLM 830M. Overall, this research provides valuable insights into the feasibility and scalability of low-bitwidth language models, paving the way for the development of more efficient LLMs.
+    <br> <br>
+  </div>
+  <br>
 
-      <li><a target="_blank" href="https://aclanthology.org/2021.semeval-1.46.pdf">
-              "Multi-Staged Language Models for Extracting Measurements, their Attributes and Relations"</a><br><i> Neel Karia*, Ayush Kaushal* and Faraaz Mallick* </i><br>
-              15th International Workshop on Semantic Evaluation (SemEval'21) at ACL-IJCNLP'21 <u><b>Second Runner-up</b></u>
-              <br>
-              {% include elements/button.html link="https://github.com/Ayushk4/SE-T8" text="Code" %} {% include elements/button.html link="https://aclanthology.org/2021.semeval-1.46.pdf" text="Pdf" %} {% include elements/button.html link="https://aclanthology.org/2021.semeval-1.46.bib" text="Cite" %} {% include elements/button.html link="https://ayushk4.github.io/Coming-Soon" text="Poster" %}
-              <a style="float:right; color:#3491fe;" data-toggle="collapse" data-target="#semeval21"><u>More</u> </a>
-      </li>
-        <div id="semeval21" class="collapse" style="font-size:15px;margin:50px">SemEval-2021 Task 8: MeasEval aims at improving the machine understanding of measurements in scientific texts through a set of entity and semantic relation extraction sub-tasks on identifying quantity spans along with various attributes and relationships. This paper describes our system, consisting of a three-stage pipeline, that leverages pre-trained language models to extract the quantity spans in the text, followed by intelligent templates to identify units and modifiers. Finally, it identifies the quantity attributes and their relations using language models boosted with a feature re-using hierarchical architecture and multi-task learning. Our submission significantly outperforms the baseline, with the best model from the post-evaluation phase delivering more than 100% increase on F1 (Overall) from the baseline. <br> <br>
-      </div>
-        <br>
+  <!-- EACL 2023 -->
+  <li><a target="_blank" href="https://aclanthology.org/2022.naacl-main.179/">
+    "What do tokens know about their characters and how do they know it?"</a>
+    <br><i><u><b>Ayush Kaushal</b></u>, Kyle Mahowald</i><br>
+    Proceedings of the 2022 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies (<b>NAACL-HLT 2022</b>)
+    <br>
+     {% include elements/button.html link="https://github.com/ayushk4/character-probing-pytorch" text="Code" %} {% include elements/button.html link="https://aclanthology.org/2022.naacl-main.179.pdf" text="Pdf" %} {% include elements/button.html link="https://aclanthology.org/2022.naacl-main.179.bib" text="Cite" %} {% include elements/button.html link="https://arxiv.org/abs/2206.02608" text="ArXiv" %}
+    <a style="float:right;color:#3491fe" data-toggle="collapse" data-target="#eacl2023"><u>More</u></a>
+  </li>
+  <div id="eacl2023" class="collapse" style="font-size:15px;margin:50px">
+    Pre-trained language models (PLMs) that use subword tokenization schemes can succeed at a variety of language tasks that require character-level information, despite lacking explicit access to the character composition of tokens. Here, studying a range of models (e.g., GPT- J, BERT, RoBERTa, GloVe), we probe what word pieces encode about character-level information by training classifiers to predict the presence or absence of a particular alphabetical character in a token, based on its embedding (e.g., probing whether the model embedding for “cat” encodes that it contains the character “a”). We find that these models robustly encode character-level information and, in general, larger models perform better at the task. We show that these results generalize to characters from non-Latin alphabets (Arabic, Devanagari, and Cyrillic). Then, through a series of experiments and analyses, we investigate the mechanisms through which PLMs acquire English-language character information during training and argue that this knowledge is acquired through multiple phenomena, including a systematic relationship between particular characters and particular parts of speech, as well as natural variability in the tokenization of related strings.
+    <br> <br>
+  </div>
+  <br>
 
+  <!-- NAACL 2022 -->
+  <li><a target="_blank" href="https://ojs.aaai.org/index.php/AAAI/article/view/21594">
+    "INDEPROP: Information-Preserving De-propagandization of News Articles (Student Abstract)."</a>
+    <br><i>Aaryan Bhagat*, Faraaz Mallick*, Neel Karia*, <u><b>Ayush Kaushal*</b></u></i><br>
+    Proceedings of the 36th Association for the Advancement of Artificial Intelligence Conference on Artificial Intelligence (AAAI 2022)
+    <br>
+    {% include elements/button.html link="https://ojs.aaai.org/index.php/AAAI/article/view/21594" text="Paper" %} {% include elements/button.html link="https://cdn.aaai.org/ojs/21594/21594-13-25607-1-2-20220628.pdf" text="Pdf" %} {% include elements/button.html link="https://ojs.aaai.org/index.php/AAAI/citationstylelanguage/download/bibtex?submissionId=21594&publicationId=19881" text="BibTeX" %}
+    <a style="float:right;color:#3491fe" data-toggle="collapse" data-target="#indeprop"><u>More</u></a>
+  </li>
+  <div id="indeprop" class="collapse" style="font-size:15px;margin:50px">
+    We propose INDEPROP, a novel Natural Language Processing (NLP) application for combating online disinformation by mitigating propaganda from news articles. INDEPROP (Information-Preserving De-propagandization) involves fine-grained propaganda detection and its removal while maintaining document level coherence, grammatical correctness and most importantly, preserving the news articles’ information content. We curate the first large-scale dataset of its kind consisting of around 1M tokens. We also propose a set of automatic evaluation metrics for the same and observe its high correlation with human judgment. Furthermore, we show that fine-tuning the existing propaganda detection systems on our dataset considerably improves their generalization to the test set.
+    <br> <br>
+  </div>
+  <br>
 
-    <li><a target="_blank" href="https://www.aclweb.org/anthology/2020.wnut-1.34.pdf">
-              "Domain specific BERT representation for Named Entity Recognition of lab protocol."</a>
-              <br><i>Tejas Vaidhya and Ayush Kaushal</i><br>
-              Proceedings of the 6th Workshop on Noisy User-generated Text (W-NUT) at the 2020 Conference on Emperical Methods in Natural Language Processing (EMNLP 2020)
-              <br>
-              {% include elements/button.html link="https://github.com/tejasvaidhyadev/W-NUT_2020" text="Code" %} {% include elements/button.html link="https://www.aclweb.org/anthology/2020.wnut-1.34.pdf" text="Pdf" %} {% include elements/button.html link="https://www.aclweb.org/anthology/2020.wnut-1.34.bib" text="Cite" %} {% include elements/button.html link="https://github.com/noisy-text/noisy-text.github.io/blob/master/2020/posters/WNUT2020_92_poster%20-%20Tejas%20vaidhya.pdf" text="Poster" %}
+  <!-- EMNLP 2021 Causality -->
+  <li><a target="_blank" href="https://drive.google.com/file/d/1oAn378KMU-cIUrXcVc0clZ_7PuwlX_Zb/view?usp=sharing">
+    "Causal Direction in Data Matters: Implications of Causal and Anticausal Learning in NLP",</a> <br> <i>Zhijing Jin, Julius von Kügelgen, Jingwei Ni, Tejas Vaidhya, <u><b>Ayush Kaushal</b></u>, Mrinmaya Sachan and Bernhard Schoelkopf </i><br>
+    <u><b>Long Paper</b></u> at the 2021 Conference on Emperical Methods in Natural Language Processing (EMNLP 2021)
+    <br>
+    {% include elements/button.html link="https://drive.google.com/file/d/1JKvfPqNUGg-RDtj2-6tq9NLYg6P_xqxL/view?usp=sharing" text="Code" %} {% include elements/button.html link="https://drive.google.com/file/d/1oAn378KMU-cIUrXcVc0clZ_7PuwlX_Zb/view?usp=sharing" text="Pdf" %} {% include elements/button.html link="https://ayushk4.github.io/Coming-Soon" text="Cite" %} {% include elements/button.html link="https://ayushk4.github.io/Coming-Soon" text="Poster" %}
+    <a style="float:right; color:#3491fe;" data-toggle="collapse" data-target="#covid"><u>More</u> </a>
+  </li>
+  <div id="covid" class="collapse" style="font-size:15px;margin:50px">
+    Twitter has acted as an important source of information during disasters and pandemic, especially during the times of COVID-19. In this paper, we describe our system entry for <i>WNUT 2020 Shared Task-3</i>. The task was aimed at automating the extraction of a variety of COVID-19 related events from Twitter, such as individuals who recently contracted the virus, someone with symptoms who were denied testing and believed remedies against the infection. The system consists of separate multi-task models for slot-filling subtasks and sentence-classification subtasks while leveraging the useful sentence-level information for the corresponding event. The system uses COVID-Twitter-Bert with attention-weighted pooling of candidate slot-chunk features to capture the useful information chunks. The system ranks <b>1st at the leader-board</b> with F1 of 0.6598, without using any ensembles or additional datasets.
+    <br> <br>
+  </div>
+  <br>
 
-              <a style="float:right;color:#3491fe" data-toggle="collapse" data-target="#wetlab"><u>More</u></a>
-      </li>
-        <div id="wetlab" class="collapse" style="font-size:15px;margin:50px">
-        <!-- <br>
-        <div align="center">
-            <img id="mobile-img" src="../images/Bio-BERT.png" width="50%" border="0" height="50%" alt=""><br>
-            </div> -->
-            Supervised models trained to predict properties from representations, have been achieving high accuracy on a variety of tasks. For instance, the BERT family seems to work exceptionally well on the downstream task from NER tagging to the range of other linguistic tasks. But the vocabulary used in the medical field contains a lot of different tokens used only in the medical industry such as the name of different diseases, devices, organisms, medicines, etc. that makes it difficult for traditional BERT model to create contextualized embedding. In this paper, we are going to illustrate the System for Named Entity Tagging based on Bio-Bert. Experimental results show that our model gives substantial improvements over the baseline and stood the fourth runner up in terms of F1 score, and first runner up in terms of Recall among 13 teams with just 2.21 F1 score behind the best one.
-            <br> <br>
-        </div>
-        <br>
+  <!-- NAACL 2021: tWT-WT -->
+  <li><a target="_blank" href="https://aclanthology.org/2021.naacl-main.303.pdf">
+    "<i style="font-family:sans-serif">t</i> WT—WT: Asserting the Role of Targets for Detecting Stance in Tweets"</a>
+    <br><i> <u><b>Ayush Kaushal</b></u>, Avirup Saha and Niloy Ganguly </i><br>
+      Proceedings of the 2021 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies (<b>NAACL-HLT 2021</b>)
+      <br>
+      {% include elements/button.html link="https://github.com/Ayushk4/bias-stance" text="Code" %} {% include elements/button.html link="https://aclanthology.org/2021.naacl-main.303.pdf" text="Pdf" %} {% include elements/button.html link="https://aclanthology.org/2021.naacl-main.303.bib" text="Cite" %} {% include elements/button.html link="https://docs.google.com/presentation/d/11kM4MJ4ct1GtdFuzko-Ou8wN5QxqhmL6hXG3WBrPevk/edit?usp=sharing" text="Slides" %} {% include elements/button.html link="https://drive.google.com/file/d/1L6BW887fOtZZ2d9jnB6Jl_Gqnu6LnLMX/view?usp=sharing" text="Poster" %}
+      <a style="float:right; color:#3491fe;" data-toggle="collapse" data-target="#biasstance"><u>More</u> </a>
+  </li>
+  <div id="biasstance" class="collapse" style="font-size:15px;margin:50px">
+    The stance detection task aims at detecting the stance of a tweet or a text for a target. These targets can be named entities or free-form sentences (claims). Though the task involves reasoning of the tweet with respect to a target, we find that it is possible to achieve high accuracy on several publicly available Twitter stance detection datasets without looking at the target sentence. Specifically, a simple tweet classification model achieved human-level performance on the WT–WT dataset and more than two-third accuracy on various other datasets. We investigate the existence of biases in such datasets to find the potential spurious correlations of sentiment-stance relations and lexcal choice associated with the stance category. Furthermore, we propose a new large dataset free of such biases and demonstrate its aptness on the existing stance detection systems. Our empirical findings show much scope for research on the stance detection task and proposes several considerations for creating future stance detection datasets.
+    <br> <br>
+  </div>
+  <br>
 
-    <li><a target="_blank" href="https://www.theoj.org/joss-papers/joss.01956/10.21105.joss.01956.pdf">
-              "Basic Tools for Tokenizing Natural Language in Julia."</a>
-              <br><i>Ayush Kaushal, Lyndon White, Mike Innes, Rohit Kumar</i><br>
-              The Journal of Open Source Software (JOSS) 2020
-              <br>
-              {% include elements/button.html link="https://github.com/JuliaText/WordTokenizers.jl" text="Code" %} {% include elements/button.html link="https://www.theoj.org/joss-papers/joss.01956/10.21105.joss.01956.pdf" text="Pdf" %} {% include elements/button.html link="https://zenodo.org/record/3663390/export/hx" text="Cite" %} {% include elements/button.html link="https://ayushk4.github.io/Coming-Soon" text="Poster" %}
-              <a style="float:right;color:#3491fe" data-toggle="collapse" data-target="#joss2020"><u>More</u></a>
-      </li>
-        <div id="joss2020" class="collapse" style="font-size:15px;margin:50px">
-        <!-- <div align="center">
-            <img id="mobile-img" src="../images/Bio-BERT.png" width="50%" border="0" height="50%" alt=""><br>
-            </div> -->
-            WordTokenizers.jl is a tool to help users of the Julia programming language work with natural language. WordTokenizers.jl provides a flexible API for defining fast tokenizers and sentence segmentors. Using this API several standard tokenizers and sentence segmenters have been implemented, allowing researchers and practitioners to focus on the higher details of their NLP tasks. WordTokenizers.jl uses a TokenBuffer API and its various lexers for fast word tokenization. TokenBuffer turns the string into a readable stream. A desired set of TokenBuffer lexers are used to read characters from the stream and flush out into an array of tokens. The package provides the following tokenizers made using this API. WordTokenizers.jl is currently being used by packages like TextAnalysis.jl, Transformers.jl and CorpusLoaders.jl for tokenizing text.
-            <br> <br>
-        </div>
-        <br>
+  <!-- AAAI 2022 -->
+  <li><a target="_blank" href="https://ojs.aaai.org/index.php/AAAI/article/view/21594">
+    "INDEPROP: Information-Preserving De-propagandization of News Articles (Student Abstract)."</a>
+    <br><i>Aaryan Bhagat*, Faraaz Mallick*, Neel Karia*, <u><b>Ayush Kaushal*</b></u></i><br>
+    Proceedings of the 36th Association for the Advancement of Artificial Intelligence Conference on Artificial Intelligence (AAAI 2022)
+    <br>
+    {% include elements/button.html link="https://ojs.aaai.org/index.php/AAAI/article/view/21594" text="Paper" %} {% include elements/button.html link="https://cdn.aaai.org/ojs/21594/21594-13-25607-1-2-20220628.pdf" text="Pdf" %} {% include elements/button.html link="https://ojs.aaai.org/index.php/AAAI/citationstylelanguage/download/bibtex?submissionId=21594&publicationId=19881" text="BibTeX" %}
+    <a style="float:right;color:#3491fe" data-toggle="collapse" data-target="#indeprop"><u>More</u></a>
+  </li>
+  <div id="indeprop" class="collapse" style="font-size:15px;margin:50px">
+    We propose INDEPROP, a novel Natural Language Processing (NLP) application for combating online disinformation by mitigating propaganda from news articles. INDEPROP (Information-Preserving De-propagandization) involves fine-grained propaganda detection and its removal while maintaining document level coherence, grammatical correctness and most importantly, preserving the news articles’ information content. We curate the first large-scale dataset of its kind consisting of around 1M tokens. We also propose a set of automatic evaluation metrics for the same and observe its high correlation with human judgment. Furthermore, we show that fine-tuning the existing propaganda detection systems on our dataset considerably improves their generalization to the test set.
+    <br> <br>
+  </div>
+  <br>
 
-    <li><a target="_blank" href="https://drive.google.com/file/d/1iNqtbP9h9d6acqpS8cw-BwzAib2Ldf3C/view?usp=sharing">
-              "Towards Target Aware Twitter Stance Detection."</a>
-              <br><i>Ayush Kaushal</i><br>
-              Bachelor's Thesis, IIT Kharagpur
-              <br>
-              {% include elements/button.html link="https://drive.google.com/open?id=1iNqtbP9h9d6acqpS8cw-BwzAib2Ldf3C&disco=AAAAO4n2YTs" text="Code" %} {% include elements/button.html link="https://drive.google.com/file/d/1iNqtbP9h9d6acqpS8cw-BwzAib2Ldf3C/view?usp=sharing" text="Pdf" %} {% include elements/button.html link="https://docs.google.com/presentation/d/1gZChpzpNbAcRGG6dyYhkTXHRL-WTDAz2/edit?usp=sharing&ouid=104189619769587518485&rtpof=true&sd=true" text="Slide" %} {% include elements/button.html link="https://drive.google.com/drive/folders/1FmngtkX1AJR2IAT8SPeWQYtKXVrtc0Me?usp=sharing" text="Report" %}
-              <a style="float:right;color:#3491fe" data-toggle="collapse" data-target="#bachelorsthesis"><u>More</u></a>
-      </li>
-        <div id="bachelorsthesis" class="collapse" style="font-size:15px;margin:50px">
-        <!-- <div align="center">
-            <img id="mobile-img" src="../images/Bio-BERT.png" width="50%" border="0" height="50%" alt=""><br>
-            </div> -->
-            The stance of a text is the attitude or standpoint of the author towards an entity or a debate topic. Stance Detection is the Natural Language Understanding (NLU) task to automatically detect the stance of a text for a given target. The targets are either named entities such as policies, politicians, or as free-form sentences such as popular debate topics, rumoured online claims or article headlines. Over the past few years, a considerable attention has been given to research on Stance Detection Systems. Several large scale datasets have also been proposed on a variety of domains to promote the progress of the field and to provide reliable benchmarks.
+  <!-- ICML 2024 Workshop TriLM vs FloatLM -->
+  <li><a target="_blank" href="https://openreview.net/forum?id=gvaDL9omKU">
+    "TriLM vs FloatLM: Ternary LLMs are more Performant than Quantized FP16 LLMs."</a>
+    <br><i><u><b>Ayush Kaushal*</b></u>, Tejas Vaidhya*, Irina Rish</i><br>
+    Proceedings of the ICML 2024 Workshop on Foundation Models in the Wild, 41st International Conference on Machine Learning (ICML 2024)
+    <br>
+    {% include elements/button.html link="https://huggingface.co/SpectraSuite" text="Models" %} {% include elements/button.html link="https://openreview.net/forum?id=gvaDL9omKU" text="OpenReview" %} {% include elements/button.html link="https://openreview.net/pdf?id=gvaDL9omKU" text="Pdf" %} {% include elements/button.html link="https://drive.google.com/file/d/1wOUeGXwPimMPqHqleww2qQq7k-bnLSjJ/view?usp=sharing" text="Slides" %} {% include elements/button.html link="https://drive.google.com/file/d/1PMMLccGHjab3vRLyQ3TkLkQh-UKhMgTc/view?usp=sharing" text="Poster" %}
+    <a style="float:right;color:#3491fe" data-toggle="collapse" data-target="#spectra2024icmlworkshop"><u>More</u></a>
+  </li>
+  <div id="spectra2024icmlworkshop" class="collapse" style="font-size:15px;margin:50px">
+    Ternary LLMs offer significantly better performance for their size (measured in bits) than the models trained and deployed in FP16/BF16. Given the widespread usage of quantization before deployment and advancements in Post Training Quantization of LLMs, a pivotal question arises: do ternary LLMs indeed provide any discernible benefits? To address this, we first build an open family of pre-trained ternary Large Language Models (TriLM). Additionally, we include their counterparts pre-trained in FP16 (FloatLM) and quantized versions of FloatLM (QuantLM) with parameters across almost two orders of magnitude - from 99M to 3.9B parameters. We demonstrate that TriLMs with 3B+ parameters start to offer competitive performance compared to FloatLMs with the same parameter count, while providing significantly better performance for their size. TriLMs also outperform quantized models, with TriLM 3.9B surpassing the larger QuantLM-3bit 3.9B. Furthermore, across knowledge-based benchmarks, TriLM maintains a superiority for its size. To advance research on Ternary LMs, we open source over 500+ checkpoints across the model families.
+    <br> <br>
+  </div>
+  <br>
 
-            In this project, we first study the role of the target entities in detecting stance and based on our findings move towards target aware stance detection systems. We mainly analyse the various publicly available stance detection datasets on tweets. In these datasets, the text is a tweet and targets are either fixed entities or naturally occurring free-form sentences. Empirical findings show that despite the task requiring significant amount of understanding of the target being considered, one can easily achieve impressive performance by doing simple target-agnostic classification over a tweet. Specifically, we observe that a simple tweet classification model achieved near-human upper bound performance on a large scale dataset (WT-WT). These classification models can also achieve more than two-third of accuracy on 6 other Twitter stance detection datasets. Then, an analysis of some of the datasets is carried out to explain the existence of such biases in such datasets. We find some spurious correlations between tweet sentiment and stance classes. These datasets additionally have a set of lexical choices associated with their respective stance category. Consequently, we propose novel methods to augment the var ious existing stance detection dataset to inhibit target oblivious models from performing well and evaluated the dataset’s usefulness on the stance detection baseline models. With these proper benchmarks, we propose and experiment with several target aware stance detection models and show that taking into consideration, the target aware cues, the models deliver state of the art performance. Finally, we create a leaderboard for the newly created datasets and make our code, datasets and pre-trained models publicly available.
-            <br> <br>
-        </div>
-        <br>
+  <!-- ICML 2024 Workshop LoRD -->
+  <li><a target="_blank" href="https://openreview.net/forum?id=br49PQvuMp">
+    "LoRD: Low-Rank Decomposition of Monolingual Code LLMs for One-Shot Compression."</a>
+    <br><i><u><b>Ayush Kaushal*</b></u>, Tejas Vaidhya*, Irina Rish</i><br>
+    Proceedings of the ICML 2024 Workshop on Foundation Models in the Wild, 41st International Conference on Machine Learning (ICML 2024)
+    <br>
+    {% include elements/button.html link="https://huggingface.co/collections/nolanoAI/lord-66f97f003c7ffa79311a7e59" text="Models" %} {% include elements/button.html link="https://openreview.net/forum?id=br49PQvuMp" text="OpenReview" %} {% include elements/button.html link="https://openreview.net/pdf?id=br49PQvuMp" text="Pdf" %} {% include elements/button.html link="https://arxiv.org/abs/2309.14021" text="ArXiv" %} {% include elements/button.html link="https://drive.google.com/file/d/1KhFfhRekeSc481w2YO-n-7y5rNxW0Koh/view?usp=sharing" text="Poster" %}
+    <a style="float:right;color:#3491fe" data-toggle="collapse" data-target="#lord2024icmlworkshop"><u>More</u></a>
+  </li>
+  <div id="lord2024icmlworkshop" class="collapse" style="font-size:15px;margin:50px">
+    We propose using low-rank matrix decomposition (LoRD), which splits a large matrix into a product of two smaller matrices, to compress neural network models and thereby enhance inference speed. Unlike quantization, LoRD maintains fully differentiable, trainable parameters and leverages efficient floating-point operations. We investigate its advantages for compressing Large Language Models (LLMs) for monolingual code generation, demonstrating that linear layer ranks can be reduced by up to 39.58% with less than a 1% increase in perplexity. Specifically, we use LoRD to compress the StarCoder 16B model to 13.2B parameters with no performance drop and to 12.3B parameters with minimal performance drop in the HumanEval Pass@1 score, all within 10 minutes on a single A100 GPU. The compressed models achieve up to a 22.35% inference speedup with just a single line of code change in HuggingFace’s implementation with Pytorch backend.
+    <br> <br>
+  </div>
+  <br>
 
+  <!-- SemEval 2021 -->
+  <li><a target="_blank" href="https://aclanthology.org/2021.semeval-1.46.pdf">
+    "Multi-Staged Language Models for Extracting Measurements, their Attributes and Relations"</a><br><i> Neel Karia*, <u><b>Ayush Kaushal*</b></u> and Faraaz Mallick* </i><br>
+    15th International Workshop on Semantic Evaluation (SemEval'21) at ACL-IJCNLP'21
+    <br>
+    {% include elements/button.html link="https://github.com/Ayushk4/SE-T8" text="Code" %} {% include elements/button.html link="https://aclanthology.org/2021.semeval-1.46.pdf" text="Pdf" %} {% include elements/button.html link="https://aclanthology.org/2021.semeval-1.46.bib" text="Cite" %} {% include elements/button.html link="https://ayushk4.github.io/Coming-Soon" text="Poster" %}
+    <a style="float:right; color:#3491fe;" data-toggle="collapse" data-target="#semeval21"><u>More</u> </a>
+  </li>
+  <div id="semeval21" class="collapse" style="font-size:15px;margin:50px">
+    SemEval-2021 Task 8: MeasEval aims at improving the machine understanding of measurements in scientific texts through a set of entity and semantic relation extraction sub-tasks on identifying quantity spans along with various attributes and relationships. This paper describes our system, consisting of a three-stage pipeline, that leverages pre-trained language models to extract the quantity spans in the text, followed by intelligent templates to identify units and modifiers. Finally, it identifies the quantity attributes and their relations using language models boosted with a feature re-using hierarchical architecture and multi-task learning. Our submission significantly outperforms the baseline, with the best model from the post-evaluation phase delivering more than 100% increase on F1 (Overall) from the baseline.
+    <br> <br>
+  </div>
+  <br>
 
-    <li><a target="_blank" href="https://www.youtube.com/watch?v=hHCi8ojazqk">
-              "Natural Language Processing in Julia."</a>
-              <br><i>Ayush Kaushal </i><br>
-              JuliaCon 2020 Conference Full Talk (30 min)
-              <br>
-              {% include elements/button.html link="https://github.com/Ayushk4/JuliaCon20_Talk" text="Code" %} {% include elements/button.html link="https://pretalx.com/juliacon2020/talk/Z8WWNV/" text="Talk" %} {% include elements/button.html link="https://www.youtube.com/watch?v=hHCi8ojazqk" text="Video" %}
-              <a style="float:right;color:#3491fe" data-toggle="collapse" data-target="#juliacontalk"><u>More</u></a>
-      </li>
-        <div id="juliacontalk" class="collapse" style="font-size:15px;margin:50px">
-          The JuliaText ecosystem provides various packages for working with human languages. In this talk, I showed the usage of these JuliaText packages with Flux.jl for Natural Language Processing (NLP) with a focus on deep learning-based approaches. The attendees will gain working knowledge about how to apply the package for NLP in Julia. The talk will encompass Tokenizers, Word Embeddings, Recurrent Neural Networks and Transformer based Language models.
-          <br><br>
+  <!-- JOSS 2020 -->
+  <li><a target="_blank" href="https://www.theoj.org/joss-papers/joss.01956/10.21105.joss.01956.pdf">
+    "Basic Tools for Tokenizing Natural Language in Julia."</a>
+    <br><i><u><b>Ayush Kaushal</b></u>, Lyndon White, Mike Innes, Rohit Kumar</i><br>
+    The Journal of Open Source Software (JOSS) 2020
+    <br>
+    {% include elements/button.html link="https://github.com/JuliaText/WordTokenizers.jl" text="Code" %} {% include elements/button.html link="https://www.theoj.org/joss-papers/joss.01956/10.21105.joss.01956.pdf" text="Pdf" %} {% include elements/button.html link="https://zenodo.org/record/3663390/export/hx" text="Cite" %} {% include elements/button.html link="https://ayushk4.github.io/Coming-Soon" text="Poster" %}
+    <a style="float:right;color:#3491fe" data-toggle="collapse" data-target="#joss2020"><u>More</u></a>
+  </li>
+  <div id="joss2020" class="collapse" style="font-size:15px;margin:50px">
+      WordTokenizers.jl is a tool to help users of the Julia programming language work with natural language. WordTokenizers.jl provides a flexible API for defining fast tokenizers and sentence segmentors. Using this API several standard tokenizers and sentence segmenters have been implemented, allowing researchers and practitioners to focus on the higher details of their NLP tasks. WordTokenizers.jl uses a TokenBuffer API and its various lexers for fast word tokenization. TokenBuffer turns the string into a readable stream. A desired set of TokenBuffer lexers are used to read characters from the stream and flush out into an array of tokens. The package provides the following tokenizers made using this API. WordTokenizers.jl is currently being used by packages like TextAnalysis.jl, Transformers.jl and CorpusLoaders.jl for tokenizing text.
+      <br> <br>
+  </div>
+  <br>
 
-        </div>
-        <br>
+  <!-- EMNLP 2020 Bio -->
+  <li><a target="_blank" href="https://www.aclweb.org/anthology/2020.wnut-1.34.pdf">
+    "Domain specific BERT representation for Named Entity Recognition of lab protocol."</a>
+    <br><i>Tejas Vaidhya and <u><b>Ayush Kaushal</b></u></i><br>
+    Proceedings of the 6th Workshop on Noisy User-generated Text (W-NUT) at the 2020 Conference on Emperical Methods in Natural Language Processing (EMNLP 2020)
+    <br>
+    {% include elements/button.html link="https://github.com/tejasvaidhyadev/W-NUT_2020" text="Code" %} {% include elements/button.html link="https://www.aclweb.org/anthology/2020.wnut-1.34.pdf" text="Pdf" %} {% include elements/button.html link="https://www.aclweb.org/anthology/2020.wnut-1.34.bib" text="Cite" %} {% include elements/button.html link="https://github.com/noisy-text/noisy-text.github.io/blob/master/2020/posters/WNUT2020_92_poster%20-%20Tejas%20vaidhya.pdf" text="Poster" %}
+    <a style="float:right;color:#3491fe" data-toggle="collapse" data-target="#wetlab"><u>More</u></a>
+  </li>
+  <div id="wetlab" class="collapse" style="font-size:15px;margin:50px">
+    Supervised models trained to predict properties from representations, have been achieving high accuracy on a variety of tasks. For instance, the BERT family seems to work exceptionally well on the downstream task from NER tagging to the range of other linguistic tasks. But the vocabulary used in the medical field contains a lot of different tokens used only in the medical industry such as the name of different diseases, devices, organisms, medicines, etc. that makes it difficult for traditional BERT model to create contextualized embedding. In this paper, we are going to illustrate the System for Named Entity Tagging based on Bio-Bert. Experimental results show that our model gives substantial improvements over the baseline and stood the fourth runner up in terms of F1 score, and first runner up in terms of Recall among 13 teams with just 2.21 F1 score behind the best one.
+    <br> <br>
+  </div>
+  <br>
+
+  <!-- EMNLP 2020 COVID -->
+  <li><a target="_blank" href="https://www.aclweb.org/anthology/2020.wnut-1.79.pdf">
+    "Leveraging Event Specific and Chunk Span features to Extract COVID Events from tweets"</a>
+    <br> <i><u><b>Ayush Kaushal</b></u> and Tejas Vaidhya </i><br>
+    <b><u>Oral Presentation</u></b> at the 6th Workshop on Noisy User-generated Text (W-NUT) at the 2020 Conference on Emperical Methods in Natural Language Processing (EMNLP 2020)
+    <br>
+    {% include elements/button.html link="https://github.com/Ayushk4/extract_covid_entity" text="Code" %} {% include elements/button.html link="https://www.aclweb.org/anthology/2020.wnut-1.79.pdf" text="Pdf" %} {% include elements/button.html link="https://www.aclweb.org/anthology/2020.wnut-1.79.bib" text="Cite" %} {% include elements/button.html link="https://docs.google.com/presentation/d/13DDY6VSmrVPBddTjWb3rThYRFlRDE_9fi4iyBrhJev4/edit?usp=sharing" text="Slides" %} {% include elements/button.html link="https://github.com/noisy-text/noisy-text.github.io/blob/master/2020/posters/WNUT2020_91_poster%20-%20Tejas%20vaidhya.pdf" text="Poster" %}
+    <a style="float:right; color:#3491fe;" data-toggle="collapse" data-target="#covid"><u>More</u> </a>
+  </li>
+  <div id="covid" class="collapse" style="font-size:15px;margin:50px">
+    Twitter has acted as an important source of information during disasters and pandemic, especially during the times of COVID-19. In this paper, we describe our system entry for <i>WNUT 2020 Shared Task-3</i>. The task was aimed at automating the extraction of a variety of COVID-19 related events from Twitter, such as individuals who recently contracted the virus, someone with symptoms who were denied testing and believed remedies against the infection. The system consists of separate multi-task models for slot-filling subtasks and sentence-classification subtasks while leveraging the useful sentence-level information for the corresponding event. The system uses COVID-Twitter-Bert with attention-weighted pooling of candidate slot-chunk features to capture the useful information chunks. The system ranks <b>1st at the leader-board</b> with F1 of 0.6598, without using any ensembles or additional datasets.
+    <br> <br>
+  </div>
+  <br>
+
+  <!-- BTP -->
+  <li><a target="_blank" href="https://drive.google.com/file/d/1iNqtbP9h9d6acqpS8cw-BwzAib2Ldf3C/view?usp=sharing">
+    "Towards Target Aware Twitter Stance Detection."</a>
+    <br><i><u><b>Ayush Kaushal</b></u></i><br>
+    Bachelor's Thesis, IIT Kharagpur
+    <br>
+    {% include elements/button.html link="https://drive.google.com/open?id=1iNqtbP9h9d6acqpS8cw-BwzAib2Ldf3C&disco=AAAAO4n2YTs" text="Code" %} {% include elements/button.html link="https://drive.google.com/file/d/1iNqtbP9h9d6acqpS8cw-BwzAib2Ldf3C/view?usp=sharing" text="Pdf" %} {% include elements/button.html link="https://docs.google.com/presentation/d/1gZChpzpNbAcRGG6dyYhkTXHRL-WTDAz2/edit?usp=sharing&ouid=104189619769587518485&rtpof=true&sd=true" text="Slide" %} {% include elements/button.html link="https://drive.google.com/drive/folders/1FmngtkX1AJR2IAT8SPeWQYtKXVrtc0Me?usp=sharing" text="Report" %}
+    <a style="float:right;color:#3491fe" data-toggle="collapse" data-target="#bachelorsthesis"><u>More</u></a>
+  </li>
+  <div id="bachelorsthesis" class="collapse" style="font-size:15px;margin:50px">
+    The stance of a text is the attitude or standpoint of the author towards an entity or a debate topic. Stance Detection is the Natural Language Understanding (NLU) task to automatically detect the stance of a text for a given target. The targets are either named entities such as policies, politicians, or as free-form sentences such as popular debate topics, rumoured online claims or article headlines. Over the past few years, a considerable attention has been given to research on Stance Detection Systems. Several large scale datasets have also been proposed on a variety of domains to promote the progress of the field and to provide reliable benchmarks.
+    <br>
+    In this project, we first study the role of the target entities in detecting stance and based on our findings move towards target aware stance detection systems. We mainly analyse the various publicly available stance detection datasets on tweets. In these datasets, the text is a tweet and targets are either fixed entities or naturally occurring free-form sentences. Empirical findings show that despite the task requiring significant amount of understanding of the target being considered, one can easily achieve impressive performance by doing simple target-agnostic classification over a tweet. Specifically, we observe that a simple tweet classification model achieved near-human upper bound performance on a large scale dataset (WT-WT). These classification models can also achieve more than two-third of accuracy on 6 other Twitter stance detection datasets. Then, an analysis of some of the datasets is carried out to explain the existence of such biases in such datasets. We find some spurious correlations between tweet sentiment and stance classes. These datasets additionally have a set of lexical choices associated with their respective stance category. Consequently, we propose novel methods to augment the var ious existing stance detection dataset to inhibit target oblivious models from performing well and evaluated the dataset’s usefulness on the stance detection baseline models. With these proper benchmarks, we propose and experiment with several target aware stance detection models and show that taking into consideration, the target aware cues, the models deliver state of the art performance. Finally, we create a leaderboard for the newly created datasets and make our code, datasets and pre-trained models publicly available.
+    <br> <br>
+  </div>
+  <br>
+
+  <!-- JuliaCon -->
+  <li><a target="_blank" href="https://www.youtube.com/watch?v=hHCi8ojazqk">
+    "Natural Language Processing in Julia Language."</a>
+    <br><i><u><b>Ayush Kaushal</b></u></i><br>
+    JuliaCon 2020 Conference Full Talk (30 min)
+    <br>
+    {% include elements/button.html link="https://github.com/Ayushk4/JuliaCon20_Talk" text="Code" %} {% include elements/button.html link="https://pretalx.com/juliacon2020/talk/Z8WWNV/" text="Talk" %} {% include elements/button.html link="https://www.youtube.com/watch?v=hHCi8ojazqk" text="Video" %}
+    <a style="float:right;color:#3491fe" data-toggle="collapse" data-target="#juliacontalk"><u>More</u></a>
+  </li>
+  <div id="juliacontalk" class="collapse" style="font-size:15px;margin:50px">
+    The JuliaText ecosystem provides various packages for working with human languages. In this talk, I showed the usage of these JuliaText packages with Flux.jl for Natural Language Processing (NLP) with a focus on deep learning-based approaches. The attendees will gain working knowledge about how to apply the package for NLP in Julia. The talk will encompass Tokenizers, Word Embeddings, Recurrent Neural Networks and Transformer based Language models.
+    <br><br>
+  </div>
+  <br>
 </ul>
-
-<h2 style="margin:50px"> Other Selected Projects </h2>
 
 {% include projects/index.html %}
 

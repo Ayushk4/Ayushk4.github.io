@@ -51,7 +51,7 @@ As an undergraduate, I developed various Open Source softwares in Julia language
     * Trained atleast one NN on atleast one AI/Graphics accelerator from NVIDIA, AMD, Gaudi, Google TPU chips.
     * Trained atleast one NN on atleast one CPU from Intel, AMD, PowerPC and Apple Silicon.
 * Wrote the first open implementation to run 4-bit LLaMa models [on Mac CPU](https://github.com/NolanoOrg/llama-int4-quant).
-* Preferred language for neural networks: Python >>> Julia > JS > C/C++ > English.
+* Preferred language for neural networks: Python > > > Julia > JS > C/C++ > English.
 
 
 <!-- 

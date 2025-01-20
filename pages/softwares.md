@@ -17,7 +17,9 @@ Early in my college years as a freshman and sophomore, I actively developed and 
   <li> I mentored students in <a href="https://github.com/Ayushk4/Resume/blob/master/certificates/Mentor_GSoC_2020.pdf"> Google Summer of Code</a> 2020, <a href="https://github.com/Ayushk4/Resume/blob/master/certificates/GCI%202019%20Mentor%20Certificate.pdf">Google Code-In</a>, 2019 and <a href="https://github.com/Ayushk4/Resume/blob/master/certificates/KWoC18-Ayush%20Kaushal.pdf">Kharagpur Winter of Code</a>, 2018 programmes with their projects, mini-projects and first Pull-requests respectively.</li>
 </ul>
 
+Drawing from my open source background, I bring the same principles of collaboration and scientific reproducibility to my ML/AI research.
+
 ## Packages and Softwares
 {% include softwares/index.html %}
-{% include elements/button.html link="https://github.com/ayushk4" text="See more such projects on GitHub" block=true %}
+{% include elements/button.html link="https://github.com/ayushk4" text="More on my GitHub" block=true %}
 
