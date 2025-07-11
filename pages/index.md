@@ -233,5 +233,5 @@ ___
 
 <h3 style="margin-left:25px;margin-bottom:0px;margin-top:50px"> Contact</h3>
 <div style="margin-left:30px">
-<i>Email: username at gmail dot com ; where username = ayushk4</i><br>
+<br>
 
