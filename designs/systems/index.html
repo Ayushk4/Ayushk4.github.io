@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Home | Ayush Kaushal (Systems preview)</title>
+<meta name="description" content="Efficient pretraining and scaling of foundation models that learn in context.">
+<script>try{var t=localStorage.getItem('ak-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script><style>
+@font-face{font-family:"Inter";src:url(/designs/assets/fonts/inter-latin-wght-normal.woff2) format("woff2");font-weight:100 900;font-style:normal;font-display:swap}
+@font-face{font-family:"Inter";src:url(/designs/assets/fonts/inter-latin-wght-italic.woff2) format("woff2");font-weight:100 900;font-style:italic;font-display:swap}
+@font-face{font-family:"Source Serif 4";src:url(/designs/assets/fonts/source-serif-4-latin-wght-normal.woff2) format("woff2");font-weight:200 900;font-style:normal;font-display:swap}
+@font-face{font-family:"Source Serif 4";src:url(/designs/assets/fonts/source-serif-4-latin-wght-italic.woff2) format("woff2");font-weight:200 900;font-style:italic;font-display:swap}
+@font-face{font-family:"JetBrains Mono";src:url(/designs/assets/fonts/jetbrains-mono-latin-wght-normal.woff2) format("woff2");font-weight:100 800;font-style:normal;font-display:swap}:root{color-scheme:light;--bg:#f4f4f1;--panel:#fbfbf9;--ink:#141414;--ink2:#4a4a45;--muted:#74746c;--rule:#d8d8d0;--rule2:#e6e6df;--accent:#0b7a55;--accent-bg:#e2f2ea;--hl:#fff6d6;--vz-surface:#fbfbf9;--vz-ink:#141414;--vz-ink2:#4a4a45;--vz-muted:#898781;--vz-grid:#e8e8e1;--vz-axis:#c3c2b7;--vz-refbar:#b4b4ab;--vz-s1:#2a78d6;--vz-s2:#eb6834;--vz-s3:#1baf7a;--vz-s4:#eda100;}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;--bg:#0c0d0e;--panel:#121416;--ink:#e3e5e1;--ink2:#a8aca6;--muted:#7c807a;--rule:#2a2d30;--rule2:#1e2124;--accent:#45d49b;--accent-bg:#11271e;--hl:#272311;--vz-surface:#121416;--vz-ink:#e3e5e1;--vz-ink2:#a8aca6;--vz-muted:#898781;--vz-grid:#202326;--vz-axis:#363a3e;--vz-refbar:#555a5e;--vz-s1:#3987e5;--vz-s2:#d95926;--vz-s3:#199e70;--vz-s4:#c98500;}}
+:root[data-theme="dark"]{color-scheme:dark;--bg:#0c0d0e;--panel:#121416;--ink:#e3e5e1;--ink2:#a8aca6;--muted:#7c807a;--rule:#2a2d30;--rule2:#1e2124;--accent:#45d49b;--accent-bg:#11271e;--hl:#272311;--vz-surface:#121416;--vz-ink:#e3e5e1;--vz-ink2:#a8aca6;--vz-muted:#898781;--vz-grid:#202326;--vz-axis:#363a3e;--vz-refbar:#555a5e;--vz-s1:#3987e5;--vz-s2:#d95926;--vz-s3:#199e70;--vz-s4:#c98500;}*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 15px/1.55 "Inter",system-ui,-apple-system,"Segoe UI",sans-serif}
+.mono,h1,h2,h3,.lbl,nav.main,table,code{font-family:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,monospace}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.todo{color:var(--muted);cursor:help;text-decoration:line-through;text-decoration-color:color-mix(in srgb,var(--muted) 50%,transparent)}
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+header.top{border-bottom:1px solid var(--rule)}
+header.top .wrap{display:flex;align-items:center;gap:16px;height:52px}
+.brand{font-family:"JetBrains Mono",monospace;font-weight:600;color:var(--ink);font-size:14px;margin-right:auto}
+.brand::before{content:"~/";color:var(--muted);font-weight:400}
+nav.main{display:flex;gap:2px;font-size:13px}
+nav.main a,nav.main span{padding:4px 8px;color:var(--ink2)}
+nav.main a[aria-current]{color:var(--ink);background:var(--panel);box-shadow:inset 0 -2px 0 var(--accent)}
+.tt{font:500 12px "JetBrains Mono",monospace;background:none;border:1px solid var(--rule);color:var(--ink2);padding:4px 8px;cursor:pointer;display:inline-flex;gap:6px;align-items:center}
+@media (max-width:720px){header.top .wrap{flex-wrap:wrap;height:auto;padding-top:10px;padding-bottom:8px;gap:6px}nav.main{order:3;width:100%;margin-left:-8px;overflow-x:auto}}
+.lbl{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin:0 0 10px;display:flex;gap:8px;align-items:center}
+.lbl::after{content:"";flex:1;height:1px;background:var(--rule)}
+.panel{background:var(--panel);border:1px solid var(--rule);padding:16px}
+.me{font-weight:600;color:var(--ink)}
+.tag{display:inline-block;font:600 11px/1 "JetBrains Mono",monospace;padding:4px 6px;border:1px solid var(--rule);color:var(--ink2);white-space:nowrap}
+.tag.acc{border-color:var(--accent);color:var(--accent);background:var(--accent-bg)}
+.lk{font:500 12px "JetBrains Mono",monospace;display:inline-flex;flex-wrap:wrap;gap:4px 10px}
+.lk a::before,.lk span::before{content:"["}
+.lk a::after,.lk span::after{content:"]"}
+footer{margin:56px 0 0;border-top:1px solid var(--rule);padding:16px 0 24px;font:12px "JetBrains Mono",monospace;color:var(--muted)}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+footer nav{display:flex;gap:4px 14px;flex-wrap:wrap}
+footer a{color:var(--ink2)}
+.tbl-wrap{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:12.5px;font-variant-numeric:tabular-nums}
+th,td{text-align:left;padding:6px 10px 6px 0;border-bottom:1px solid var(--rule2);white-space:nowrap}
+thead th{font-weight:600;color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.05em;border-bottom:1px solid var(--rule)}
+td.n,th.n{text-align:right}
+tr.hl td{background:var(--hl);font-weight:600}
+details.data{margin-top:10px;font:12px "JetBrains Mono",monospace}
+details.data summary{cursor:pointer;color:var(--accent)}
+figcaption{font-size:12.5px;color:var(--ink2);margin-top:10px}
+
+.vz{width:100%;height:auto;display:block;overflow:visible}
+.vz text{font-family:inherit;fill:var(--vz-ink2)}
+.vz .vz-tick{font-size:11px;fill:var(--vz-muted);font-variant-numeric:tabular-nums}
+.vz .vz-label{font-size:11px;fill:var(--vz-ink2)}
+.vz .vz-note{font-size:11px;fill:var(--vz-ink2)}
+.vz .vz-cat{font-size:12px;fill:var(--vz-ink)}
+.vz .vz-val{font-size:12px;fill:var(--vz-ink);font-variant-numeric:tabular-nums}
+.vz-grid{stroke:var(--vz-grid);stroke-width:1}
+.vz-axis{stroke:var(--vz-axis);stroke-width:1}
+.vz-line{fill:none;stroke-width:2;stroke-linejoin:round;stroke-linecap:round;opacity:.9}
+.vz-dot{stroke:var(--vz-surface);stroke-width:2}
+.vz-dot:hover,.vz-bar:hover{opacity:.8}
+.vz-ref{fill:var(--vz-surface);stroke:var(--vz-muted);stroke-width:2}
+.vz-line.s1{stroke:var(--vz-s1)}.vz-line.s2{stroke:var(--vz-s2)}.vz-line.s3{stroke:var(--vz-s3)}.vz-line.s4{stroke:var(--vz-s4)}
+.vz-dot.s1,.vz-bar.s1,.vz-key.s1{fill:var(--vz-s1)}.vz-dot.s2,.vz-key.s2{fill:var(--vz-s2)}
+.vz-dot.s3,.vz-key.s3{fill:var(--vz-s3)}.vz-dot.s4,.vz-key.s4{fill:var(--vz-s4)}
+.vz-bar.ref{fill:var(--vz-refbar)}
+.vz-narrow{display:none}
+@media (max-width:560px){.vz-wide{display:none}.vz-narrow{display:block}}
+.vz-legend{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:12px;color:var(--vz-ink2);margin:0 0 8px;padding:0;list-style:none}
+.vz-legend li{display:flex;align-items:center;gap:6px}
+.vz-legend i{width:10px;height:10px;border-radius:50%;display:inline-block}
+.vz-legend i.s1{background:var(--vz-s1)}.vz-legend i.s2{background:var(--vz-s2)}
+.vz-legend i.s3{background:var(--vz-s3)}.vz-legend i.s4{background:var(--vz-s4)}
+.vz-legend i.ref{background:transparent;border:2px solid var(--vz-muted);width:8px;height:8px}
+
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="brand" href="/designs/systems/">ayush-kaushal</a>
+  <nav class="main" aria-label="Main">
+    <a href="/designs/systems/research/">research</a>
+    <a href="/designs/systems/megatabicl/">megatabicl</a>
+    <a href="/2019/08/22/My-Journey-in-Google-Summer-of-Code.html">writing</a>
+    <span class="todo" title="TODO(owner): CV PDF">cv.pdf</span>
+  </nav>
+  <button class="tt" type="button" data-theme-toggle aria-label="Toggle dark mode"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.25" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M8 1.75a6.25 6.25 0 0 1 0 12.5z" fill="currentColor"/></svg>theme</button>
+</div></header>
+<main class="wrap">
+<style>
+.row{display:grid;grid-template-columns:44px 176px 1fr;gap:12px;padding:12px 0;border-top:1px solid var(--rule2)}
+.row:first-child{border-top:0}
+.row .tag{white-space:normal;line-height:1.35}
+.row .yr{font-size:12px;color:var(--muted);padding-top:2px}
+.row .t{font-weight:600;line-height:1.35;margin:0 0 3px}
+.row .a{font-size:13.5px;color:var(--ink2);margin:0 0 5px}
+.row .abs{font-size:13.5px;color:var(--ink2);margin:8px 0 0;max-width:72ch}
+@media (max-width:640px){.row{grid-template-columns:1fr;gap:4px}.row .yr{display:none}}
+</style>
+<script>
+document.addEventListener('click',function(e){var a=e.target.closest('[data-abs]');if(!a)return;e.preventDefault();var p=a.closest('.bd').querySelector('.abs');p.hidden=!p.hidden;});
+</script><style>
+.top-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:32px;padding:36px 0 0}
+h1{font-size:30px;font-weight:700;letter-spacing:-.02em;margin:0 0 6px}
+.role{font:13px "JetBrains Mono",monospace;color:var(--ink2);margin:0 0 16px}
+.tag-line{font-size:18px;font-weight:600;margin:0 0 12px;line-height:1.35}
+.bio p{margin:0 0 10px;color:var(--ink2)}
+.metrics{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--rule);background:var(--panel)}
+.metric{padding:16px;border-right:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+.metric:nth-child(2n){border-right:0}.metric:nth-last-child(-n+2){border-bottom:0}
+.metric .v{font:700 34px/1 "JetBrains Mono",monospace;letter-spacing:-.03em}
+.metric .k{font:600 12px "JetBrains Mono",monospace;margin:8px 0 2px;color:var(--ink)}
+.metric .x{font-size:12.5px;color:var(--ink2);margin:0}
+.src{font:11px "JetBrains Mono",monospace;color:var(--muted);margin:8px 0 0}
+.main-grid{display:grid;grid-template-columns:1.6fr 1fr;gap:32px;margin-top:40px}
+dl.kv{display:grid;grid-template-columns:auto 1fr;gap:6px 14px;margin:0;font-size:13.5px}
+dl.kv dt{font:600 12px "JetBrains Mono",monospace;color:var(--muted);padding-top:2px}
+dl.kv dd{margin:0;color:var(--ink2)}
+.news div{display:grid;grid-template-columns:64px 1fr;gap:10px;padding:7px 0;border-top:1px solid var(--rule2);font-size:13.5px}
+.news div:first-child{border-top:0}
+.news time{font:12px "JetBrains Mono",monospace;color:var(--muted);padding-top:2px}
+@media (max-width:900px){.top-grid,.main-grid{grid-template-columns:1fr}}
+@media (max-width:420px){.metric .v{font-size:28px}}
+</style>
+<section class="top-grid">
+  <div>
+    <h1>Ayush Kaushal</h1>
+    <p class="role">phd @ udem + mila · cerc lab (irina rish) · montreal</p>
+    <p class="tag-line">Efficient pretraining and scaling of foundation models that learn in context.</p>
+    <div class="bio"><p>I&#39;m a PhD student at Université de Montréal and Mila, advised by Irina Rish in the CERC lab. I work on making foundation-model pretraining cheap enough that its scaling behaviour can be measured, with a current focus on tabular foundation models that are meta-trained on synthetic priors and predict through in-context learning.</p><p>My recent work, MegaTabICL, reproduces TabICLv2&#39;s stage-1 pretraining at 3.86x lower cost on 4 H100s and trains a 1B-parameter model within the stage-1 compute of the original 28M run, which enabled a 24-model scaling study from 5M to 1B parameters. Earlier, I pretrained and studied ternary language models (Spectra, ICLR 2025 Spotlight; Spectra 1.1, ACL 2025), covering scaling laws and inference kernels.</p><p>Before the PhD, I co-founded Nolano (2023 to 2026), did research at Google, and studied at UT Austin (MS) and IIT Kharagpur (B.Tech).</p></div>
+    <p style="margin:12px 0 0"><b>I&#39;m open to research collaborations, compute partnerships and funding around open tabular foundation models and efficient pretraining.</b> <a class="mono" style="font-size:13px" data-email data-email-show href="#">ayushk4 [at] gmail.com</a></p>
+  </div>
+  <div>
+    <p class="lbl">megatabicl / headline numbers</p>
+    <div class="metrics">
+<div class="metric"><div class="v">3.86x</div><div class="k">lower stage-1 cost</div><p class="x">Reference 28M run on 4xH100: 20.96 to 5.43 H100-days.</p></div><div class="metric"><div class="v">17.35</div><div class="k">H100-days for 1B params</div><p class="x">Full 500K-step stage 1, 37x Base, below the 28M reference.</p></div><div class="metric"><div class="v">0.2B</div><div class="k">compute-optimal size</div><p class="x">At TabICLv2&#39;s own stage-1 budget, 7x its size.</p></div><div class="metric"><div class="v">24</div><div class="k">models, 5M to 1B</div><p class="x">Six budgets, one non-repeating table sequence, 27.5 H100-days in total.</p></div>    </div>
+    <p class="src">source: MegaTabICL, Tables 4 and 6 · <a href="/designs/systems/megatabicl/">details</a></p>
+    <div class="panel" style="margin-top:16px">
+      <p class="lbl">stage-1 cost, H100-days on 4xH100</p>
+      <div class="vz-wide"><svg class="vz" viewBox="0 0 480 202" role="img" aria-labelledby="costsw-t">
+<title id="costsw-t">Stage-1 cost in H100-days on 4xH100 for each MegaTabICL size and the TabICLv2 reference</title>
+<line class="vz-grid" x1="168.0" x2="168.0" y1="6" y2="176"/>
+<text class="vz-tick" x="168.0" y="192" text-anchor="middle">0</text>
+<line class="vz-grid" x1="220.0" x2="220.0" y1="6" y2="176"/>
+<text class="vz-tick" x="220.0" y="192" text-anchor="middle">5</text>
+<line class="vz-grid" x1="272.0" x2="272.0" y1="6" y2="176"/>
+<text class="vz-tick" x="272.0" y="192" text-anchor="middle">10</text>
+<line class="vz-grid" x1="324.0" x2="324.0" y1="6" y2="176"/>
+<text class="vz-tick" x="324.0" y="192" text-anchor="middle">15</text>
+<line class="vz-grid" x1="376.0" x2="376.0" y1="6" y2="176"/>
+<text class="vz-tick" x="376.0" y="192" text-anchor="middle">20</text>
+<line class="vz-grid" x1="428.0" x2="428.0" y1="6" y2="176"/>
+<text class="vz-tick" x="428.0" y="192" text-anchor="middle">25</text>
+<text class="vz-cat" x="158" y="28.0" text-anchor="end">Tiny 4.7M</text>
+<path class="vz-bar s1" d="M168,15.0 h28.8 a4,4 0 0 1 4,4 v8 a4,4 0 0 1 -4,4 h-28.8 z"><title>Tiny 4.7M: 3.15 H100-days</title></path>
+<text class="vz-val" x="206.8" y="28.0">3.15</text>
+<text class="vz-cat" x="158" y="62.0" text-anchor="end">Base 27.6M</text>
+<path class="vz-bar s1" d="M168,49.0 h52.5 a4,4 0 0 1 4,4 v8 a4,4 0 0 1 -4,4 h-52.5 z"><title>Base 27.6M: 5.43 H100-days</title></path>
+<text class="vz-val" x="230.5" y="62.0">5.43</text>
+<text class="vz-cat" x="158" y="96.0" text-anchor="end">Medium 194.2M</text>
+<path class="vz-bar s1" d="M168,83.0 h71.0 a4,4 0 0 1 4,4 v8 a4,4 0 0 1 -4,4 h-71.0 z"><title>Medium 194.2M: 7.21 H100-days</title></path>
+<text class="vz-val" x="249.0" y="96.0">7.21</text>
+<text class="vz-cat" x="158" y="130.0" text-anchor="end">Large 1.03B</text>
+<path class="vz-bar s1" d="M168,117.0 h176.4 a4,4 0 0 1 4,4 v8 a4,4 0 0 1 -4,4 h-176.4 z"><title>Large 1.03B: 17.35 H100-days</title></path>
+<text class="vz-val" x="354.4" y="130.0">17.35</text>
+<text class="vz-cat" x="158" y="164.0" text-anchor="end">TabICLv2 reference, 28M</text>
+<path class="vz-bar ref" d="M168,151.0 h214.0 a4,4 0 0 1 4,4 v8 a4,4 0 0 1 -4,4 h-214.0 z"><title>TabICLv2 reference, 28M: 20.96 H100-days</title></path>
+<text class="vz-val" x="392.0" y="164.0">20.96</text>
+<line class="vz-axis" x1="168" x2="168" y1="6" y2="176"/>
+</svg></div><div class="vz-narrow"><svg class="vz" viewBox="0 0 340 262" role="img" aria-labelledby="costsn-t">
+<title id="costsn-t">Stage-1 cost in H100-days on 4xH100 for each MegaTabICL size and the TabICLv2 reference</title>
+<line class="vz-grid" x1="0.0" x2="0.0" y1="6" y2="236"/>
+<text class="vz-tick" x="0.0" y="252" text-anchor="middle">0</text>
+<line class="vz-grid" x1="57.6" x2="57.6" y1="6" y2="236"/>
+<text class="vz-tick" x="57.6" y="252" text-anchor="middle">5</text>
+<line class="vz-grid" x1="115.2" x2="115.2" y1="6" y2="236"/>
+<text class="vz-tick" x="115.2" y="252" text-anchor="middle">10</text>
+<line class="vz-grid" x1="172.8" x2="172.8" y1="6" y2="236"/>
+<text class="vz-tick" x="172.8" y="252" text-anchor="middle">15</text>
+<line class="vz-grid" x1="230.4" x2="230.4" y1="6" y2="236"/>
+<text class="vz-tick" x="230.4" y="252" text-anchor="middle">20</text>
+<line class="vz-grid" x1="288.0" x2="288.0" y1="6" y2="236"/>
+<text class="vz-tick" x="288.0" y="252" text-anchor="middle">25</text>
+<text class="vz-cat" x="0" y="19">Tiny 4.7M</text>
+<path class="vz-bar s1" d="M0,26.0 h32.3 a4,4 0 0 1 4,4 v6 a4,4 0 0 1 -4,4 h-32.3 z"><title>Tiny 4.7M: 3.15 H100-days</title></path>
+<text class="vz-val" x="42.3" y="37.0">3.15</text>
+<text class="vz-cat" x="0" y="65">Base 27.6M</text>
+<path class="vz-bar s1" d="M0,72.0 h58.6 a4,4 0 0 1 4,4 v6 a4,4 0 0 1 -4,4 h-58.6 z"><title>Base 27.6M: 5.43 H100-days</title></path>
+<text class="vz-val" x="68.6" y="83.0">5.43</text>
+<text class="vz-cat" x="0" y="111">Medium 194.2M</text>
+<path class="vz-bar s1" d="M0,118.0 h79.1 a4,4 0 0 1 4,4 v6 a4,4 0 0 1 -4,4 h-79.1 z"><title>Medium 194.2M: 7.21 H100-days</title></path>
+<text class="vz-val" x="89.1" y="129.0">7.21</text>
+<text class="vz-cat" x="0" y="157">Large 1.03B</text>
+<path class="vz-bar s1" d="M0,164.0 h195.9 a4,4 0 0 1 4,4 v6 a4,4 0 0 1 -4,4 h-195.9 z"><title>Large 1.03B: 17.35 H100-days</title></path>
+<text class="vz-val" x="205.9" y="175.0">17.35</text>
+<text class="vz-cat" x="0" y="203">TabICLv2 reference, 28M</text>
+<path class="vz-bar ref" d="M0,210.0 h237.5 a4,4 0 0 1 4,4 v6 a4,4 0 0 1 -4,4 h-237.5 z"><title>TabICLv2 reference, 28M: 20.96 H100-days</title></path>
+<text class="vz-val" x="247.5" y="221.0">20.96</text>
+<line class="vz-axis" x1="0" x2="0" y1="6" y2="236"/>
+</svg></div>
+    </div>
+  </div>
+</section>
+<section class="main-grid">
+  <div>
+    <p class="lbl">selected publications <a href="/designs/systems/research/" style="text-transform:none;letter-spacing:0;font-weight:500">all</a></p>
+<div class="row" data-themes="pretraining" data-year="2026">
+  <div class="yr mono">2026</div>
+  <div class="vn"><span class="tag acc">NeurIPS 2026 W · poster</span></div>
+  <div class="bd">
+    <div class="t">MegaTabICL: Efficient Scaling of Tabular Foundation Model Pretraining</div>
+    <div class="a"><span class="me">Ayush Kaushal</span>, Daria Yasafova, Irina Rish</div>
+    <div class="lk"><a class="" href="https://openreview.net/forum?id=WfamdVi3VV">openreview</a><a class="" href="https://openreview.net/pdf?id=WfamdVi3VV">pdf</a><span class=" todo" title="TODO(owner): link pending">code</span><a class="" href="/designs/systems/megatabicl/">project</a><a href="#" data-abs>abstract</a></div>
+<p class="abs" hidden>Pretraining frontier Tabular Foundation Models (TFMs) such as TabICLv2 is expensive: a single 28M-parameter run costs 24.5 H100-days. This limits systematic study of their scaling behavior, architecture and synthetic priors. We find this cost stems from adopting standard pretraining practices from other modalities, whose assumptions do not hold for the TFM pretraining workload. Three mismatches stand out: heavy-tailed prior-generation compute, heterogeneous input shapes across micro-batches, and computational load concentrated in low-parameter components. We propose MegaTabICL, which exactly reproduces the TabICLv2 pretraining recipe while resolving these mismatches, together with a stabilized BF16 pretraining recipe. Focusing on stage 1, which accounts for over 80% of total pretraining cost, MegaTabICL and the BF16 recipe reproduce the reference 28M-parameter run using 4 H100s at 3.86x lower cost, and train a 1B-parameter model in less compute than that reference run required. As an initial demonstration, we pretrain 24 models spanning 5M to 1B parameters across six compute budgets. We find the compute-optimal parameter count grows with the training budget, already reaching 0.2B at TabICLv2&#39;s own stage-1 budget, since pretraining cost grows only sublinearly with parameter count. We open-source the MegaTabICL framework.</p>  </div>
+</div><div class="row" data-themes="pretraining inference" data-year="2025">
+  <div class="yr mono">2025</div>
+  <div class="vn"><span class="tag">ACL 2025</span></div>
+  <div class="bd">
+    <div class="t">Scaling Laws and Efficient Inference for Ternary Language Models</div>
+    <div class="a">Tejas Vaidhya, <span class="me">Ayush Kaushal</span>, Vineet Jain, Francis Couture-Harpin, Prashant Shishodia, Majid Behbahani, Yuriy Nevmyvaka, Irina Rish</div>
+    <div class="lk"><a class="" href="https://aclanthology.org/2025.acl-long.1294/">acl anthology</a><a class="" href="https://aclanthology.org/2025.acl-long.1294.pdf">pdf</a><a class="" href="https://arxiv.org/abs/2506.23025">arxiv</a><span class=" todo" title="TODO(owner): link pending">models</span><span class=" todo" title="TODO(owner): link pending">kernels</span></div>
+  </div>
+</div><div class="row" data-themes="pretraining" data-year="2025">
+  <div class="yr mono">2025</div>
+  <div class="vn"><span class="tag acc">ICLR 2025 · spotlight</span></div>
+  <div class="bd">
+    <div class="t">Spectra: Surprising Effectiveness of Pretraining Ternary Language Models at Scale</div>
+    <div class="a"><span class="me">Ayush Kaushal*</span>, Tejas Vaidhya*, Arnab Kumar Mondal, Tejas Pandey, Aaryan Bhagat, Irina Rish</div>
+    <div class="lk"><a class="" href="https://openreview.net/forum?id=TJo6aQb7mK">openreview</a><a class="" href="https://openreview.net/pdf?id=TJo6aQb7mK">pdf</a><a class="" href="https://arxiv.org/abs/2407.12327">arxiv</a><a class="" href="https://huggingface.co/SpectraSuite">models</a><a href="#" data-abs>abstract</a></div>
+<p class="abs" hidden>Rapid advancements in GPU computational power has outpaced memory capacity and bandwidth growth, creating bottlenecks in Large Language Model (LLM) inference. Post-training quantization is the leading method for addressing memory-related bottlenecks in LLM inference, but it suffers from significant performance degradation below 4-bit precision. This paper addresses these challenges by investigating the pretraining of low-bitwidth models specifically Ternary Language Models (TriLMs) as an alternative to traditional floating-point models (FloatLMs) and their post-training quantized versions (QuantLMs). We present Spectra LLM suite, the first open suite of LLMs spanning multiple bit-widths, including FloatLMs, QuantLMs, and TriLMs, ranging from 99M to 3.9B parameters trained on 300B tokens. Our comprehensive evaluation demonstrates that TriLMs offer superior scaling behavior in terms of model size (in bits). Surprisingly, at scales exceeding one billion parameters, TriLMs consistently outperform their QuantLM and FloatLM counterparts for a given bit size across various benchmarks. Notably, the 3.9B parameter TriLM matches the performance of the FloatLM 3.9B across all benchmarks, despite having fewer bits than FloatLM 830M.</p>  </div>
+</div><div class="row" data-themes="inference" data-year="2023">
+  <div class="yr mono">2023</div>
+  <div class="vn"><span class="tag">EACL 2023</span></div>
+  <div class="bd">
+    <div class="t">Efficient Encoders for Streaming Sequence Tagging</div>
+    <div class="a"><span class="me">Ayush Kaushal</span>, Aditya Gupta, Shyam Upadhyay, Manaal Faruqui</div>
+    <div class="lk"><a class="" href="https://aclanthology.org/2023.eacl-main.31/">acl anthology</a><a class="" href="https://aclanthology.org/2023.eacl-main.31.pdf">pdf</a><a class="" href="https://aclanthology.org/2023.eacl-main.31.bib">bibtex</a></div>
+  </div>
+</div>  </div>
+  <div>
+    <p class="lbl">now</p>
+    <dl class="kv"><dt>megatabicl</dt><dd>Presenting at the NeurIPS 2026 AXIOM workshop in Paris on Dec 13; extending the scaling study past stage 1.</dd><dt>interests</dt><dd>Agents and automated research (no public work yet).</dd></dl>
+    <p class="lbl" style="margin-top:28px">news</p>
+    <div class="news"><div><time datetime="2026-12">2026-12</time><span>Presenting MegaTabICL at the NeurIPS 2026 AXIOM workshop, Paris (Dec 13).</span></div><div><time datetime="2026-09">2026-09</time><span>MegaTabICL accepted as a poster at NeurIPS 2026 AXIOM (on OpenReview since 29 Sept 2026).</span></div><div><time datetime="2025-08">2025-08</time><span>Started my PhD at Université de Montréal and Mila.</span></div><div><time datetime="2025-07">2025-07</time><span>Spectra 1.1 published at ACL 2025.</span></div><div><time datetime="2025-04">2025-04</time><span>Spectra presented as a Spotlight at ICLR 2025.</span></div></div>
+    <p class="lbl" style="margin-top:28px">links</p>
+    <dl class="kv"><dt>email</dt><dd class="mono" style="font-size:12.5px"><a data-email href="#">ayushk4 [at] gmail.com</a></dd><dt>google scholar</dt><dd class="mono" style="font-size:12.5px"><span class="todo">TODO(owner)</span></dd><dt>github</dt><dd class="mono" style="font-size:12.5px"><a href="https://github.com/ayushk4">ayushk4</a></dd><dt>openreview</dt><dd class="mono" style="font-size:12.5px"><a href="https://openreview.net/profile?id=~Ayush_Kaushal1">~Ayush_Kaushal1</a></dd><dt>hugging face</dt><dd class="mono" style="font-size:12.5px"><a href="https://huggingface.co/ayushk4">ayushk4</a></dd><dt>linkedin</dt><dd class="mono" style="font-size:12.5px"><a href="https://www.linkedin.com/in/ayushkaushal4/">ayushkaushal4</a></dd><dt>x</dt><dd class="mono" style="font-size:12.5px"><span class="todo">TODO(owner)</span></dd></dl>
+  </div>
+</section>
+</main>
+<footer><div class="wrap">
+  <nav aria-label="Profiles"><a data-email href="#">email</a><span class="todo" title="TODO(owner)">google scholar</span><a href="https://github.com/ayushk4">github</a><a href="https://openreview.net/profile?id=~Ayush_Kaushal1">openreview</a><a href="https://huggingface.co/ayushk4">hugging face</a><a href="https://www.linkedin.com/in/ayushkaushal4/">linkedin</a><span class="todo" title="TODO(owner)">x</span></nav>
+  <span>montreal · updated 2026-11</span>
+</div></footer>
+<nav class="pv" aria-label="Design preview switcher">
+  <span class="pv-l">Preview</span>
+  <a href="/designs/minimal/">Minimal</a>
+  <a href="/designs/lab/">Lab</a>
+  <a href="/designs/systems/" aria-current="page">Systems</a>
+  <a class="pv-all" href="/designs/">All</a>
+</nav>
+<style>
+.pv{position:fixed;left:50%;bottom:12px;transform:translateX(-50%);z-index:50;display:flex;align-items:center;gap:2px;
+padding:4px;border-radius:999px;background:#111;color:#eee;font:500 13px/1 system-ui,-apple-system,"Segoe UI",sans-serif;
+box-shadow:0 4px 18px rgba(0,0,0,.25);white-space:nowrap}
+.pv a{color:#ddd;text-decoration:none;padding:8px 11px;border-radius:999px}
+.pv a:hover{background:#2a2a2a;color:#fff}
+.pv a[aria-current]{background:#fff;color:#111}
+.pv-l{padding:0 8px 0 10px;color:#999;font-size:11px;text-transform:uppercase;letter-spacing:.06em}
+.pv-all{color:#999!important}
+body{padding-bottom:72px}
+@media print{.pv{display:none}}
+</style><script>
+(function(){
+  var root=document.documentElement;
+  function cur(){var t=root.getAttribute('data-theme');if(t)return t;return matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}
+  document.querySelectorAll('[data-theme-toggle]').forEach(function(b){
+    b.addEventListener('click',function(){var n=cur()==='dark'?'light':'dark';root.setAttribute('data-theme',n);try{localStorage.setItem('ak-theme',n)}catch(e){}});
+  });
+  document.querySelectorAll('[data-email]').forEach(function(a){
+    var e='ayushk4'+'@'+'gmail.com';a.href='mailto:'+e;if(a.hasAttribute('data-email-show'))a.textContent=e;
+  });
+  document.querySelectorAll('[data-view-btn]').forEach(function(b){
+    b.addEventListener('click',function(){
+      var v=b.getAttribute('data-view-btn');
+      document.querySelectorAll('[data-view]').forEach(function(s){s.hidden=s.getAttribute('data-view')!==v});
+      document.querySelectorAll('[data-view-btn]').forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false')});
+    });
+  });
+})();
+</script></body>
+</html>

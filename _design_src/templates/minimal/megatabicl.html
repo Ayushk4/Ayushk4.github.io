@@ -1,0 +1,48 @@
+{% extends "minimal/base.html" %}
+{% import "_macros.html" as m with context %}
+{% block main %}
+{% set T = C.MTI %}
+<p class="small" style="margin:40px 0 0">Project · Published on OpenReview {{ T.published }}</p>
+<h1 style="margin-top:6px">MegaTabICL: Efficient Scaling of Tabular Foundation Model Pretraining</h1>
+<p class="a" style="color:var(--ink2)">{{ authors(T.authors) }}</p>
+<p class="small"><i>{{ T.venue }}</i>. {{ T.note }}. Presenting in {{ T.presenting }}.</p>
+<p class="small" style="display:flex;gap:14px;flex-wrap:wrap"><a href="{{ T.openreview }}">OpenReview</a><a href="{{ T.pdf }}">PDF</a>{{ m.link("Code", None) }}{{ m.link("BibTeX", None) }}</p>
+
+<p><b>TL;DR.</b> {{ T.tldr }}</p>
+
+<h2>Results</h2>
+<ul>
+{% for big, label, detail in T.headline %}<li><b>{{ big }} {{ label }}.</b> {{ detail }}</li>{% endfor %}
+</ul>
+
+<figure>
+  {{ legend }}
+  {{ scaling_chart }}
+  <figcaption><b>Figure 1.</b> Accuracy on the TALENT-Tiny classification subset (28 datasets) against stage-1 compute, for 24 checkpoints from Table 6. Lines are per-size power-law fits, 1 − acc = A·D<sup>−p</sup> with D the number of tables seen, fitted by this site to the table values. The TabICLv2 release point includes stages 2 and 3, so it is not on the same footing.</figcaption>
+  {% include "_sweep_table.html" %}
+</figure>
+
+<figure>
+  {{ cost_chart }}
+  <figcaption><b>Figure 2.</b> Stage-1 cost for the full 500K steps on 4xH100, in H100-days (Table 4). The 1B model costs less than the 28M reference.</figcaption>
+</figure>
+
+<h2>Why it was expensive</h2>
+{% for t, d in T.mismatches %}<p><b>{{ loop.index }}. {{ t }}.</b> {{ d }}</p>{% endfor %}
+<p>The only deviation from the reference recipe: QASSMax stays in FP32 and moves from Muon to AdamW, which keeps BF16 training stable.</p>
+
+<h3>Ablation (Table 1, Base, median s/step)</h3>
+<div class="tbl-wrap"><table>
+<thead><tr><th>Configuration</th><th class="n">s/step</th><th class="n">Speedup lost</th></tr></thead>
+<tbody>{% for name, s, x, hl in C.ABLATION %}<tr{% if hl %} class="hl"{% endif %}><td>{{ name }}</td><td class="n">{{ "%.2f"|format(s) }}</td><td class="n">{% if x %}{{ x }}x{% endif %}</td></tr>{% endfor %}</tbody>
+</table></div>
+
+<h3>Model sizes (Table 2)</h3>
+<div class="tbl-wrap"><table>
+<thead><tr><th></th>{% for c in C.ARCH.cols %}<th class="n">{{ c }}</th>{% endfor %}</tr></thead>
+<tbody>{% for name, vals in C.ARCH.rows %}<tr><td>{{ name }}</td>{% for v in vals %}<td class="n">{{ v }}</td>{% endfor %}</tr>{% endfor %}</tbody>
+</table></div>
+
+<h2>Limitations</h2>
+<p>{{ T.limitations }}</p>
+{% endblock %}

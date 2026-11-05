@@ -1,0 +1,11 @@
+{% import "_macros.html" as m with context %}
+<div class="row" data-themes="{{ p.themes|join(' ') }}" data-year="{{ p.year }}">
+  <div class="yr mono">{{ p.year }}</div>
+  <div class="vn"><span class="tag{% if p.note in ('Spotlight', 'Poster') %} acc{% endif %}">{{ p.abbr }}{% if p.note in ('Spotlight', 'Poster') %} · {{ p.note|lower }}{% endif %}</span></div>
+  <div class="bd">
+    <div class="t">{{ p.title }}</div>
+    <div class="a">{{ authors(p.authors) }}</div>
+    <div class="lk">{% for label, url in p.links %}{{ m.link(label|lower, url) }}{% endfor %}{% if p.abstract %}<a href="#" data-abs>abstract</a>{% endif %}</div>
+    {% if p.abstract %}<p class="abs" hidden>{{ p.abstract }}</p>{% endif %}
+  </div>
+</div>

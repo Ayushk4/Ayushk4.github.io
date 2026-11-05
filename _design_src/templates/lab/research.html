@@ -1,0 +1,47 @@
+{% extends "lab/base.html" %}
+{% import "_macros.html" as m with context %}
+{% block main %}
+<style>
+.layout{display:grid;grid-template-columns:230px 1fr;gap:40px;padding-top:44px}
+.side{position:sticky;top:84px;align-self:start}
+.side a{display:flex;justify-content:space-between;gap:8px;padding:7px 10px;border-radius:8px;font-size:14px;color:var(--ink2)}
+.side a:hover{background:var(--card);text-decoration:none;color:var(--ink)}
+.side .n{color:var(--muted);font-variant-numeric:tabular-nums}
+.seg{display:inline-flex;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:3px;margin:0 0 18px}
+.seg button{font:inherit;font-size:13px;font-weight:500;border:0;background:none;color:var(--ink2);padding:6px 12px;border-radius:7px;cursor:pointer}
+.seg button[aria-pressed=true]{background:var(--ink);color:var(--card)}
+.list{display:grid;gap:14px}
+h2.th{font-size:20px;margin:36px 0 14px;scroll-margin-top:84px}
+h2.th:first-child{margin-top:0}
+@media (max-width:860px){.layout{grid-template-columns:1fr;gap:16px;padding-top:28px}.side{position:static}.side nav{display:none}}
+</style>
+<div class="layout">
+  <aside class="side">
+    <h1 style="font-size:30px;margin:0 0 6px">Research</h1>
+    <p style="font-size:14px;color:var(--ink2);margin:0 0 18px">Papers, models and code. * marks equal contribution.</p>
+    <div class="seg" role="group" aria-label="Order"><button type="button" data-view-btn="theme" aria-pressed="true">By theme</button><button type="button" data-view-btn="year" aria-pressed="false">By year</button></div>
+    <nav aria-label="Themes">{% for g in by_theme %}<a href="#{{ g.key }}"><span>{{ g.label.split(':')[0] }}</span><span class="n">{{ g.pubs|length + g.oss|length }}</span></a>{% endfor %}</nav>
+  </aside>
+  <div>
+    <section data-view="theme">
+    {% for g in by_theme %}
+      <h2 class="th" id="{{ g.key }}">{{ g.label }}</h2>
+      <div class="list">
+      {% for p in g.pubs %}{% include "lab/_pub.html" %}{% endfor %}
+      {% for o in g.oss %}
+        <article class="card pubcard"><div><span class="chip">{{ o.abbr }}</span> <span class="chip">Project</span></div>
+        <p class="t">{{ o.title }}</p><p class="a">{{ o.text }}</p>
+        <div class="l">{% for label, url in o.links %}{{ m.link(label, url, "pill") }}{% endfor %}</div></article>
+      {% endfor %}
+      </div>
+    {% endfor %}
+    </section>
+    <section data-view="year" hidden>
+    {% for y, items in by_year %}
+      <h2 class="th">{{ y }}</h2>
+      <div class="list">{% for p in items %}{% include "lab/_pub.html" %}{% endfor %}</div>
+    {% endfor %}
+    </section>
+  </div>
+</div>
+{% endblock %}

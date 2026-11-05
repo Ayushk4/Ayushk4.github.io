@@ -1,0 +1,20 @@
+{% extends "minimal/base.html" %}
+{% import "_macros.html" as m with context %}
+{% block main %}
+<h1>Ayush Kaushal</h1>
+<p class="lede">{{ P.role }}. {{ P.tagline }}</p>
+{% for para in C.BIO %}<p>{{ para }}</p>{% endfor %}
+<p>{{ C.COLLAB }} Email me at <a data-email data-email-show href="#">ayushk4 [at] gmail.com</a>.</p>
+
+<h2>Now</h2>
+{% for k, v in C.NOW %}<p><b>{{ k }}.</b> {{ v }}</p>{% endfor %}
+
+<h2>News</h2>
+<table class="news"><tbody>
+{% for iso, d, t in C.NEWS %}<tr><td class="small" style="white-space:nowrap;width:6.5rem">{{ d }}</td><td>{{ t }}</td></tr>{% endfor %}
+</tbody></table>
+
+<h2>Selected publications</h2>
+{% for p in selected %}{% include "minimal/_pub.html" %}{% endfor %}
+<p class="small"><a href="/designs/minimal/research/">All publications and projects</a></p>
+{% endblock %}

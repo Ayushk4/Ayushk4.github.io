@@ -1,0 +1,12 @@
+{% import "_macros.html" as m with context %}
+<article class="pub">
+  <div class="v"><b>{{ p.abbr }}</b>{% if p.note %}{{ p.note }}{% endif %}</div>
+  <div>
+    <p class="t">{% set u = m.primary_url(p) %}{% if u %}<a href="{{ u }}">{{ p.title }}</a>{% else %}{{ p.title }}{% endif %}</p>
+    <p class="a">{{ authors(p.authors) }}</p>
+    <div class="l">
+      {% for label, url in p.links %}{{ m.link(label, url) }}{% endfor %}
+      {% if p.abstract %}<details><summary>Abstract</summary><p>{{ p.abstract }}</p></details>{% endif %}
+    </div>
+  </div>
+</article>

@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Design previews | Ayush Kaushal</title>
+<style>
+@font-face{font-family:"Inter";src:url(/designs/assets/fonts/inter-latin-wght-normal.woff2) format("woff2");font-weight:100 900;font-style:normal;font-display:swap}
+@font-face{font-family:"Inter";src:url(/designs/assets/fonts/inter-latin-wght-italic.woff2) format("woff2");font-weight:100 900;font-style:italic;font-display:swap}
+@font-face{font-family:"Source Serif 4";src:url(/designs/assets/fonts/source-serif-4-latin-wght-normal.woff2) format("woff2");font-weight:200 900;font-style:normal;font-display:swap}
+@font-face{font-family:"Source Serif 4";src:url(/designs/assets/fonts/source-serif-4-latin-wght-italic.woff2) format("woff2");font-weight:200 900;font-style:italic;font-display:swap}
+@font-face{font-family:"JetBrains Mono";src:url(/designs/assets/fonts/jetbrains-mono-latin-wght-normal.woff2) format("woff2");font-weight:100 800;font-style:normal;font-display:swap}:root{color-scheme:light;--bg:#f6f6f4;--card:#fff;--ink:#141414;--ink2:#55554f;--muted:#80807a;--line:#e3e3de;--accent:#1d4ed8}
+@media (prefers-color-scheme:dark){:root{color-scheme:dark;--bg:#0e0f10;--card:#16181a;--ink:#e8e8e5;--ink2:#a9a9a3;--muted:#85857f;--line:#2a2c2f;--accent:#7aa2ff}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.55 "Inter",system-ui,-apple-system,"Segoe UI",sans-serif}
+.wrap{max-width:1120px;margin:0 auto;padding:40px 20px 64px}
+h1{font-size:30px;letter-spacing:-.02em;margin:0 0 8px}
+.lede{color:var(--ink2);max-width:46em;margin:0 0 32px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column}
+.card img{display:block;width:100%;height:auto;aspect-ratio:16/10;object-fit:cover;object-position:top;border-bottom:1px solid var(--line);background:var(--bg)}
+.card .b{padding:16px 18px 18px;display:flex;flex-direction:column;gap:8px;flex:1}
+.card h2{font-size:19px;margin:0}
+.card p{margin:0;color:var(--ink2);font-size:14px;flex:1}
+.links{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.links a{font-size:13px;font-weight:600;padding:6px 11px;border-radius:8px;border:1px solid var(--line);color:var(--ink);text-decoration:none}
+.links a:first-child{background:var(--ink);color:var(--card);border-color:var(--ink)}
+.links a:hover{border-color:var(--muted)}
+.notes{margin-top:36px;font-size:14px;color:var(--ink2);max-width:46em}
+.notes h3{font-size:14px;color:var(--ink);margin:0 0 6px}
+.notes ul{margin:0;padding-left:18px}
+a{color:var(--accent)}
+@media (max-width:900px){.grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Design previews</h1>
+  <p class="lede">Three directions for the new site, each with a homepage, a Research page and the MegaTabICL project page. All three use the same content; only layout, type and density differ. The live homepage is unchanged until you pick one. Every page has a dark mode (toggle in the header) and a switcher at the bottom to jump between designs on the same page.</p>
+  <div class="grid">
+    <article class="card">
+      <a href="/designs/minimal/"><img src="/designs/assets/thumbs/minimal.jpg" alt="Minimal design, homepage" width="640" height="400" loading="lazy"></a>
+      <div class="b">
+        <h2>1. Minimal</h2>
+        <p>Single column, serif, text first. Publications are the main object.</p>
+        <div class="links"><a href="/designs/minimal/">Home</a><a href="/designs/minimal/research/">Research</a><a href="/designs/minimal/megatabicl/">MegaTabICL</a></div>
+      </div>
+    </article>
+    <article class="card">
+      <a href="/designs/lab/"><img src="/designs/assets/thumbs/lab.jpg" alt="Lab design, homepage" width="640" height="400" loading="lazy"></a>
+      <div class="b">
+        <h2>2. Lab</h2>
+        <p>Hero with tagline and the MegaTabICL scaling chart, cards for Now and News.</p>
+        <div class="links"><a href="/designs/lab/">Home</a><a href="/designs/lab/research/">Research</a><a href="/designs/lab/megatabicl/">MegaTabICL</a></div>
+      </div>
+    </article>
+    <article class="card">
+      <a href="/designs/systems/"><img src="/designs/assets/thumbs/systems.jpg" alt="Systems design, homepage" width="640" height="400" loading="lazy"></a>
+      <div class="b">
+        <h2>3. Systems</h2>
+        <p>Monospace accents, numbers first, dense two-column layout.</p>
+        <div class="links"><a href="/designs/systems/">Home</a><a href="/designs/systems/research/">Research</a><a href="/designs/systems/megatabicl/">MegaTabICL</a></div>
+      </div>
+    </article>
+  </div>
+  <div class="notes">
+    <h3>Placeholders in the previews</h3>
+    <ul>
+      <li>Greyed or struck-through links (Google Scholar, X, CV, MegaTabICL code and BibTeX, Spectra 1.1 models and kernels) are waiting for URLs.</li>
+      <li>The "AK" badge stands in for a photo.</li>
+      <li>Older publication titles and author lists are copied from the current site and are not yet checked against ACL Anthology or OpenReview.</li>
+      <li>Charts are static SVG from the paper's Tables 4 and 6. Interactive versions come later.</li>
+    </ul>
+  </div>
+</div>
+</body>
+</html>

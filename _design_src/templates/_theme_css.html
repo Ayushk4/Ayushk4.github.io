@@ -1,0 +1,4 @@
+{# usage: {% with light=..., dark=... %}{% include "_theme_css.html" %}{% endwith %} #}
+:root{color-scheme:light;{{ light }}}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;{{ dark }}}}
+:root[data-theme="dark"]{color-scheme:dark;{{ dark }}}

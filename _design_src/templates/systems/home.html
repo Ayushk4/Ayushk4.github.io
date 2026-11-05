@@ -1,0 +1,62 @@
+{% extends "systems/base.html" %}
+{% import "_macros.html" as m with context %}
+{% block main %}
+{% include "systems/_rowcss.html" %}
+<style>
+.top-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:32px;padding:36px 0 0}
+h1{font-size:30px;font-weight:700;letter-spacing:-.02em;margin:0 0 6px}
+.role{font:13px "JetBrains Mono",monospace;color:var(--ink2);margin:0 0 16px}
+.tag-line{font-size:18px;font-weight:600;margin:0 0 12px;line-height:1.35}
+.bio p{margin:0 0 10px;color:var(--ink2)}
+.metrics{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--rule);background:var(--panel)}
+.metric{padding:16px;border-right:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+.metric:nth-child(2n){border-right:0}.metric:nth-last-child(-n+2){border-bottom:0}
+.metric .v{font:700 34px/1 "JetBrains Mono",monospace;letter-spacing:-.03em}
+.metric .k{font:600 12px "JetBrains Mono",monospace;margin:8px 0 2px;color:var(--ink)}
+.metric .x{font-size:12.5px;color:var(--ink2);margin:0}
+.src{font:11px "JetBrains Mono",monospace;color:var(--muted);margin:8px 0 0}
+.main-grid{display:grid;grid-template-columns:1.6fr 1fr;gap:32px;margin-top:40px}
+dl.kv{display:grid;grid-template-columns:auto 1fr;gap:6px 14px;margin:0;font-size:13.5px}
+dl.kv dt{font:600 12px "JetBrains Mono",monospace;color:var(--muted);padding-top:2px}
+dl.kv dd{margin:0;color:var(--ink2)}
+.news div{display:grid;grid-template-columns:64px 1fr;gap:10px;padding:7px 0;border-top:1px solid var(--rule2);font-size:13.5px}
+.news div:first-child{border-top:0}
+.news time{font:12px "JetBrains Mono",monospace;color:var(--muted);padding-top:2px}
+@media (max-width:900px){.top-grid,.main-grid{grid-template-columns:1fr}}
+@media (max-width:420px){.metric .v{font-size:28px}}
+</style>
+<section class="top-grid">
+  <div>
+    <h1>Ayush Kaushal</h1>
+    <p class="role">phd @ udem + mila · cerc lab (irina rish) · montreal</p>
+    <p class="tag-line">{{ P.tagline }}</p>
+    <div class="bio">{% for para in C.BIO %}<p>{{ para }}</p>{% endfor %}</div>
+    <p style="margin:12px 0 0"><b>{{ C.COLLAB }}</b> <a class="mono" style="font-size:13px" data-email data-email-show href="#">ayushk4 [at] gmail.com</a></p>
+  </div>
+  <div>
+    <p class="lbl">megatabicl / headline numbers</p>
+    <div class="metrics">
+    {% for big, label, detail in C.MTI.headline %}<div class="metric"><div class="v">{{ big }}</div><div class="k">{{ label }}</div><p class="x">{{ detail }}</p></div>{% endfor %}
+    </div>
+    <p class="src">source: MegaTabICL, Tables 4 and 6 · <a href="/designs/systems/megatabicl/">details</a></p>
+    <div class="panel" style="margin-top:16px">
+      <p class="lbl">stage-1 cost, H100-days on 4xH100</p>
+      {{ cost_chart_small }}
+    </div>
+  </div>
+</section>
+<section class="main-grid">
+  <div>
+    <p class="lbl">selected publications <a href="/designs/systems/research/" style="text-transform:none;letter-spacing:0;font-weight:500">all</a></p>
+    {% for p in selected %}{% include "systems/_row.html" %}{% endfor %}
+  </div>
+  <div>
+    <p class="lbl">now</p>
+    <dl class="kv">{% for k, v in C.NOW %}<dt>{{ k|lower }}</dt><dd>{{ v }}</dd>{% endfor %}</dl>
+    <p class="lbl" style="margin-top:28px">news</p>
+    <div class="news">{% for iso, d, t in C.NEWS %}<div><time datetime="{{ iso }}">{{ iso }}</time><span>{{ t }}</span></div>{% endfor %}</div>
+    <p class="lbl" style="margin-top:28px">links</p>
+    <dl class="kv">{% for label, url, handle in C.LINKS %}<dt>{{ label|lower }}</dt><dd class="mono" style="font-size:12.5px">{% if url == "mailto" %}<a data-email href="#">{{ handle }}</a>{% elif url %}<a href="{{ url }}">{{ handle }}</a>{% else %}<span class="todo">{{ handle }}</span>{% endif %}</dd>{% endfor %}</dl>
+  </div>
+</section>
+{% endblock %}

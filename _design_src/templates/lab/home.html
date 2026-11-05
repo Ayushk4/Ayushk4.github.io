@@ -1,0 +1,78 @@
+{% extends "lab/base.html" %}
+{% import "_macros.html" as m with context %}
+{% block main %}
+<style>
+.hero{display:grid;grid-template-columns:1.05fr 1fr;gap:40px;align-items:center;padding:56px 0 8px}
+.hero h1{font-size:44px;font-weight:700;margin:0 0 18px;line-height:1.08;letter-spacing:-.025em}
+.hero p.b{font-size:17px;color:var(--ink2);margin:0 0 22px;max-width:36em}
+.hero .cta{display:flex;flex-wrap:wrap;gap:8px}
+.hero .card h3{font-size:15px;margin:0 0 4px}
+.hero .card p.s{font-size:13px;color:var(--ink2);margin:0 0 12px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.news li{display:grid;grid-template-columns:72px 1fr;gap:10px;padding:9px 0;border-top:1px solid var(--line);font-size:14px}
+.news li:first-child{border-top:0;padding-top:0}
+.news time{color:var(--muted);font-weight:500;font-variant-numeric:tabular-nums}
+ul.clean{list-style:none;margin:0;padding:0}
+.now dt{font-weight:600;font-size:14px;margin:0}
+.now dd{margin:2px 0 14px;font-size:14px;color:var(--ink2)}
+.theme h3{font-size:16px;margin:0 0 6px}
+.theme p{font-size:14px;color:var(--ink2);margin:0 0 12px}
+.about p{font-size:15px;color:var(--ink2)}
+@media (max-width:900px){.hero{grid-template-columns:1fr;padding-top:32px}.hero h1{font-size:34px}.grid3,.grid2{grid-template-columns:1fr}}
+</style>
+<section class="hero">
+  <div>
+    <p class="eyebrow">PhD student · Université de Montréal and Mila · CERC lab</p>
+    <h1>{{ P.tagline }}</h1>
+    <p class="b">{{ C.BIO[0] }}</p>
+    <div class="cta">
+      <a class="btn primary" data-email href="#">Email me</a>
+      <span class="btn todo" title="TODO(owner)">Google Scholar</span>
+      <a class="btn" href="https://github.com/ayushk4">GitHub</a>
+      <span class="btn todo" title="TODO(owner)">CV</span>
+    </div>
+  </div>
+  <figure class="card" style="margin:0">
+    <h3>MegaTabICL: the compute-optimal model size grows with budget</h3>
+    <p class="s">24 models, 5M to 1B parameters, accuracy on TALENT-Tiny. Lines are per-size fits.</p>
+    {{ legend }}
+    {{ scaling_chart_small }}
+    <figcaption><a href="/designs/lab/megatabicl/">Project page: data, cost and method</a></figcaption>
+  </figure>
+</section>
+
+<section class="sec grid3" style="align-items:start">
+  <div class="card now">
+    <p class="eyebrow">Now</p>
+    <dl style="margin:0">{% for k, v in C.NOW %}<dt>{{ k }}</dt><dd>{{ v }}</dd>{% endfor %}</dl>
+  </div>
+  <div class="card">
+    <p class="eyebrow">News</p>
+    <ul class="clean news">{% for iso, d, t in C.NEWS %}<li><time datetime="{{ iso }}">{{ d }}</time><span>{{ t }}</span></li>{% endfor %}</ul>
+  </div>
+  <div class="card about">
+    <p class="eyebrow">About</p>
+    {% for para in C.BIO[1:] %}<p>{{ para }}</p>{% endfor %}
+    <p style="color:var(--ink);font-weight:500">{{ C.COLLAB }}</p>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="sec-h"><h2>Selected publications</h2><a href="/designs/lab/research/">All publications</a></div>
+  <div class="grid2">{% for p in selected %}{% include "lab/_pub.html" %}{% endfor %}</div>
+</section>
+
+<section class="sec">
+  <div class="sec-h"><h2>Research themes</h2></div>
+  <div class="grid3">
+  {% for g in by_theme[:3] %}
+    <a class="card theme" href="/designs/lab/research/#{{ g.key }}" style="color:inherit;text-decoration:none">
+      <h3>{{ g.label }}</h3>
+      <p>{{ g.pubs | length }} papers{% if g.oss %}, {{ g.oss | length }} project{% endif %}</p>
+      <span style="color:var(--accent);font-size:14px;font-weight:500">Browse</span>
+    </a>
+  {% endfor %}
+  </div>
+</section>
+{% endblock %}
