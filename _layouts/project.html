@@ -30,6 +30,9 @@ layout: academic
     {%- endif %}
   </header>
   <div class="prose">
+    {%- if page.placeholder %}
+    <div class="ph-note"><p><strong>Placeholder.</strong> The write-up for this project is coming.</p></div>
+    {%- endif %}
 {{ content }}
   </div>
   {%- if page.done_at %}

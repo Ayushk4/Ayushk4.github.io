@@ -8,7 +8,7 @@
   authors: ["Ayush Kaushal", "Daria Yasafova", "Irina Rish"]
   venue: "NeurIPS 2026 Workshop AXIOM (poster)"
   context: "PhD work at Mila."
-  page: null  # planned: /projects/megatabicl/
+  page: /projects/megatabicl/
   paper: "https://openreview.net/forum?id=WfamdVi3VV"
   code: null  # TODO(owner): public code repository URL
 
@@ -16,7 +16,7 @@
   authors: ["Tejas Vaidhya", "Ayush Kaushal", "Vineet Jain", "Francis Couture-Harpin", "Prashant Shishodia", "Majid Behbahani", "Yuriy Nevmyvaka", "Irina Rish"]
   venue: "ACL 2025"
   context: null
-  page: null  # planned: /projects/spectra-1-1/
+  page: /projects/spectra-1-1/
   paper: "https://aclanthology.org/2025.acl-long.1294/"
   arxiv: "https://arxiv.org/abs/2506.23025"
   code: null
@@ -45,7 +45,7 @@
   authors: ["Ayush Kaushal", "Aditya Gupta", "Shyam Upadhyay", "Manaal Faruqui"]
   venue: "EACL 2023"
   context: "Internship project at Google."
-  page: null  # planned: /projects/streaming-encoders/
+  page: /projects/streaming-encoders/
   paper: "https://aclanthology.org/2023.eacl-main.31/"
   code: null
 
@@ -53,6 +53,6 @@
   authors: ["Ayush Kaushal", "Kyle Mahowald"]
   venue: "NAACL 2022"
   context: null
-  page: null  # planned: /projects/tokens-characters/
+  page: /projects/tokens-characters/
   paper: "https://aclanthology.org/2022.naacl-main.179/"
   code: "https://github.com/ayushk4/character-probing-pytorch"  # from pages/projects.md

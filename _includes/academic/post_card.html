@@ -1,10 +1,12 @@
 <li class="post">
   {%- if include.image %}
   <img class="post-img" src="{{ include.image | relative_url }}" alt="{{ include.image_alt | escape }}" width="88" height="88">
+  {%- else %}
+  <span class="post-noimg" aria-hidden="true"></span>
   {%- endif %}
   <div class="post-body">
     <time class="meta" datetime="{{ include.date | date: '%Y-%m-%d' }}">{{ include.date | date: '%b %-d, %Y' }}</time>
-    <h3 class="post-t"><a href="{{ include.url | relative_url }}">{{ include.title | escape }}</a></h3>
+    <h3 class="post-t"><a href="{{ include.url | relative_url }}">{{ include.title | escape }}</a>{% if include.placeholder %}<span class="ph">placeholder</span>{% endif %}</h3>
     {%- if include.summary %}
     <p class="post-s">{{ include.summary | strip_html | escape }}</p>
     {%- endif %}

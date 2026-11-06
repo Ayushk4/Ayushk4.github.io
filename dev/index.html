@@ -7,6 +7,7 @@ permalink: /dev/
 
 <section class="sec" aria-labelledby="h-timeline">
   <h2 id="h-timeline">Research Timeline</h2>
+  <span class="tl-arrow" aria-hidden="true"></span>
   <ol class="tl">
     {%- for era in site.data.research_timeline %}
     <li class="tl-row">
@@ -28,7 +29,6 @@ permalink: /dev/
     </li>
     {%- endfor %}
   </ol>
-  <span class="tl-arrow" aria-hidden="true"></span>
 </section>
 
 <section class="sec" aria-labelledby="h-cv">
@@ -90,7 +90,7 @@ permalink: /dev/
     {%- assign written = site.project_pages | concat: site.posts | sort: "date" | reverse -%}
     {%- for post in written %}
     {%- assign summary = post.summary | default: post.excerpt -%}
-    {% include academic/post_card.html url=post.url date=post.date title=post.title summary=summary image=post.image image_alt=post.image_alt %}
+    {% include academic/post_card.html url=post.url date=post.date title=post.title summary=summary image=post.image image_alt=post.image_alt placeholder=post.placeholder %}
     {%- endfor %}
     {%- for post in site.data.blog_legacy %}
     {% include academic/post_card.html url=post.url date=post.date title=post.title summary=post.summary image=post.image image_alt=post.image_alt %}
