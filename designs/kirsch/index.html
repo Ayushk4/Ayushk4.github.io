@@ -3,23 +3,32 @@ layout: kirsch
 permalink: /designs/kirsch/
 ---
 {%- assign me = site.data.profile.name -%}
+{% include kirsch/intro.html %}
 
 <section class="sec" aria-labelledby="h-timeline">
   <h2 id="h-timeline">Research Timeline</h2>
-  <ol class="timeline">
+  <ol class="tl">
     {%- for era in site.data.research_timeline %}
-    <li class="era">
-      <h3 class="era-h"><span class="meta yrs">{{ era.years }}</span> <span class="place">{{ era.place | escape }}</span></h3>
-      <p>
-        {%- for it in era.items -%}
-        {%- unless it.todo -%}
-        {{ it.pre | escape }}{% include kirsch/link.html text=it.link page=it.page paper=it.paper %}{{ it.post | escape }}{{ " " }}
-        {%- endunless -%}
-        {%- endfor -%}
-      </p>
+    <li class="tl-row">
+      <span class="tl-year">{{ era.years }}</span>
+      <span class="tl-dot" aria-hidden="true"></span>
+      <div class="tl-card">
+        <h3 class="tl-place">
+          {%- if era.logo %}<img class="tl-logo" src="{{ era.logo | relative_url }}" alt="" width="40" height="40">{% endif -%}
+          {{ era.place | escape }}
+        </h3>
+        <p>
+          {%- for it in era.items -%}
+          {%- unless it.todo -%}
+          {{ it.pre | escape }}{% include kirsch/link.html text=it.link page=it.page paper=it.paper %}{{ it.post | escape }}{{ " " }}
+          {%- endunless -%}
+          {%- endfor -%}
+        </p>
+      </div>
     </li>
     {%- endfor %}
   </ol>
+  <span class="tl-arrow" aria-hidden="true"></span>
 </section>
 
 <section class="sec" aria-labelledby="h-cv">
@@ -27,14 +36,12 @@ permalink: /designs/kirsch/
   <ul class="cv">
     {%- for r in site.data.cv %}
     <li>
-      <span class="cv-what"><strong>{{ r.role | escape }}</strong>, {{ r.org | escape }}{% if r.detail %} <span class="muted">({{ r.detail | escape }})</span>{% endif %}</span>
-      <span class="meta cv-yrs">
-        {%- if r.start -%}
-          {{ r.start }} to {% if r.end %}{{ r.end }}{% else %}<span class="ph">year: TODO</span>{% endif %}
-        {%- else -%}
-          <span class="ph">years: TODO</span>
-        {%- endif -%}
-      </span>
+      {%- if r.start -%}
+        {{ r.start }} to {% if r.end %}{{ r.end }}{% else %}<span class="ph">year: TODO</span>{% endif %}
+      {%- else -%}
+        <span class="ph">years: TODO</span>
+      {%- endif -%}
+      : {{ r.role | escape }}, {{ r.org | escape }}{% if r.detail %} ({{ r.detail | escape }}){% endif %}
     </li>
     {%- endfor %}
   </ul>
@@ -44,28 +51,30 @@ permalink: /designs/kirsch/
   <h2 id="h-news">News</h2>
   <ul class="news">
     {%- for n in site.data.news %}
-    <li><time class="meta" datetime="{{ n.date }}">{{ n.date | append: "-01" | date: "%b %Y" }}</time> <span>{{ n.text | escape }}</span></li>
+    {%- assign d = n.date | split: "-" %}
+    <li><time datetime="{{ n.date }}">{{ d[1] }}/{{ d[0] }}</time> {{ n.text | escape }}</li>
     {%- endfor %}
   </ul>
 </section>
 
-<section class="sec" aria-labelledby="h-pubs">
+<section class="sec" id="publications" aria-labelledby="h-pubs">
   <h2 id="h-pubs">Recent publications</h2>
-  <ol class="pubs">
+  {%- assign scholar = site.data.profile.links | where: "label", "Google Scholar" | first -%}
+  {%- if scholar.url %}
+  <p class="lead-in">A complete list is on <a href="{{ scholar.url }}">Google Scholar</a>.</p>
+  {%- endif %}
+  <ul class="pubs">
     {%- for p in site.data.publications %}
     <li class="pub">
-      <h3 class="pub-t">{% include kirsch/link.html text=p.title page=p.page paper=p.paper %}</h3>
-      {%- if p.page or p.paper or p.code %}
-      <p class="btns">
-        {%- if p.page %}<a class="btn" href="{{ p.page | relative_url }}">Blog<span class="vh">: {{ p.title | escape }}</span></a>{% endif -%}
-        {%- if p.paper %}<a class="btn" href="{{ p.paper }}">Paper<span class="vh">: {{ p.title | escape }}</span></a>{% endif -%}
-        {%- if p.code %}<a class="btn" href="{{ p.code }}">Code<span class="vh">: {{ p.title | escape }}</span></a>{% endif -%}
+      <p class="pub-head"><strong class="pub-t">{{ p.title | escape }}</strong>
+        {%- if p.page %} <span class="bl">[<a href="{{ p.page | relative_url }}">Blog<span class="vh">: {{ p.title | escape }}</span></a>]</span>{% endif -%}
+        {%- if p.paper %} <span class="bl">[<a href="{{ p.paper }}">Paper<span class="vh">: {{ p.title | escape }}</span></a>]</span>{% endif -%}
+        {%- if p.code %} <span class="bl">[<a href="{{ p.code }}">Code<span class="vh">: {{ p.title | escape }}</span></a>]</span>{% endif -%}
       </p>
-      {%- endif %}
       <p class="authors">
         {%- for a in p.authors -%}
         {%- assign bare = a | remove: "*" -%}
-        {%- if bare == me %}<strong>{{ a | escape }}</strong>{% else %}{{ a | escape }}{% endif %}{% unless forloop.last %}, {% endunless -%}
+        {%- if bare == me %}<span class="me">{{ a | escape }}</span>{% else %}{{ a | escape }}{% endif %}{% unless forloop.last %}, {% endunless -%}
         {%- endfor -%}
       </p>
       <p class="venue">{{ p.venue | escape }}</p>
@@ -74,15 +83,11 @@ permalink: /designs/kirsch/
       {%- endif %}
     </li>
     {%- endfor %}
-  </ol>
-  <p class="meta note">* Equal contribution.</p>
-  {%- assign scholar = site.data.profile.links | where: "label", "Google Scholar" | first -%}
-  {%- if scholar.url %}
-  <p><a href="{{ scholar.url }}">Full list on Google Scholar</a></p>
-  {%- endif %}
+  </ul>
+  <p class="note">* Equal contribution.</p>
 </section>
 
-<section class="sec" aria-labelledby="h-blog">
+<section class="sec" id="blog" aria-labelledby="h-blog">
   <h2 id="h-blog">Blog</h2>
   <ul class="posts">
     {%- for post in site.posts %}

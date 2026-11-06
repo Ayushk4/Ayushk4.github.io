@@ -13,17 +13,20 @@
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
-<div class="shell">
-  <aside class="side" aria-label="About {{ profile.name | escape }}">
-    {% include kirsch/sidebar.html %}
-  </aside>
-  <div class="col">
-    <main id="main">
-{{ content }}
-    </main>
-    {% include kirsch/footer.html %}
+<header class="top">
+  <div class="wrap top-in">
+    <a class="brand" href="{{ page.url | relative_url }}">{{ profile.name | escape }}</a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#blog">Blog</a>
+      <a href="#publications">Publications</a>
+      <button class="tt" type="button" data-theme-toggle hidden>Dark mode</button>
+    </nav>
   </div>
-</div>
+</header>
+<main id="main" class="wrap">
+{{ content }}
+</main>
+{% include kirsch/footer.html %}
 <script>
 (function(){
   var b=document.querySelector('[data-theme-toggle]');if(!b)return;

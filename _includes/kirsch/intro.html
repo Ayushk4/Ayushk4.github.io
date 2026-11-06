@@ -1,0 +1,20 @@
+{%- assign profile = site.data.profile -%}
+<section class="intro" aria-labelledby="h-intro">
+  <div class="intro-side">
+    {%- if profile.photo %}
+    <img class="photo" src="{{ profile.photo | relative_url }}" alt="{{ profile.photo_alt | escape }}" width="220" height="220">
+    {%- else %}
+    <img class="photo" src="{{ profile.photo_placeholder | relative_url }}" alt="Placeholder for a portrait photo" width="220" height="220">
+    {%- endif %}
+    {% include kirsch/links.html class="intro-links" %}
+  </div>
+  <div class="intro-main">
+    <h1 id="h-intro">Hi. I'm {{ profile.name | escape }}.</h1>
+    {%- if profile.tagline %}
+    <p class="tagline">{{ profile.tagline | escape }}</p>
+    {%- endif %}
+    {%- for para in profile.bio %}
+    <p class="bio">{{ para | escape }}</p>
+    {%- endfor %}
+  </div>
+</section>
