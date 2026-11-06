@@ -1,9 +1,9 @@
 ---
-layout: kirsch
-permalink: /designs/kirsch/
+layout: academic
+permalink: /dev/
 ---
 {%- assign me = site.data.profile.name -%}
-{% include kirsch/intro.html %}
+{% include academic/intro.html %}
 
 <section class="sec" aria-labelledby="h-timeline">
   <h2 id="h-timeline">Research Timeline</h2>
@@ -20,7 +20,7 @@ permalink: /designs/kirsch/
         <p>
           {%- for it in era.items -%}
           {%- unless it.todo -%}
-          {{ it.pre | escape }}{% include kirsch/link.html text=it.link page=it.page paper=it.paper %}{{ it.post | escape }}{{ " " }}
+          {{ it.pre | escape }}{% include academic/link.html text=it.link page=it.page paper=it.paper %}{{ it.post | escape }}{{ " " }}
           {%- endunless -%}
           {%- endfor -%}
         </p>
@@ -36,11 +36,7 @@ permalink: /designs/kirsch/
   <ul class="cv">
     {%- for r in site.data.cv %}
     <li>
-      {%- if r.start -%}
-        {{ r.start }} to {% if r.end %}{{ r.end }}{% else %}<span class="ph">year: TODO</span>{% endif %}
-      {%- else -%}
-        <span class="ph">years: TODO</span>
-      {%- endif -%}
+      {%- if r.years -%}{{ r.years }}{%- else -%}<span class="ph">years: TODO</span>{%- endif -%}
       : {{ r.role | escape }}, {{ r.org | escape }}{% if r.detail %} ({{ r.detail | escape }}){% endif %}
     </li>
     {%- endfor %}
@@ -90,12 +86,14 @@ permalink: /designs/kirsch/
 <section class="sec" id="blog" aria-labelledby="h-blog">
   <h2 id="h-blog">Blog</h2>
   <ul class="posts">
-    {%- for post in site.posts %}
+    {%- comment -%} Project pages and posts, newest first; then older posts that live outside _posts. {%- endcomment -%}
+    {%- assign written = site.project_pages | concat: site.posts | sort: "date" | reverse -%}
+    {%- for post in written %}
     {%- assign summary = post.summary | default: post.excerpt -%}
-    {% include kirsch/post_card.html url=post.url date=post.date title=post.title summary=summary image=post.image image_alt=post.image_alt %}
+    {% include academic/post_card.html url=post.url date=post.date title=post.title summary=summary image=post.image image_alt=post.image_alt %}
     {%- endfor %}
     {%- for post in site.data.blog_legacy %}
-    {% include kirsch/post_card.html url=post.url date=post.date title=post.title summary=post.summary image=post.image image_alt=post.image_alt %}
+    {% include academic/post_card.html url=post.url date=post.date title=post.title summary=post.summary image=post.image image_alt=post.image_alt %}
     {%- endfor %}
   </ul>
 </section>

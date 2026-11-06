@@ -1,7 +1,10 @@
-# Single source for the sidebar, the footer and <meta name="description"> on /designs/kirsch/.
+# Single source for the sidebar, the footer and <meta name="description"> on /dev/.
 # Edit here only; the page never repeats this text.
 
 name: Ayush Kaushal
+
+# URL of the new homepage. Change to "/" when it replaces the live homepage.
+home: /dev/
 
 # TODO(owner): one-line tagline. While null it is hidden, and the meta
 # description falls back to the first bio paragraph.
@@ -15,7 +18,7 @@ bio:
 # While null, the neutral placeholder below is shown.
 photo: null
 photo_alt: "Portrait of Ayush Kaushal"
-photo_placeholder: /designs/kirsch/assets/photo-placeholder.svg
+photo_placeholder: /assets/academic/photo-placeholder.svg
 
 # Links with url: null are hidden everywhere.
 links:

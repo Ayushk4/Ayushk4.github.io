@@ -1,5 +1,5 @@
 # Posts that live as pages outside _posts and keep their original URLs.
-# The Blog section on /designs/kirsch/ lists site.posts first (newest first), then these.
+# The Blog section on /dev/ lists site.posts first (newest first), then these.
 # New posts go in _posts/ as usual and appear automatically.
 
 - url: /2019/08/22/My-Journey-in-Google-Summer-of-Code.html

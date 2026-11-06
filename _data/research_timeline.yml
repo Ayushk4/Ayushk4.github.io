@@ -1,4 +1,4 @@
-# Research Timeline for /designs/kirsch/, oldest era first.
+# Research Timeline for /dev/, oldest era first.
 # (Named research_timeline.yml because _data/timeline.yml already exists with older content.)
 #
 # Each era renders as one paragraph built from its items. An item renders as
@@ -8,7 +8,6 @@
 # Items with a `todo` field are hidden until the todo is resolved and the field removed.
 
 - years: "2017–2021"
-  todo_years: "TODO(owner): confirm years"
   place: IIT Kharagpur
   logo: null
   items:
@@ -19,7 +18,6 @@
       post: "."
 
 - years: "2021–2023"
-  todo_years: "TODO(owner): confirm years"
   place: UT Austin and Google
   logo: null
   items:
@@ -35,7 +33,7 @@
       post: "."
 
 - years: "2023–2025"
-  todo_years: "TODO(owner): confirm end year"
+  todo_years: "TODO(owner): confirm end year (CV: Nolano to 2026, UdeM research contract to 2025)"
   place: Nolano
   logo: null
   items:
@@ -44,20 +42,19 @@
       page: null  # planned: /projects/llama-int4-quant/
       paper: "https://github.com/NolanoOrg/llama-int4-quant"
       post: " in March 2023."
-    - pre: ""
-      link: "Hi-NOLIN"
-      page: null  # planned: /projects/hi-nolin/
-      paper: null
-      post: ""
-      todo: "TODO(owner): one-line description of Hi-NOLIN, and a paper or project link"
     - pre: "Compressed code LLMs with "
       link: "low-rank decomposition"
-      page: null  # planned: /projects/lord/
+      page: /projects/lord/
       paper: "https://openreview.net/forum?id=br49PQvuMp"
       post: " (LoRD)."
+    - pre: "Extended Pythia to Hindi through "
+      link: "continued pretraining"
+      page: /projects/hi-nolin/
+      paper: null
+      post: " (Hi-NOLIN)."
     - pre: "Pretrained "
       link: "ternary language models at scale"
-      page: null  # planned: /projects/spectra/
+      page: /projects/spectra/
       paper: "https://openreview.net/forum?id=TJo6aQb7mK"
       post: " (Spectra), and studied"
     - pre: ""

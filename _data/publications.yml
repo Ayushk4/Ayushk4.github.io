@@ -1,4 +1,4 @@
-# Recent publications for /designs/kirsch/, newest first.
+# Recent publications for /dev/, newest first.
 # Author lists are exactly as published; * marks equal contribution.
 # Buttons: [Blog] -> page, [Paper] -> paper, [Code] -> code. null hides the button.
 # The title links to page if set, otherwise to paper.
@@ -25,7 +25,7 @@
   authors: ["Ayush Kaushal*", "Tejas Vaidhya*", "Arnab Kumar Mondal", "Tejas Pandey", "Aaryan Bhagat", "Irina Rish"]
   venue: "ICLR 2025 (Spotlight)"
   context: null
-  page: null  # planned: /projects/spectra/
+  page: /projects/spectra/
   paper: "https://openreview.net/forum?id=TJo6aQb7mK"
   models: "https://huggingface.co/SpectraSuite"
   code: null
@@ -35,7 +35,7 @@
   authors: ["Ayush Kaushal*", "Tejas Vaidhya*", "Irina Rish"]
   venue: "ICML 2024 Workshop on Foundation Models in the Wild"
   context: null
-  page: null  # planned: /projects/lord/
+  page: /projects/lord/
   paper: "https://openreview.net/forum?id=br49PQvuMp"
   arxiv: "https://arxiv.org/abs/2309.14021"
   models: "https://huggingface.co/collections/nolanoAI/lord-66f97f003c7ffa79311a7e59"  # Nolano-hosted; may break after the shutdown

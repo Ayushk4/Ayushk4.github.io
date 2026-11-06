@@ -6,7 +6,7 @@
     {%- else %}
     <img class="photo" src="{{ profile.photo_placeholder | relative_url }}" alt="Placeholder for a portrait photo" width="220" height="220">
     {%- endif %}
-    {% include kirsch/links.html class="intro-links" %}
+    {% include academic/links.html class="intro-links" %}
   </div>
   <div class="intro-main">
     <h1 id="h-intro">Hi. I'm {{ profile.name | escape }}.</h1>

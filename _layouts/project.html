@@ -1,0 +1,40 @@
+---
+layout: academic
+---
+{%- assign profile = site.data.profile -%}
+<article class="proj">
+  <header class="proj-head">
+    <p class="proj-kicker"><a href="{{ profile.home | relative_url }}#blog">Blog</a></p>
+    <h1 class="proj-title">{{ page.title | escape }}</h1>
+    {%- if page.authors %}
+    <p class="authors">
+      {%- for a in page.authors -%}
+      {%- if a == profile.name %}<span class="me">{{ a | escape }}</span>{% else %}{{ a | escape }}{% endif %}{% unless forloop.last %}, {% endunless -%}
+      {%- endfor -%}
+    </p>
+    {%- endif %}
+    <p class="meta"><time datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date: '%b %-d, %Y' }}</time>{% if page.venue %} · {{ page.venue | escape }}{% endif %}</p>
+    {%- if page.links %}
+    <p class="proj-links">
+      {%- for l in page.links -%}
+      <span class="bl">[<a href="{{ l.url }}">{{ l.label | escape }}</a>]</span>{% unless forloop.last %}{{ " " }}{% endunless -%}
+      {%- endfor -%}
+    </p>
+    {%- endif %}
+    {%- if page.versions %}
+    <ul class="versions">
+      {%- for v in page.versions %}
+      <li>{{ v.label | escape }}: <a href="{{ v.url }}">{{ v.title | escape }}</a>, {{ v.venue | escape }}</li>
+      {%- endfor %}
+    </ul>
+    {%- endif %}
+  </header>
+  <div class="prose">
+{{ content }}
+  </div>
+  {%- if page.done_at %}
+  <aside class="ack" aria-label="Acknowledgement">
+    <p>This work was done at {{ page.done_at | escape }}.</p>
+  </aside>
+  {%- endif %}
+</article>

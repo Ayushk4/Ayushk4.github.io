@@ -1,5 +1,5 @@
 {%- assign profile = site.data.profile -%}
-{%- if profile.tagline -%}{%- assign meta_desc = profile.tagline -%}{%- else -%}{%- assign meta_desc = profile.bio | first -%}{%- endif -%}
+{%- if page.summary -%}{%- assign meta_desc = page.summary -%}{%- elsif profile.tagline -%}{%- assign meta_desc = profile.tagline -%}{%- else -%}{%- assign meta_desc = profile.bio | first -%}{%- endif -%}
 <!doctype html>
 <html lang="en">
 <head>
@@ -8,17 +8,17 @@
 <meta name="robots" content="noindex">
 <title>{% if page.title %}{{ page.title | escape }} | {% endif %}{{ profile.name | escape }}</title>
 <meta name="description" content="{{ meta_desc | strip_html | strip | escape }}">
-<link rel="stylesheet" href="{{ '/designs/kirsch/assets/kirsch.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/academic/academic.css' | relative_url }}">
 <script>try{var t=localStorage.getItem('ak-theme');if(t==='light'||t==='dark')document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 <header class="top">
   <div class="wrap top-in">
-    <a class="brand" href="{{ page.url | relative_url }}">{{ profile.name | escape }}</a>
+    <a class="brand" href="{{ profile.home | relative_url }}">{{ profile.name | escape }}</a>
     <nav class="nav" aria-label="Sections">
-      <a href="#blog">Blog</a>
-      <a href="#publications">Publications</a>
+      <a href="{{ profile.home | relative_url }}#blog">Blog</a>
+      <a href="{{ profile.home | relative_url }}#publications">Publications</a>
       <button class="tt" type="button" data-theme-toggle hidden>Dark mode</button>
     </nav>
   </div>
@@ -26,7 +26,7 @@
 <main id="main" class="wrap">
 {{ content }}
 </main>
-{% include kirsch/footer.html %}
+{% include academic/footer.html %}
 <script>
 (function(){
   var b=document.querySelector('[data-theme-toggle]');if(!b)return;
