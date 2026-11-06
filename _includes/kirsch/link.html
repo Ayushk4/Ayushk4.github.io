@@ -1,0 +1,7 @@
+{%- comment -%}
+  Renders include.text as a link: to include.page (internal project page) if set,
+  otherwise to include.paper (external fallback), otherwise as plain text.
+{%- endcomment -%}
+{%- if include.page -%}<a href="{{ include.page | relative_url }}">{{ include.text | escape }}</a>
+{%- elsif include.paper -%}<a href="{{ include.paper }}">{{ include.text | escape }}</a>
+{%- else -%}{{ include.text | escape }}{%- endif -%}

@@ -1,0 +1,5 @@
+{%- assign profile = site.data.profile -%}
+<footer class="foot">
+  <p class="foot-name">{{ profile.name | escape }}</p>
+  {% include kirsch/links.html class="foot-links" %}
+</footer>

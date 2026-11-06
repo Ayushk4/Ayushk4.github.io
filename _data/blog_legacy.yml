@@ -1,0 +1,10 @@
+# Posts that live as pages outside _posts and keep their original URLs.
+# The Blog section on /designs/kirsch/ lists site.posts first (newest first), then these.
+# New posts go in _posts/ as usual and appear automatically.
+
+- url: /2019/08/22/My-Journey-in-Google-Summer-of-Code.html
+  date: "2019-08-22"  # from the post's URL
+  title: "My Journey in Google Summer of Code"  # from the post's URL; pages/gsoc_blog.md has no title field
+  summary: "The sequence labelling models, word tokenizers and text analysis tools I worked on for JuliaText."  # from the post's "Summary of work done"
+  image: /images/GSoC_Julia_Logo.png
+  image_alt: "Google Summer of Code and Julia logos"

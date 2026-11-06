@@ -1,0 +1,29 @@
+# Short CV for /designs/kirsch/, newest first. Years only.
+# start/end: null means unknown; the page shows a visibly marked placeholder.
+
+- role: PhD
+  org: Mila and Université de Montréal
+  detail: "advisor: Irina Rish"
+  start: 2025
+  end: present
+
+- role: Co-founder
+  org: Nolano
+  start: 2023
+  end: 2026
+  todo: "TODO(owner): confirm years"
+
+- role: Research intern
+  org: Google
+  start: null  # TODO(owner): year
+  end: null
+
+- role: MS Computer Science
+  org: UT Austin
+  start: null  # TODO(owner): years
+  end: null
+
+- role: B.Tech Computer Science
+  org: IIT Kharagpur
+  start: 2017  # from _data/timeline.yml
+  end: null    # TODO(owner): graduation year (_data/timeline.yml still says "Present")

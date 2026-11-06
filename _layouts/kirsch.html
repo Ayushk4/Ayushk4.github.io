@@ -1,0 +1,38 @@
+{%- assign profile = site.data.profile -%}
+{%- if profile.tagline -%}{%- assign meta_desc = profile.tagline -%}{%- else -%}{%- assign meta_desc = profile.bio | first -%}{%- endif -%}
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>{% if page.title %}{{ page.title | escape }} | {% endif %}{{ profile.name | escape }}</title>
+<meta name="description" content="{{ meta_desc | strip_html | strip | escape }}">
+<link rel="stylesheet" href="{{ '/designs/kirsch/assets/kirsch.css' | relative_url }}">
+<script>try{var t=localStorage.getItem('ak-theme');if(t==='light'||t==='dark')document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="shell">
+  <aside class="side" aria-label="About {{ profile.name | escape }}">
+    {% include kirsch/sidebar.html %}
+  </aside>
+  <div class="col">
+    <main id="main">
+{{ content }}
+    </main>
+    {% include kirsch/footer.html %}
+  </div>
+</div>
+<script>
+(function(){
+  var b=document.querySelector('[data-theme-toggle]');if(!b)return;
+  var root=document.documentElement;
+  function cur(){var t=root.getAttribute('data-theme');if(t)return t;return window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}
+  function label(){var d=cur()==='dark';b.textContent=d?'Light mode':'Dark mode';b.setAttribute('aria-pressed',d?'true':'false')}
+  b.hidden=false;label();
+  b.addEventListener('click',function(){var n=cur()==='dark'?'light':'dark';root.setAttribute('data-theme',n);try{localStorage.setItem('ak-theme',n)}catch(e){}label()});
+})();
+</script>
+</body>
+</html>

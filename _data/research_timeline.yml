@@ -1,0 +1,77 @@
+# Research Timeline for /designs/kirsch/, oldest era first.
+# (Named research_timeline.yml because _data/timeline.yml already exists with older content.)
+#
+# Each era renders as one paragraph built from its items. An item renders as
+#   pre + link + post
+# where the link goes to `page` if set, otherwise to `paper`.
+# `page` stays null until the project page exists; the planned route is in the comment.
+# Items with a `todo` field are hidden until the todo is resolved and the field removed.
+
+- years: "2017–2021"
+  todo_years: "TODO(owner): confirm years"
+  place: IIT Kharagpur
+  logo: null
+  items:
+    - pre: "Worked on stance detection and causal analysis in NLP, and contributed to JuliaText through "
+      link: "Google Summer of Code"
+      page: /2019/08/22/My-Journey-in-Google-Summer-of-Code.html
+      paper: null
+      post: "."
+
+- years: "2021–2023"
+  todo_years: "TODO(owner): confirm years"
+  place: UT Austin and Google
+  logo: null
+  items:
+    - pre: "Probed "
+      link: "what subword tokens encode about their characters"
+      page: null  # planned: /projects/tokens-characters/
+      paper: "https://aclanthology.org/2022.naacl-main.179"
+      post: "."
+    - pre: "At Google, built "
+      link: "efficient encoders for streaming sequence tagging"
+      page: null  # planned: /projects/streaming-encoders/
+      paper: "https://aclanthology.org/2023.eacl-main.31"
+      post: "."
+
+- years: "2023–2025"
+  todo_years: "TODO(owner): confirm end year"
+  place: Nolano
+  logo: null
+  items:
+    - pre: "Ran "
+      link: "4-bit LLaMA on a laptop CPU"
+      page: null  # planned: /projects/llama-int4-quant/
+      paper: "https://github.com/NolanoOrg/llama-int4-quant"
+      post: " in March 2023."
+    - pre: ""
+      link: "Hi-NOLIN"
+      page: null  # planned: /projects/hi-nolin/
+      paper: null
+      post: ""
+      todo: "TODO(owner): one-line description of Hi-NOLIN, and a paper or project link"
+    - pre: "Compressed code LLMs with "
+      link: "low-rank decomposition"
+      page: null  # planned: /projects/lord/
+      paper: "https://openreview.net/forum?id=br49PQvuMp"
+      post: " (LoRD)."
+    - pre: "Pretrained "
+      link: "ternary language models at scale"
+      page: null  # planned: /projects/spectra/
+      paper: "https://openreview.net/forum?id=TJo6aQb7mK"
+      post: " (Spectra), and studied"
+    - pre: ""
+      link: "their scaling laws and inference kernels"
+      page: null  # planned: /projects/spectra-1-1/
+      paper: "https://aclanthology.org/2025.acl-long.1294/"
+      post: " (Spectra 1.1)."
+
+- years: "2025–now"
+  place: Mila and Université de Montréal
+  logo: null
+  items:
+    - pre: "Built "
+      link: "exact, much cheaper pretraining of tabular foundation models"
+      page: null  # planned: /projects/megatabicl/
+      paper: "https://openreview.net/forum?id=WfamdVi3VV"
+      post: ", and ran their first billion-parameter scaling study (MegaTabICL)."

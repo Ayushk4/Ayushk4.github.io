@@ -1,0 +1,8 @@
+{%- comment -%} Profile links from _data/profile.yml. Links with url: null are skipped. {%- endcomment -%}
+<ul class="{{ include.class }}">
+  {%- for l in site.data.profile.links %}
+  {%- if l.url %}
+  <li><a href="{{ l.url }}">{{ l.display | default: l.label | escape }}</a></li>
+  {%- endif %}
+  {%- endfor %}
+</ul>

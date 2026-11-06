@@ -1,0 +1,96 @@
+---
+layout: kirsch
+permalink: /designs/kirsch/
+---
+{%- assign me = site.data.profile.name -%}
+
+<section class="sec" aria-labelledby="h-timeline">
+  <h2 id="h-timeline">Research Timeline</h2>
+  <ol class="timeline">
+    {%- for era in site.data.research_timeline %}
+    <li class="era">
+      <h3 class="era-h"><span class="meta yrs">{{ era.years }}</span> <span class="place">{{ era.place | escape }}</span></h3>
+      <p>
+        {%- for it in era.items -%}
+        {%- unless it.todo -%}
+        {{ it.pre | escape }}{% include kirsch/link.html text=it.link page=it.page paper=it.paper %}{{ it.post | escape }}{{ " " }}
+        {%- endunless -%}
+        {%- endfor -%}
+      </p>
+    </li>
+    {%- endfor %}
+  </ol>
+</section>
+
+<section class="sec" aria-labelledby="h-cv">
+  <h2 id="h-cv">Short CV</h2>
+  <ul class="cv">
+    {%- for r in site.data.cv %}
+    <li>
+      <span class="cv-what"><strong>{{ r.role | escape }}</strong>, {{ r.org | escape }}{% if r.detail %} <span class="muted">({{ r.detail | escape }})</span>{% endif %}</span>
+      <span class="meta cv-yrs">
+        {%- if r.start -%}
+          {{ r.start }} to {% if r.end %}{{ r.end }}{% else %}<span class="ph">year: TODO</span>{% endif %}
+        {%- else -%}
+          <span class="ph">years: TODO</span>
+        {%- endif -%}
+      </span>
+    </li>
+    {%- endfor %}
+  </ul>
+</section>
+
+<section class="sec" aria-labelledby="h-news">
+  <h2 id="h-news">News</h2>
+  <ul class="news">
+    {%- for n in site.data.news %}
+    <li><time class="meta" datetime="{{ n.date }}">{{ n.date | append: "-01" | date: "%b %Y" }}</time> <span>{{ n.text | escape }}</span></li>
+    {%- endfor %}
+  </ul>
+</section>
+
+<section class="sec" aria-labelledby="h-pubs">
+  <h2 id="h-pubs">Recent publications</h2>
+  <ol class="pubs">
+    {%- for p in site.data.publications %}
+    <li class="pub">
+      <h3 class="pub-t">{% include kirsch/link.html text=p.title page=p.page paper=p.paper %}</h3>
+      {%- if p.page or p.paper or p.code %}
+      <p class="btns">
+        {%- if p.page %}<a class="btn" href="{{ p.page | relative_url }}">Blog<span class="vh">: {{ p.title | escape }}</span></a>{% endif -%}
+        {%- if p.paper %}<a class="btn" href="{{ p.paper }}">Paper<span class="vh">: {{ p.title | escape }}</span></a>{% endif -%}
+        {%- if p.code %}<a class="btn" href="{{ p.code }}">Code<span class="vh">: {{ p.title | escape }}</span></a>{% endif -%}
+      </p>
+      {%- endif %}
+      <p class="authors">
+        {%- for a in p.authors -%}
+        {%- assign bare = a | remove: "*" -%}
+        {%- if bare == me %}<strong>{{ a | escape }}</strong>{% else %}{{ a | escape }}{% endif %}{% unless forloop.last %}, {% endunless -%}
+        {%- endfor -%}
+      </p>
+      <p class="venue">{{ p.venue | escape }}</p>
+      {%- if p.context %}
+      <p class="ctx">{{ p.context | escape }}</p>
+      {%- endif %}
+    </li>
+    {%- endfor %}
+  </ol>
+  <p class="meta note">* Equal contribution.</p>
+  {%- assign scholar = site.data.profile.links | where: "label", "Google Scholar" | first -%}
+  {%- if scholar.url %}
+  <p><a href="{{ scholar.url }}">Full list on Google Scholar</a></p>
+  {%- endif %}
+</section>
+
+<section class="sec" aria-labelledby="h-blog">
+  <h2 id="h-blog">Blog</h2>
+  <ul class="posts">
+    {%- for post in site.posts %}
+    {%- assign summary = post.summary | default: post.excerpt -%}
+    {% include kirsch/post_card.html url=post.url date=post.date title=post.title summary=summary image=post.image image_alt=post.image_alt %}
+    {%- endfor %}
+    {%- for post in site.data.blog_legacy %}
+    {% include kirsch/post_card.html url=post.url date=post.date title=post.title summary=post.summary image=post.image image_alt=post.image_alt %}
+    {%- endfor %}
+  </ul>
+</section>
