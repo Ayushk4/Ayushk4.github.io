@@ -2,7 +2,6 @@
 layout: project
 title: "LoRD: Low-Rank Decomposition of Monolingual Code LLMs for One-Shot Compression"
 date: 2023-08-20
-authors: ["Ayush Kaushal", "Tejas Vaidhya", "Irina Rish"]
 venue: "Model release"
 summary: "StarCoder 16B compressed to 13B parameters by one-shot low-rank decomposition, with HumanEval pass@1 of 31.57% versus 31.67% for the original model."
 links:
@@ -112,14 +111,4 @@ We sparsify two LoRDCoder models with [an LLM pruning method](https://arxiv.org/
 
 ## Citation
 
-```
-@misc{kaushal2023lordlowrankdecomposition,
-  title={LORD: Low Rank Decomposition Of Monolingual Code LLMs For One-Shot Compression},
-  author={Ayush Kaushal and Tejas Vaidhya and Irina Rish},
-  year={2023},
-  eprint={2309.14021},
-  archivePrefix={arXiv},
-  primaryClass={cs.CL},
-  url={https://arxiv.org/abs/2309.14021}
-}
-```
+BibTeX: [arXiv](https://arxiv.org/bibtex/2309.14021)

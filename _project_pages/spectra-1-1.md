@@ -4,7 +4,6 @@ title: "Scaling Laws and Efficient Inference for Ternary Language Models"
 date: 2025-06-28
 permalink: /projects/spectra-1-1/
 summary: "Scaling laws for ternary language models, the TriTera suite trained on 1.2T tokens, lossless 2-bit and 1.6-bit weight packing, and TriRun GPU kernels."
-authors: ["Tejas Vaidhya*", "Ayush Kaushal*", "Vineet Jain", "Francis Couture-Harpin", "Prashant Shishodia", "Majid Behbahani", "Yuriy Nevmyvaka", "Irina Rish"]
 venue: "ACL 2025"
 links:
   - {label: Paper, url: "https://aclanthology.org/2025.acl-long.1294/"}
@@ -13,7 +12,7 @@ links:
 byline_in_body: true  # the post's first lines carry authors, venue and links, so the header shows only title and date
 ---
 
-**Tejas Vaidhya\*, Ayush Kaushal\*, Vineet Jain, Francis Couture-Harpin, Prashant Shishodia, Majid Behbahani, Yuriy Nevmyvaka, Irina Rish** · ACL 2025 (Long Papers) · \*Equal contribution
+ACL 2025 (Long Papers)
 [Paper](https://aclanthology.org/2025.acl-long.1294/) · [arXiv](https://arxiv.org/abs/2506.23025) · [llama.cpp TQ1_0 / TQ2_0](https://github.com/ggml-org/llama.cpp/pull/8151) · [BibTeX](#citation)
 
 *The arXiv version is titled "Spectra 1.1" and calls the model suite Spectra-1.1; the ACL version calls it TriTera. An earlier version appeared at the ICLR 2025 Workshop on Sparsity in LLMs.*
@@ -63,7 +62,7 @@ The rest of the architecture follows LLaMA: SwiGLU MLPs, rotary embeddings (θ =
 We trained on the Frontier supercomputer. Each node has four AMD MI250X accelerators, and each MI250X has two compute dies that act as separate GPUs. Communication within a node is fast and communication between nodes is slower, so we shard optimizer states and gradients only across the GPUs within a node, similar to ZeRO stage 2. This scales nearly linearly to 2,048 GPUs.
 
 ![Relative training speedup as the number of GPUs increases](/assets/projects/spectra-1-1/paper_fig7.png)
-*Figure 7 of the paper. Relative training speedup against the number of GPUs, compared with ideal linear scaling. Vaidhya, Kaushal et al. (2025), CC BY 4.0.*
+*Figure 7 of [the paper](https://aclanthology.org/2025.acl-long.1294/). Relative training speedup against the number of GPUs, compared with ideal linear scaling. CC BY 4.0.*
 
 The 1.2T-token training mixture is dominated by educational web text and code:
 
@@ -86,7 +85,7 @@ Here N is the parameter count in millions and D is the token count in billions. 
 *Equations 2 and 3 of the paper.*
 
 ![Validation loss against parameters and tokens, with the fitted law](/assets/projects/spectra-1-1/paper_fig2.png)
-*Figure 2 of the paper. Final validation loss of TriLMs against parameter count (left) and training tokens (right). Dotted lines show the fitted law. Vaidhya, Kaushal et al. (2025), CC BY 4.0.*
+*Figure 2 of [the paper](https://aclanthology.org/2025.acl-long.1294/). Final validation loss of TriLMs against parameter count (left) and training tokens (right). Dotted lines show the fitted law. CC BY 4.0.*
 
 For FloatLMs, the parameter and data exponents are almost equal, so adding parameters or adding data has a similar effect. For TriLMs, the data term decays much faster than the parameter term.
 
@@ -108,7 +107,7 @@ Two cautions apply. The law is fitted on models up to 1.1B parameters and 150B t
 ## TriTera: training on 1.2T tokens
 
 ![MMLU of TriTera against Spectra TriLMs trained on 300B tokens](/assets/projects/spectra-1-1/paper_fig3.png)
-*Figure 3 of the paper. Average MMLU accuracy of TriTera (1.2T tokens) and Spectra TriLMs (300B tokens) of comparable size, with LLaMA-1 7B as a reference line. Vaidhya, Kaushal et al. (2025), CC BY 4.0.*
+*Figure 3 of [the paper](https://aclanthology.org/2025.acl-long.1294/). Average MMLU accuracy of TriTera (1.2T tokens) and Spectra TriLMs (300B tokens) of comparable size, with LLaMA-1 7B as a reference line. CC BY 4.0.*
 
 TriTera improves over the earlier Spectra TriLMs at every size. This comparison changes more than the token count: the data mixture (now 80% FineWeb-Edu) and the tokenizer also changed between the two suites. The figure therefore shows their combined effect, not the effect of training longer alone.
 
@@ -211,7 +210,7 @@ Three patterns stand out:
 These are benchmarks of layer shapes. The trained TriTera models go up to 3.6B parameters.
 
 ![End-to-end generation speedup and MMLU against training compute](/assets/projects/spectra-1-1/paper_fig1.png)
-*Figure 1 of the paper. Left: MMLU against training FLOPs for models with comparable compute and token budgets. Right: end-to-end generation speedup of TriRun over FP16 PyTorch on an L40S, with the number of GPUs each needs. Vaidhya, Kaushal et al. (2025), CC BY 4.0.*
+*Figure 1 of [the paper](https://aclanthology.org/2025.acl-long.1294/). Left: MMLU against training FLOPs for models with comparable compute and token budgets. Right: end-to-end generation speedup of TriRun over FP16 PyTorch on an L40S, with the number of GPUs each needs. CC BY 4.0.*
 
 End-to-end generation includes work outside the ternary linear layers, so its speedups are lower than the layer-level ones. On an L40S, TriRun always runs on one GPU:
 
@@ -230,7 +229,7 @@ Two effects drive the growth with size:
 The 7B and 13B rows are the like-for-like comparisons.
 
 ![Time to first token, time per output token and total time](/assets/projects/spectra-1-1/paper_fig6.png)
-*Figure 6 of the paper. Time to first token (left) and time per output token (center) on an L40S, and total time for the 70B configuration across four GPUs (right). Vaidhya, Kaushal et al. (2025), CC BY 4.0.*
+*Figure 6 of [the paper](https://aclanthology.org/2025.acl-long.1294/). Time to first token (left) and time per output token (center) on an L40S, and total time for the 70B configuration across four GPUs (right). CC BY 4.0.*
 
 For the 70B configuration, the end-to-end speedup is consistent across hardware: 4.9× on the L40S, 5.4× on the L40, 4.9× on the A40 and 5.3× on the RTX 4090.
 
@@ -248,31 +247,6 @@ The paper commits to releasing the TriTera suite, including intermediate checkpo
 
 ## Citation
 
-```bibtex
-@inproceedings{vaidhya-etal-2025-scaling,
-    title = "Scaling Laws and Efficient Inference for Ternary Language Models",
-    author = "Vaidhya, Tejas  and
-      Kaushal, Ayush  and
-      Jain, Vineet  and
-      Couture-Harpin, Francis  and
-      Shishodia, Prashant  and
-      Behbahani, Majid  and
-      Nevmyvaka, Yuriy  and
-      Rish, Irina",
-    editor = "Che, Wanxiang  and
-      Nabende, Joyce  and
-      Shutova, Ekaterina  and
-      Pilehvar, Mohammad Taher",
-    booktitle = "Proceedings of the 63rd Annual Meeting of the {A}ssociation for {C}omputational {L}inguistics (Volume 1: Long Papers)",
-    month = jul,
-    year = "2025",
-    address = "Vienna, Austria",
-    publisher = "Association for Computational Linguistics",
-    url = "https://aclanthology.org/2025.acl-long.1294/",
-    doi = "10.18653/v1/2025.acl-long.1294",
-    pages = "26679--26710",
-    ISBN = "979-8-89176-251-0"
-}
-```
+BibTeX: [ACL Anthology](https://aclanthology.org/2025.acl-long.1294.bib)
 
 *Supported by the Mozilla Responsible AI Grant, the Canada CIFAR AI Chair Program, Nolano AI and the Canada Excellence Research Chairs Program. Compute was provided by the Oak Ridge Leadership Computing Facility (INCITE 2023, Frontier DD and SummitPlus allocations).*

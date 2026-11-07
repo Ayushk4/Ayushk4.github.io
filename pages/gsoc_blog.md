@@ -1,7 +1,8 @@
 ---
-layout: default
+layout: project
+title: "My Journey in Google Summer of Code"
+date: 2019-08-22
 permalink: /2019/08/22/My-Journey-in-Google-Summer-of-Code.html
-weight: 1
 ---
 
 
@@ -13,16 +14,7 @@ Here, I would like to give share some of my work done. I will giving a talk on t
 
 Check out my [project page at Google's GSoC website](https://summerofcode.withgoogle.com/archive/2019/projects/4945754462879744/)
 
-<style>
-img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 30%;
-  height: 30%;
-}
-</style>
-<img src="../../../images/GSoC_Julia_Logo.png" alt="Google Summer of Code">
+<img src="../../../images/GSoC_Julia_Logo.png" alt="Google Summer of Code" style="width:30%;margin:22px auto 0">
 
 ## Acknowledgement
 
@@ -68,6 +60,6 @@ Following is a performance analysis comparing the Tokenizers of _Spacy, NLTK wit
 
 This work has been published at [the Journal of Open Source Software](https://www.theoj.org/joss-papers/joss.01956/10.21105.joss.01956.pdf).
 
-<iframe src="https://www.theoj.org/joss-papers/joss.01956/10.21105.joss.01956.pdf" width="100%" height="750px">
+<iframe src="https://www.theoj.org/joss-papers/joss.01956/10.21105.joss.01956.pdf" style="width:100%;border:0" height="750" title="WordTokenizers.jl paper in the Journal of Open Source Software (PDF)"></iframe>
 
 

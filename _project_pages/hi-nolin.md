@@ -2,7 +2,6 @@
 layout: project
 title: "Hi-NOLIN: English-Hindi Continued Pretraining of Pythia"
 date: 2023-10-30
-authors: ["Ayush Kaushal", "Tejas Vaidhya", "Irina Rish"]
 venue: "Open model release"
 summary: "An English-Hindi language model obtained by continued pretraining of Pythia from 7B to 9B parameters, released under Apache 2.0."
 image: /assets/projects/hi-nolin/banner.jpg

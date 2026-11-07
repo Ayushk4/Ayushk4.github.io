@@ -1,8 +1,0 @@
-{% import "_macros.html" as m with context %}
-<article class="card pubcard" id="p-{{ p.id }}">
-  <div style="display:flex;gap:6px;flex-wrap:wrap"><span class="chip">{{ p.abbr }}</span>{% if p.note %}<span class="chip{% if p.note == 'Spotlight' %} star{% endif %}">{{ p.note }}</span>{% endif %}</div>
-  <p class="t">{{ p.title }}</p>
-  <p class="a">{{ authors(p.authors) }}</p>
-  <div class="l">{% for label, url in p.links %}{{ m.link(label, url, "pill") }}{% endfor %}</div>
-  {% if p.abstract %}<details><summary>Abstract</summary><p>{{ p.abstract }}</p></details>{% endif %}
-</article>
