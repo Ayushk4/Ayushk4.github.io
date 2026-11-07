@@ -6,17 +6,17 @@ name: Ayush Kaushal
 # URL of the new homepage. Change to "/" when it replaces the live homepage.
 home: /dev/
 
-# TODO(owner): one-line tagline. While null it is hidden, and the meta
-# description falls back to the first bio paragraph.
+# Optional one-line tagline. While null it is hidden, and the meta
+# description uses the first bio paragraph.
 tagline: null
 
 bio:
-  - "I work on efficient systems that keep learning as they see more context: meta-training them cheaply, training them continually, and measuring how they scale so we can understand them."
-  - "I'm a PhD student at Mila and Université de Montréal, advised by Irina Rish. Before this, I co-founded Nolano, where I worked on efficient foundation models: pretraining ternary language models (Spectra, ICLR 2025 Spotlight; Spectra 1.1, ACL 2025) and making them cheap to run. I did my Master's at UT Austin and my Bachelor's at IIT Kharagpur, and spent a summer at Google building efficient encoders for streaming text."
+  - "I study compute-efficient learning in systems that improve as they condition on more context: meta-training of in-context learners, continual pretraining, and scaling analysis that characterizes their behaviour."
+  - "I'm a PhD student at Mila and Université de Montréal, advised by Irina Rish. Previously, I co-founded Nolano, where my work focused on low-bit pretraining and inference for foundation models, including the Spectra suite of ternary language models (ICLR 2025 Spotlight) and its scaling-law follow-up (ACL 2025). I hold an MS from UT Austin and a B.Tech from IIT Kharagpur, and was a research intern at Google, where I worked on encoder architectures for streaming sequence tagging."
 
-# TODO(owner): add a portrait to the repo (e.g. /images/ayush.jpg) and set its path.
-# While null, the neutral placeholder below is shown.
-photo: null
+# Portrait (the photo from the live site, stored in the repo). If set to null,
+# the neutral image in photo_placeholder is shown instead.
+photo: /assets/academic/ayush.jpg
 photo_alt: "Portrait of Ayush Kaushal"
 photo_placeholder: /assets/academic/photo-placeholder.svg
 

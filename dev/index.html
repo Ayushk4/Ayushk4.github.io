@@ -35,10 +35,7 @@ permalink: /dev/
   <h2 id="h-cv">Short CV</h2>
   <ul class="cv">
     {%- for r in site.data.cv %}
-    <li>
-      {%- if r.years -%}{{ r.years }}{%- else -%}<span class="ph">years: TODO</span>{%- endif -%}
-      : {{ r.role | escape }}, {{ r.org | escape }}{% if r.detail %} ({{ r.detail | escape }}){% endif %}
-    </li>
+    <li><span class="cv-yrs">{% if r.years %}{{ r.years }}{% else %}<span class="ph">years: TODO</span>{% endif %}</span> <span>{{ r.role | escape }}, {{ r.org | escape }}{% if r.detail %} ({{ r.detail | escape }}){% endif %}</span></li>
     {%- endfor %}
   </ul>
 </section>
@@ -87,10 +84,10 @@ permalink: /dev/
   <h2 id="h-blog">Blog</h2>
   <ul class="posts">
     {%- comment -%} Project pages and posts, newest first; then older posts that live outside _posts. {%- endcomment -%}
-    {%- assign written = site.project_pages | concat: site.posts | sort: "date" | reverse -%}
+    {%- assign written = site.project_pages | concat: site.posts | where_exp: "p", "p.placeholder != true" | sort: "date" | reverse -%}
     {%- for post in written %}
     {%- assign summary = post.summary | default: post.excerpt -%}
-    {% include academic/post_card.html url=post.url date=post.date title=post.title summary=summary image=post.image image_alt=post.image_alt placeholder=post.placeholder %}
+    {% include academic/post_card.html url=post.url date=post.date title=post.title summary=summary image=post.image image_alt=post.image_alt %}
     {%- endfor %}
     {%- for post in site.data.blog_legacy %}
     {% include academic/post_card.html url=post.url date=post.date title=post.title summary=post.summary image=post.image image_alt=post.image_alt %}

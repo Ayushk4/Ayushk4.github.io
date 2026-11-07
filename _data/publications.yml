@@ -7,7 +7,7 @@
 - title: "MegaTabICL: Efficient Scaling of Tabular Foundation Model Pretraining"
   authors: ["Ayush Kaushal", "Daria Yasafova", "Irina Rish"]
   venue: "NeurIPS 2026 Workshop AXIOM (poster)"
-  context: "PhD work at Mila."
+  context: null
   page: /projects/megatabicl/
   paper: "https://openreview.net/forum?id=WfamdVi3VV"
   code: null  # TODO(owner): public code repository URL
@@ -44,7 +44,7 @@
 - title: "Efficient Encoders for Streaming Sequence Tagging"
   authors: ["Ayush Kaushal", "Aditya Gupta", "Shyam Upadhyay", "Manaal Faruqui"]
   venue: "EACL 2023"
-  context: "Internship project at Google."
+  context: "Internship project at Google Assistant."
   page: /projects/streaming-encoders/
   paper: "https://aclanthology.org/2023.eacl-main.31/"
   code: null

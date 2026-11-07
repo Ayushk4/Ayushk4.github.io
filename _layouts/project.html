@@ -6,6 +6,9 @@ layout: academic
   <header class="proj-head">
     <p class="proj-kicker"><a href="{{ profile.home | relative_url }}#blog">Blog</a></p>
     <h1 class="proj-title">{{ page.title | escape }}</h1>
+    {%- if page.title_note %}
+    <p class="title-note">{{ page.title_note | escape }}</p>
+    {%- endif %}
     {%- if page.authors %}
     <p class="authors">
       {%- for a in page.authors -%}

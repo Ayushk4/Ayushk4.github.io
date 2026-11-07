@@ -48,7 +48,7 @@ p{margin:0}
 .intro-links{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;justify-content:center;gap:4px 14px;font-size:.9rem}
 h1{font-size:1.45rem;font-weight:400;line-height:1.3;margin:0 0 18px}
 .tagline{color:var(--ink2);margin:0 0 12px}
-.bio{text-align:justify;hyphens:auto;margin:0 0 14px;line-height:1.75}
+.bio{text-align:justify;hyphens:manual;margin:0 0 14px;line-height:1.75}
 .bio:last-child{margin-bottom:0}
 
 /* sections */
@@ -71,8 +71,10 @@ h2{font-size:1.85rem;font-weight:400;letter-spacing:-.015em;line-height:1.2;marg
 .tl-card p{line-height:1.7}
 
 /* CV and news: plain lines */
-.cv{margin:0;padding-left:1.2em}
-.cv li{margin:0 0 6px}
+.cv{list-style:none;margin:0;padding:0}
+.cv li{display:grid;grid-template-columns:9.5rem minmax(0,1fr);gap:12px;margin:0 0 6px}
+.cv-yrs{font-variant-numeric:tabular-nums}
+@media (max-width:480px){.cv li{grid-template-columns:1fr;gap:0;margin-bottom:10px}.cv-yrs{color:var(--muted);font-size:.92rem}}
 .news{list-style:none;margin:0;padding:0}
 .news li{margin:0 0 6px}
 .news time{font-weight:700;font-variant-numeric:tabular-nums;margin-right:4px}
@@ -131,6 +133,7 @@ h2{font-size:1.85rem;font-weight:400;letter-spacing:-.015em;line-height:1.2;marg
 .proj-head{border-bottom:1px solid var(--rule);padding-bottom:22px;margin-bottom:28px}
 .proj-kicker{font-size:.92rem;margin:0 0 10px}
 .proj-title{font-size:2rem;font-weight:600;line-height:1.25;letter-spacing:-.015em;margin:0 0 12px}
+.title-note{color:var(--ink2);margin:-4px 0 12px}
 .proj-head .authors{margin:0 0 4px}
 .proj-head .meta{margin:0 0 10px}
 .proj-links{margin:0}

@@ -1,6 +1,7 @@
 ---
 layout: project
-title: "Spectra: A Comprehensive Study of Ternary, Quantized, and FP16 Language Models"
+title: "Spectra: Surprising Effectiveness of Pretraining Ternary Language Models at Scale"
+title_note: "Earlier arXiv title: Spectra: A Comprehensive Study of Ternary, Quantized, and FP16 Language Models."
 date: 2024-07-17
 authors: ["Ayush Kaushal", "Tejas Pandey", "Tejas Vaidhya", "Aaryan Bhagat", "Irina Rish"]  # arXiv order (owner's instruction)
 venue: "arXiv preprint"

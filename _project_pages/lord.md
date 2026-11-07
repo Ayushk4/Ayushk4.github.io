@@ -1,10 +1,10 @@
 ---
 layout: project
-title: "The LoRD (Low Rank Decomposition) of Code LLMs"
+title: "LoRD: Low-Rank Decomposition of Monolingual Code LLMs for One-Shot Compression"
 date: 2023-08-20
 authors: ["Ayush Kaushal", "Tejas Vaidhya", "Irina Rish"]
 venue: "Model release"
-summary: "LoRDCoder: StarCoder 16B compressed with low rank decomposition, down to 13B parameters with no drop in HumanEval Pass@1."
+summary: "StarCoder 16B compressed to 13B parameters by one-shot low-rank decomposition, with HumanEval pass@1 of 31.57% versus 31.67% for the original model."
 links:
   - {label: Paper, url: "https://arxiv.org/abs/2309.14021"}
   - {label: Models, url: "https://huggingface.co/collections/nolanoAI/lord"}  # Nolano-hosted
