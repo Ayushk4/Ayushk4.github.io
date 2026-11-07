@@ -14,8 +14,6 @@ PROFILE = {
     "lab": "CERC lab, advised by Irina Rish",
     "location": "Montreal",
     "tagline": "Efficient pretraining and scaling of foundation models that learn in context.",
-    "email_user": "ayushk4",
-    "email_domain": "gmail.com",
 }
 
 # Paragraphs of the homepage bio (draft from the brief, with the MegaTabICL
@@ -57,7 +55,6 @@ NEWS = [
 
 # label, url (None = TODO(owner)), short handle
 LINKS = [
-    ("Email", "mailto", "ayushk4 [at] gmail.com"),
     ("Google Scholar", None, "TODO(owner)"),
     ("GitHub", "https://github.com/ayushk4", "ayushk4"),
     ("OpenReview", "https://openreview.net/profile?id=~Ayush_Kaushal1", "~Ayush_Kaushal1"),

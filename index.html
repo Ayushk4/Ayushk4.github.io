@@ -1,0 +1,96 @@
+---
+layout: academic
+permalink: /
+---
+{%- assign me = site.data.profile.name -%}
+{% include academic/intro.html %}
+
+<section class="sec" aria-labelledby="h-timeline">
+  <h2 id="h-timeline">Research Timeline</h2>
+  <span class="tl-arrow" aria-hidden="true"></span>
+  <ol class="tl">
+    {%- for era in site.data.research_timeline %}
+    <li class="tl-row">
+      <span class="tl-year">{{ era.years }}</span>
+      <span class="tl-dot" aria-hidden="true"></span>
+      <div class="tl-card">
+        <h3 class="tl-place">
+          {%- if era.logo %}<img class="tl-logo" src="{{ era.logo | relative_url }}" alt="" width="40" height="40">{% endif -%}
+          {{ era.place | escape }}
+        </h3>
+        <p>
+          {%- for it in era.items -%}
+          {%- unless it.todo -%}
+          {{ it.pre | escape }}{% include academic/link.html text=it.link page=it.page paper=it.paper %}{{ it.post | escape }}{{ " " }}
+          {%- endunless -%}
+          {%- endfor -%}
+        </p>
+      </div>
+    </li>
+    {%- endfor %}
+  </ol>
+</section>
+
+<section class="sec" aria-labelledby="h-cv">
+  <h2 id="h-cv">Short CV</h2>
+  <ul class="cv">
+    {%- for r in site.data.cv %}
+    <li><span class="cv-yrs">{% if r.years %}{{ r.years }}{% else %}<span class="ph">years: TODO</span>{% endif %}</span> <span>{{ r.role | escape }}, {{ r.org | escape }}{% if r.detail %} ({{ r.detail | escape }}){% endif %}</span></li>
+    {%- endfor %}
+  </ul>
+</section>
+
+<section class="sec" aria-labelledby="h-news">
+  <h2 id="h-news">News</h2>
+  <ul class="news">
+    {%- for n in site.data.news %}
+    {%- assign d = n.date | split: "-" %}
+    <li><time datetime="{{ n.date }}">{{ d[1] }}/{{ d[0] }}</time> {{ n.text | escape }}</li>
+    {%- endfor %}
+  </ul>
+</section>
+
+<section class="sec" id="publications" aria-labelledby="h-pubs">
+  <h2 id="h-pubs">Recent publications</h2>
+  {%- assign scholar = site.data.profile.links | where: "label", "Google Scholar" | first -%}
+  {%- if scholar.url %}
+  <p class="lead-in">A complete list is on <a href="{{ scholar.url }}">Google Scholar</a>.</p>
+  {%- endif %}
+  <ul class="pubs">
+    {%- for p in site.data.publications %}
+    <li class="pub">
+      <p class="pub-head"><strong class="pub-t">{{ p.title | escape }}</strong>
+        {%- if p.page %} <span class="bl">[<a href="{{ p.page | relative_url }}">Blog<span class="vh">: {{ p.title | escape }}</span></a>]</span>{% endif -%}
+        {%- if p.paper %} <span class="bl">[<a href="{{ p.paper }}">Paper<span class="vh">: {{ p.title | escape }}</span></a>]</span>{% endif -%}
+        {%- if p.code %} <span class="bl">[<a href="{{ p.code }}">Code<span class="vh">: {{ p.title | escape }}</span></a>]</span>{% endif -%}
+      </p>
+      <p class="authors">
+        {%- for a in p.authors -%}
+        {%- assign bare = a | remove: "*" -%}
+        {%- if bare == me %}<span class="me">{{ a | escape }}</span>{% else %}{{ a | escape }}{% endif %}{% unless forloop.last %}, {% endunless -%}
+        {%- endfor -%}
+      </p>
+      <p class="venue">{{ p.venue | escape }}</p>
+      {%- if p.context %}
+      <p class="ctx">{{ p.context | escape }}</p>
+      {%- endif %}
+    </li>
+    {%- endfor %}
+  </ul>
+  <p class="note">* Equal contribution.</p>
+</section>
+
+<section class="sec" id="blog" aria-labelledby="h-blog">
+  <h2 id="h-blog">Blog</h2>
+  <ul class="posts">
+    {%- comment -%} Project pages and posts, newest first; then older posts that live outside _posts. {%- endcomment -%}
+    {%- assign written = site.project_pages | concat: site.posts | where_exp: "p", "p.placeholder != true" | sort: "date" | reverse -%}
+    {%- for post in written %}
+    {%- assign summary = post.summary | default: post.excerpt -%}
+    {% include academic/post_card.html url=post.url date=post.date title=post.title summary=summary image=post.image image_alt=post.image_alt %}
+    {%- endfor %}
+    {%- for post in site.data.blog_legacy %}
+    {% include academic/post_card.html url=post.url date=post.date title=post.title summary=post.summary image=post.image image_alt=post.image_alt %}
+    {%- endfor %}
+  </ul>
+</section>

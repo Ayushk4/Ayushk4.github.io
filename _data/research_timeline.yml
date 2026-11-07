@@ -1,4 +1,4 @@
-# Research Timeline for /dev/, newest era first.
+# Research Timeline for the homepage, newest era first.
 # (Named research_timeline.yml because _data/timeline.yml already exists with older content.)
 #
 # Each era renders as one paragraph built from its items. An item renders as

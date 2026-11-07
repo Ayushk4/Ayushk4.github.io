@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
-"""Check links on the built /dev/ homepage and the /projects/ pages.
+"""Check links on the built homepage (/) and the /projects/ pages.
 
 Usage (from the repo root):
     bundle exec jekyll build                 # writes _site/
     python3 scripts/check_links.py           # or: python3 scripts/check_links.py path/to/_site
 
-Crawls every HTML page under _site/dev/ and _site/projects/, starting at /dev/ and following
+Crawls the homepage and every HTML page under _site/projects/, starting at / and following
 internal links that stay inside those folders, and reports:
   - internal links and assets (href, src, CSS url()) that do not resolve to a file in _site
   - in-page anchors (#id) whose target id does not exist
@@ -22,8 +22,8 @@ from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import unquote, urljoin, urlsplit
 
-START = "/dev/"
-CRAWL = ("/dev/", "/projects/")
+START = "/"
+CRAWL = ("/projects/",)   # pages under these prefixes are crawled too
 SKIP_SCHEMES = ("mailto:", "tel:")
 
 
@@ -153,7 +153,7 @@ def main():
                     checked += 1
                     if target_file(site, urlsplit(urljoin(path, u)).path) is None:
                         problems.append(f"{tf.relative_to(site)}: broken url() -> {u}")
-            if tag == "a" and path.startswith(CRAWL) and tf.suffix == ".html":
+            if tag == "a" and (path == START or path.startswith(CRAWL)) and tf.suffix == ".html":
                 queue.append(path)
 
     print(f"Pages crawled: {len(seen)}  internal refs checked: {checked}  external links (not fetched): {len(external)}")

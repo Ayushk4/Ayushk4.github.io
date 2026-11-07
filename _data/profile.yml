@@ -1,10 +1,10 @@
-# Single source for the sidebar, the footer and <meta name="description"> on /dev/.
+# Single source for the sidebar, the footer and <meta name="description"> on the homepage.
 # Edit here only; the page never repeats this text.
 
 name: Ayush Kaushal
 
-# URL of the new homepage. Change to "/" when it replaces the live homepage.
-home: /dev/
+# URL of the homepage.
+home: /
 
 # Optional one-line tagline. While null it is hidden, and the meta
 # description uses the first bio paragraph.
@@ -20,13 +20,10 @@ photo: /assets/academic/ayush.jpg
 photo_alt: "Portrait of Ayush Kaushal"
 photo_placeholder: /assets/academic/photo-placeholder.svg
 
-# Links with url: null are hidden everywhere.
+# Links with url: null are hidden everywhere. No email address on the site (spam).
 links:
-  - label: Email
-    url: "mailto:ayushk4@gmail.com"
-    display: "ayushk4 [at] gmail.com"
   - label: Google Scholar
-    url: null  # TODO(owner): Google Scholar profile URL
+    url: "https://scholar.google.com/citations?user=HPXkux0AAAAJ"
   - label: GitHub
     url: "https://github.com/ayushk4"
   - label: OpenReview

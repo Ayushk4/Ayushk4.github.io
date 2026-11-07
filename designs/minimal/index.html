@@ -110,7 +110,7 @@ details.data summary{cursor:pointer;color:var(--accent)}
 <main>
 <h1>Ayush Kaushal</h1>
 <p class="lede">PhD student, Université de Montréal and Mila. Efficient pretraining and scaling of foundation models that learn in context.</p>
-<p>I&#39;m a PhD student at Université de Montréal and Mila, advised by Irina Rish in the CERC lab. I work on making foundation-model pretraining cheap enough that its scaling behaviour can be measured, with a current focus on tabular foundation models that are meta-trained on synthetic priors and predict through in-context learning.</p><p>My recent work, MegaTabICL, reproduces TabICLv2&#39;s stage-1 pretraining at 3.86x lower cost on 4 H100s and trains a 1B-parameter model within the stage-1 compute of the original 28M run, which enabled a 24-model scaling study from 5M to 1B parameters. Earlier, I pretrained and studied ternary language models (Spectra, ICLR 2025 Spotlight; Spectra 1.1, ACL 2025), covering scaling laws and inference kernels.</p><p>Before the PhD, I co-founded Nolano (2023 to 2026), did research at Google, and studied at UT Austin (MS) and IIT Kharagpur (B.Tech).</p><p>I&#39;m open to research collaborations, compute partnerships and funding around open tabular foundation models and efficient pretraining. Email me at <a data-email data-email-show href="#">ayushk4 [at] gmail.com</a>.</p>
+<p>I&#39;m a PhD student at Université de Montréal and Mila, advised by Irina Rish in the CERC lab. I work on making foundation-model pretraining cheap enough that its scaling behaviour can be measured, with a current focus on tabular foundation models that are meta-trained on synthetic priors and predict through in-context learning.</p><p>My recent work, MegaTabICL, reproduces TabICLv2&#39;s stage-1 pretraining at 3.86x lower cost on 4 H100s and trains a 1B-parameter model within the stage-1 compute of the original 28M run, which enabled a 24-model scaling study from 5M to 1B parameters. Earlier, I pretrained and studied ternary language models (Spectra, ICLR 2025 Spotlight; Spectra 1.1, ACL 2025), covering scaling laws and inference kernels.</p><p>Before the PhD, I co-founded Nolano (2023 to 2026), did research at Google, and studied at UT Austin (MS) and IIT Kharagpur (B.Tech).</p><p>I&#39;m open to research collaborations, compute partnerships and funding around open tabular foundation models and efficient pretraining.</p>
 
 <h2>Now</h2>
 <p><b>MegaTabICL.</b> Presenting at the NeurIPS 2026 AXIOM workshop in Paris on Dec 13; extending the scaling study past stage 1.</p><p><b>Interests.</b> Agents and automated research (no public work yet).</p>
@@ -154,7 +154,7 @@ details.data summary{cursor:pointer;color:var(--accent)}
 </article><p class="small"><a href="/designs/minimal/research/">All publications and projects</a></p>
 </main>
 <footer>
-  <span><a data-email href="#">Email</a> · <span class="todo" title="TODO(owner)">Google Scholar</span> · <a href="https://github.com/ayushk4">GitHub</a> · <a href="https://openreview.net/profile?id=~Ayush_Kaushal1">OpenReview</a> · <a href="https://huggingface.co/ayushk4">Hugging Face</a> · <a href="https://www.linkedin.com/in/ayushkaushal4/">LinkedIn</a> · <span class="todo" title="TODO(owner)">X</span></span>
+  <span><span class="todo" title="TODO(owner)">Google Scholar</span> · <a href="https://github.com/ayushk4">GitHub</a> · <a href="https://openreview.net/profile?id=~Ayush_Kaushal1">OpenReview</a> · <a href="https://huggingface.co/ayushk4">Hugging Face</a> · <a href="https://www.linkedin.com/in/ayushkaushal4/">LinkedIn</a> · <span class="todo" title="TODO(owner)">X</span></span>
   <span>Updated Nov 2026</span>
 </footer>
 </div>
@@ -182,9 +182,6 @@ body{padding-bottom:72px}
   function cur(){var t=root.getAttribute('data-theme');if(t)return t;return matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}
   document.querySelectorAll('[data-theme-toggle]').forEach(function(b){
     b.addEventListener('click',function(){var n=cur()==='dark'?'light':'dark';root.setAttribute('data-theme',n);try{localStorage.setItem('ak-theme',n)}catch(e){}});
-  });
-  document.querySelectorAll('[data-email]').forEach(function(a){
-    var e='ayushk4'+'@'+'gmail.com';a.href='mailto:'+e;if(a.hasAttribute('data-email-show'))a.textContent=e;
   });
   document.querySelectorAll('[data-view-btn]').forEach(function(b){
     b.addEventListener('click',function(){

@@ -134,7 +134,6 @@ ul.clean{list-style:none;margin:0;padding:0}
     <h1>Efficient pretraining and scaling of foundation models that learn in context.</h1>
     <p class="b">I&#39;m a PhD student at Université de Montréal and Mila, advised by Irina Rish in the CERC lab. I work on making foundation-model pretraining cheap enough that its scaling behaviour can be measured, with a current focus on tabular foundation models that are meta-trained on synthetic priors and predict through in-context learning.</p>
     <div class="cta">
-      <a class="btn primary" data-email href="#">Email me</a>
       <span class="btn todo" title="TODO(owner)">Google Scholar</span>
       <a class="btn" href="https://github.com/ayushk4">GitHub</a>
       <span class="btn todo" title="TODO(owner)">CV</span>
@@ -319,7 +318,7 @@ ul.clean{list-style:none;margin:0;padding:0}
 </section>
 </main>
 <footer><div class="wrap">
-  <nav aria-label="Profiles"><a data-email href="#">Email</a><span class="todo" title="TODO(owner)">Google Scholar</span><a href="https://github.com/ayushk4">GitHub</a><a href="https://openreview.net/profile?id=~Ayush_Kaushal1">OpenReview</a><a href="https://huggingface.co/ayushk4">Hugging Face</a><a href="https://www.linkedin.com/in/ayushkaushal4/">LinkedIn</a><span class="todo" title="TODO(owner)">X</span></nav>
+  <nav aria-label="Profiles"><span class="todo" title="TODO(owner)">Google Scholar</span><a href="https://github.com/ayushk4">GitHub</a><a href="https://openreview.net/profile?id=~Ayush_Kaushal1">OpenReview</a><a href="https://huggingface.co/ayushk4">Hugging Face</a><a href="https://www.linkedin.com/in/ayushkaushal4/">LinkedIn</a><span class="todo" title="TODO(owner)">X</span></nav>
   <span>Montreal · Updated Nov 2026</span>
 </div></footer>
 <nav class="pv" aria-label="Design preview switcher">
@@ -346,9 +345,6 @@ body{padding-bottom:72px}
   function cur(){var t=root.getAttribute('data-theme');if(t)return t;return matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}
   document.querySelectorAll('[data-theme-toggle]').forEach(function(b){
     b.addEventListener('click',function(){var n=cur()==='dark'?'light':'dark';root.setAttribute('data-theme',n);try{localStorage.setItem('ak-theme',n)}catch(e){}});
-  });
-  document.querySelectorAll('[data-email]').forEach(function(a){
-    var e='ayushk4'+'@'+'gmail.com';a.href='mailto:'+e;if(a.hasAttribute('data-email-show'))a.textContent=e;
   });
   document.querySelectorAll('[data-view-btn]').forEach(function(b){
     b.addEventListener('click',function(){

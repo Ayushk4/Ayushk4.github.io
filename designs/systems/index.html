@@ -134,7 +134,7 @@ dl.kv dd{margin:0;color:var(--ink2)}
     <p class="role">phd @ udem + mila · cerc lab (irina rish) · montreal</p>
     <p class="tag-line">Efficient pretraining and scaling of foundation models that learn in context.</p>
     <div class="bio"><p>I&#39;m a PhD student at Université de Montréal and Mila, advised by Irina Rish in the CERC lab. I work on making foundation-model pretraining cheap enough that its scaling behaviour can be measured, with a current focus on tabular foundation models that are meta-trained on synthetic priors and predict through in-context learning.</p><p>My recent work, MegaTabICL, reproduces TabICLv2&#39;s stage-1 pretraining at 3.86x lower cost on 4 H100s and trains a 1B-parameter model within the stage-1 compute of the original 28M run, which enabled a 24-model scaling study from 5M to 1B parameters. Earlier, I pretrained and studied ternary language models (Spectra, ICLR 2025 Spotlight; Spectra 1.1, ACL 2025), covering scaling laws and inference kernels.</p><p>Before the PhD, I co-founded Nolano (2023 to 2026), did research at Google, and studied at UT Austin (MS) and IIT Kharagpur (B.Tech).</p></div>
-    <p style="margin:12px 0 0"><b>I&#39;m open to research collaborations, compute partnerships and funding around open tabular foundation models and efficient pretraining.</b> <a class="mono" style="font-size:13px" data-email data-email-show href="#">ayushk4 [at] gmail.com</a></p>
+    <p style="margin:12px 0 0"><b>I&#39;m open to research collaborations, compute partnerships and funding around open tabular foundation models and efficient pretraining.</b></p>
   </div>
   <div>
     <p class="lbl">megatabicl / headline numbers</p>
@@ -249,12 +249,12 @@ dl.kv dd{margin:0;color:var(--ink2)}
     <p class="lbl" style="margin-top:28px">news</p>
     <div class="news"><div><time datetime="2026-12">2026-12</time><span>Presenting MegaTabICL at the NeurIPS 2026 AXIOM workshop, Paris (Dec 13).</span></div><div><time datetime="2026-09">2026-09</time><span>MegaTabICL accepted as a poster at NeurIPS 2026 AXIOM (on OpenReview since 29 Sept 2026).</span></div><div><time datetime="2025-08">2025-08</time><span>Started my PhD at Université de Montréal and Mila.</span></div><div><time datetime="2025-07">2025-07</time><span>Spectra 1.1 published at ACL 2025.</span></div><div><time datetime="2025-04">2025-04</time><span>Spectra presented as a Spotlight at ICLR 2025.</span></div></div>
     <p class="lbl" style="margin-top:28px">links</p>
-    <dl class="kv"><dt>email</dt><dd class="mono" style="font-size:12.5px"><a data-email href="#">ayushk4 [at] gmail.com</a></dd><dt>google scholar</dt><dd class="mono" style="font-size:12.5px"><span class="todo">TODO(owner)</span></dd><dt>github</dt><dd class="mono" style="font-size:12.5px"><a href="https://github.com/ayushk4">ayushk4</a></dd><dt>openreview</dt><dd class="mono" style="font-size:12.5px"><a href="https://openreview.net/profile?id=~Ayush_Kaushal1">~Ayush_Kaushal1</a></dd><dt>hugging face</dt><dd class="mono" style="font-size:12.5px"><a href="https://huggingface.co/ayushk4">ayushk4</a></dd><dt>linkedin</dt><dd class="mono" style="font-size:12.5px"><a href="https://www.linkedin.com/in/ayushkaushal4/">ayushkaushal4</a></dd><dt>x</dt><dd class="mono" style="font-size:12.5px"><span class="todo">TODO(owner)</span></dd></dl>
+    <dl class="kv"><dt>google scholar</dt><dd class="mono" style="font-size:12.5px"><span class="todo">TODO(owner)</span></dd><dt>github</dt><dd class="mono" style="font-size:12.5px"><a href="https://github.com/ayushk4">ayushk4</a></dd><dt>openreview</dt><dd class="mono" style="font-size:12.5px"><a href="https://openreview.net/profile?id=~Ayush_Kaushal1">~Ayush_Kaushal1</a></dd><dt>hugging face</dt><dd class="mono" style="font-size:12.5px"><a href="https://huggingface.co/ayushk4">ayushk4</a></dd><dt>linkedin</dt><dd class="mono" style="font-size:12.5px"><a href="https://www.linkedin.com/in/ayushkaushal4/">ayushkaushal4</a></dd><dt>x</dt><dd class="mono" style="font-size:12.5px"><span class="todo">TODO(owner)</span></dd></dl>
   </div>
 </section>
 </main>
 <footer><div class="wrap">
-  <nav aria-label="Profiles"><a data-email href="#">email</a><span class="todo" title="TODO(owner)">google scholar</span><a href="https://github.com/ayushk4">github</a><a href="https://openreview.net/profile?id=~Ayush_Kaushal1">openreview</a><a href="https://huggingface.co/ayushk4">hugging face</a><a href="https://www.linkedin.com/in/ayushkaushal4/">linkedin</a><span class="todo" title="TODO(owner)">x</span></nav>
+  <nav aria-label="Profiles"><span class="todo" title="TODO(owner)">google scholar</span><a href="https://github.com/ayushk4">github</a><a href="https://openreview.net/profile?id=~Ayush_Kaushal1">openreview</a><a href="https://huggingface.co/ayushk4">hugging face</a><a href="https://www.linkedin.com/in/ayushkaushal4/">linkedin</a><span class="todo" title="TODO(owner)">x</span></nav>
   <span>montreal · updated 2026-11</span>
 </div></footer>
 <nav class="pv" aria-label="Design preview switcher">
@@ -281,9 +281,6 @@ body{padding-bottom:72px}
   function cur(){var t=root.getAttribute('data-theme');if(t)return t;return matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}
   document.querySelectorAll('[data-theme-toggle]').forEach(function(b){
     b.addEventListener('click',function(){var n=cur()==='dark'?'light':'dark';root.setAttribute('data-theme',n);try{localStorage.setItem('ak-theme',n)}catch(e){}});
-  });
-  document.querySelectorAll('[data-email]').forEach(function(a){
-    var e='ayushk4'+'@'+'gmail.com';a.href='mailto:'+e;if(a.hasAttribute('data-email-show'))a.textContent=e;
   });
   document.querySelectorAll('[data-view-btn]').forEach(function(b){
     b.addEventListener('click',function(){

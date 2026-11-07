@@ -17,9 +17,9 @@ plugins:
 nav_exclude:                                            # The following path is excluded from navbar
   - pages/tags.html
   - pages/404.html
-  - pages/index.md
+  - index.html                                          # the homepage (new layout)
   - designs/**                                          # design previews stay out of the live navbar
-  - dev/**                                              # new homepage preview stays out of the live navbar
+  - dev/**                                              # /dev/ now redirects to /
 
 
 
@@ -29,7 +29,6 @@ author:
   image             : https://avatars3.githubusercontent.com/u/34215911?s=400&u=c1b19b8c083df088983c31dcb81bc92f39cacc00&v=4
 # behance           : your_username
 # dribbble          : your_username
-  email             : <username> [at] gmail [dot] com where <username>=ayushk4
   facebook          : ayush.kaushal1
   github            : ayushk4
 # gitlab            : your_username
@@ -92,7 +91,7 @@ exclude:
   - temp_blog.html
   - scripts
 
-### Project pages for the new site (/dev/) ###
+### Project pages (/projects/<name>/) ###
 # Not named "projects": the old theme already renders site.projects on the live Research page.
 collections:
   project_pages:

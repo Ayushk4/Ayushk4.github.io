@@ -372,7 +372,7 @@ details.data summary{cursor:pointer;color:var(--accent)}
 </article></section>
 </main>
 <footer>
-  <span><a data-email href="#">Email</a> · <span class="todo" title="TODO(owner)">Google Scholar</span> · <a href="https://github.com/ayushk4">GitHub</a> · <a href="https://openreview.net/profile?id=~Ayush_Kaushal1">OpenReview</a> · <a href="https://huggingface.co/ayushk4">Hugging Face</a> · <a href="https://www.linkedin.com/in/ayushkaushal4/">LinkedIn</a> · <span class="todo" title="TODO(owner)">X</span></span>
+  <span><span class="todo" title="TODO(owner)">Google Scholar</span> · <a href="https://github.com/ayushk4">GitHub</a> · <a href="https://openreview.net/profile?id=~Ayush_Kaushal1">OpenReview</a> · <a href="https://huggingface.co/ayushk4">Hugging Face</a> · <a href="https://www.linkedin.com/in/ayushkaushal4/">LinkedIn</a> · <span class="todo" title="TODO(owner)">X</span></span>
   <span>Updated Nov 2026</span>
 </footer>
 </div>
@@ -400,9 +400,6 @@ body{padding-bottom:72px}
   function cur(){var t=root.getAttribute('data-theme');if(t)return t;return matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}
   document.querySelectorAll('[data-theme-toggle]').forEach(function(b){
     b.addEventListener('click',function(){var n=cur()==='dark'?'light':'dark';root.setAttribute('data-theme',n);try{localStorage.setItem('ak-theme',n)}catch(e){}});
-  });
-  document.querySelectorAll('[data-email]').forEach(function(a){
-    var e='ayushk4'+'@'+'gmail.com';a.href='mailto:'+e;if(a.hasAttribute('data-email-show'))a.textContent=e;
   });
   document.querySelectorAll('[data-view-btn]').forEach(function(b){
     b.addEventListener('click',function(){
