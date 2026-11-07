@@ -149,14 +149,6 @@ The improvement in quality is not only a by-product of saving compute. Restartin
 
 **The ARM benefits from recurrence.** On SNIPS, any learned restart policy is far better than restarting at every step (streaming EM 73.8, EO 16.3). A linear layer or an MLP reaches about 81 streaming EM. A GRU, which carries state from one step to the next, reaches 85.3 streaming EM and 6.0 EO.
 
-## Limitations
-
-- The ARM needs an additional, though small, training stage on top of a trained HYBRID encoder.
-- All benchmarks are in English.
-- The experiments use 4-layer encoders trained from GloVe-initialized embeddings, not large pretrained encoders. Whether the same savings hold at that scale remains untested.
-- Compute is measured in FLOPs, not wall-clock latency on a deployed system.
-- The ARM's training target is a greedy policy.
-
 ## Takeaway
 
 Streaming inputs separate the computation that depends only on the past, which can be cached, from the computation that depends on the future, which must be redone. HEAR makes that split explicit in the architecture, then learns when the second kind of computation is worth paying for. Learning that decision saves compute and, on most tasks, also produces more stable and more accurate predictions on incomplete input.

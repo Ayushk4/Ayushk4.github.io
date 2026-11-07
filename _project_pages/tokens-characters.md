@@ -148,13 +148,6 @@ Case and spacing alone already produce many variants. For `signature`:
 
 Subword tokenization yields more character information than word-level tokenization (63.23 against 60.55). Adding a little variability increases it further, peaking at 66.00 at ρ = 0.05. Beyond that, performance declines, to 62.33 at ρ = 0.5. A likely explanation for the decline is the small corpus: with high variability, each token is seen fewer times. The differences are small, but they were consistent across seeds and splits. This is evidence that variability affects character learning in CBOW. Whether the same holds for pretrained transformers remains to be tested, though the result is in line with earlier work on subword regularization such as BPE-dropout.
 
-## Limitations
-
-- We probe static input embeddings only, not contextual representations inside the network.
-- A probe shows that information can be decoded from an embedding, not that the model uses it.
-- The tokenization-variability experiment uses CBOW embeddings as a proof of concept, not transformer pretraining.
-- The multilingual splits are not lemma-disjoint, and we do not test non-alphabetic scripts such as Chinese, which would need a different task formulation.
-
 ## Takeaways
 
 Spelling is a property of language that is almost unrelated to meaning: nothing about a dog requires the word to be spelled `d-o-g`. Even so, subword models trained only to predict words acquire it, and they encode it robustly across models, character positions, token frequencies and scripts. At least two routes contribute: correlations between letters and grammatical categories, and the variability with which tokenizers split the same word.
