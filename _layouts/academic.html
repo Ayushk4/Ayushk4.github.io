@@ -31,6 +31,7 @@
 (function(){
   var n=0;
   document.querySelectorAll('.prose > table').forEach(function(t){
+    t.querySelectorAll('thead th').forEach(function(th){if(!th.textContent.trim()){th.parentNode.replaceChild(document.createElement('td'),th)}});
     n++;var w=document.createElement('div');w.className='tbl-scroll';w.tabIndex=0;w.setAttribute('role','region');
     var cap=t.nextElementSibling,em=cap&&cap.tagName==='P'&&cap.querySelector('em');
     w.setAttribute('aria-label',em?em.textContent:'Table '+n);

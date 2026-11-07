@@ -13,7 +13,7 @@
   code: null  # TODO(owner): public code repository URL
 
 - title: "Scaling Laws and Efficient Inference for Ternary Language Models"
-  authors: ["Tejas Vaidhya", "Ayush Kaushal", "Vineet Jain", "Francis Couture-Harpin", "Prashant Shishodia", "Majid Behbahani", "Yuriy Nevmyvaka", "Irina Rish"]
+  authors: ["Tejas Vaidhya*", "Ayush Kaushal*", "Vineet Jain", "Francis Couture-Harpin", "Prashant Shishodia", "Majid Behbahani", "Yuriy Nevmyvaka", "Irina Rish"]
   venue: "ACL 2025"
   context: null
   page: /projects/spectra-1-1/

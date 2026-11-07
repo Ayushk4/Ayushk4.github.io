@@ -41,7 +41,7 @@
       paper: "https://openreview.net/forum?id=TJo6aQb7mK"
       post: ": an open suite of ternary, quantized and FP16 language models trained on identical data, for controlled comparison of low-bit pretraining."
     - pre: ""
-      link: "Spectra 1.1"
+      link: "TriTera (Spectra 1.1)"
       page: /projects/spectra-1-1/
       paper: "https://aclanthology.org/2025.acl-long.1294/"
       post: ": scaling laws and inference kernels for ternary language models."
