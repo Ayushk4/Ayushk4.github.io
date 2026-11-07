@@ -44,7 +44,7 @@
 - title: "Efficient Encoders for Streaming Sequence Tagging"
   authors: ["Ayush Kaushal", "Aditya Gupta", "Shyam Upadhyay", "Manaal Faruqui"]
   venue: "EACL 2023"
-  context: "Internship project at Google Assistant."
+  context: "Research Internship Project at Google, Mountain View."
   page: /projects/streaming-encoders/
   paper: "https://aclanthology.org/2023.eacl-main.31/"
   code: null

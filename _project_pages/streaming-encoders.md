@@ -12,7 +12,7 @@ links:
 byline_in_body: true  # the post's first lines carry authors, venue and links, so the header shows only title and date
 ---
 
-**Ayush Kaushal, Aditya Gupta, Shyam Upadhyay, Manaal Faruqui** · EACL 2023 · Internship project at Google Assistant
+**Ayush Kaushal, Aditya Gupta, Shyam Upadhyay, Manaal Faruqui** · EACL 2023 · Research Internship Project at Google, Mountain View
 [Paper](https://aclanthology.org/2023.eacl-main.31/) · [arXiv](https://arxiv.org/abs/2301.09244) · [BibTeX](#citation)
 
 ## Summary
