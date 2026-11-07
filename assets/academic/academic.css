@@ -5,15 +5,15 @@
 :root{color-scheme:light;
   --bg:#fbfbfd;--ink:#1d1d1f;--ink2:#3d3d45;--muted:#62626b;--rule:#e4e4ea;
   --link:#1d5fd3;--line:#3a73ee;--card:#fafbff;--pill:#e7effd;--pill-ink:#1c56c4;
-  --shadow:rgba(58,115,238,.16);--link-line:rgba(29,95,211,.35);--ph-bg:#fff4d1;--ph-ink:#6b4a00}
+  --shadow:rgba(58,115,238,.16);--img-pad:0px;--link-line:rgba(29,95,211,.35);--ph-bg:#fff4d1;--ph-ink:#6b4a00}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;
   --bg:#111317;--ink:#ececf1;--ink2:#c9c9d1;--muted:#9c9ca7;--rule:#2a2d34;
   --link:#86aeff;--line:#5b8cf6;--card:#151a23;--pill:#1a2742;--pill-ink:#a3c0ff;
-  --shadow:rgba(0,0,0,.45);--link-line:rgba(134,174,255,.4);--ph-bg:#3a2f12;--ph-ink:#f3d58a}}
+  --shadow:rgba(0,0,0,.45);--img-pad:10px;--link-line:rgba(134,174,255,.4);--ph-bg:#3a2f12;--ph-ink:#f3d58a}}
 :root[data-theme="dark"]{color-scheme:dark;
   --bg:#111317;--ink:#ececf1;--ink2:#c9c9d1;--muted:#9c9ca7;--rule:#2a2d34;
   --link:#86aeff;--line:#5b8cf6;--card:#151a23;--pill:#1a2742;--pill-ink:#a3c0ff;
-  --shadow:rgba(0,0,0,.45);--link-line:rgba(134,174,255,.4);--ph-bg:#3a2f12;--ph-ink:#f3d58a}
+  --shadow:rgba(0,0,0,.45);--img-pad:10px;--link-line:rgba(134,174,255,.4);--ph-bg:#3a2f12;--ph-ink:#f3d58a}
 
 *{box-sizing:border-box}
 [hidden]{display:none!important}
@@ -146,7 +146,10 @@ h2{font-size:1.85rem;font-weight:400;letter-spacing:-.015em;line-height:1.2;marg
 .prose ul,.prose ol{margin:0 0 14px;padding-left:1.3em}
 .prose li{margin:0 0 6px;line-height:1.7}
 .prose figure{margin:26px 0}
-.prose figure img{display:block;width:100%;height:auto;border:1px solid var(--rule);border-radius:12px;background:#fff}
+.prose figure img,.prose p > img{display:block;width:100%;max-width:100%;height:auto;border:1px solid var(--rule);border-radius:12px;background:#fff;padding:var(--img-pad);box-sizing:border-box}
+.prose p > img{margin:22px 0 0}
+.prose p > img + em{display:block;font-size:.9rem;color:var(--muted);margin:8px 0 10px;line-height:1.5}
+.prose.byline-body > p:first-child{white-space:pre-line;color:var(--ink2)}
 .prose figure.banner img{max-width:240px;margin:0 auto;border:0;background:transparent}
 .prose figcaption{font-size:.9rem;color:var(--muted);margin-top:8px;line-height:1.5}
 .prose .tbl{overflow-x:auto;margin:0 0 16px}
@@ -154,7 +157,7 @@ h2{font-size:1.85rem;font-weight:400;letter-spacing:-.015em;line-height:1.2;marg
 .prose table{border-collapse:collapse;width:100%;font-size:.95rem;font-variant-numeric:tabular-nums}
 .prose th,.prose td{text-align:left;padding:6px 12px 6px 0;border-bottom:1px solid var(--rule);white-space:nowrap}
 .prose thead th{font-weight:600;border-bottom:2px solid var(--rule)}
-.prose td+td,.prose th+th{text-align:right}
+.prose .tbl td+td,.prose .tbl th+th{text-align:right}
 .prose pre{background:var(--card);border:1px solid var(--rule);border-radius:10px;padding:14px 16px;white-space:pre-wrap;overflow-wrap:anywhere;font-size:.85rem;line-height:1.5;margin:0 0 16px}
 .prose code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.9em}
 .ack{margin:44px 0 0;padding:16px 20px;border:2px solid var(--line);border-radius:14px;background:var(--card)}

@@ -9,22 +9,22 @@ layout: academic
     {%- if page.title_note %}
     <p class="title-note">{{ page.title_note | escape }}</p>
     {%- endif %}
-    {%- if page.authors %}
+    {%- if page.authors and page.byline_in_body != true %}
     <p class="authors">
       {%- for a in page.authors -%}
       {%- if a == profile.name %}<span class="me">{{ a | escape }}</span>{% else %}{{ a | escape }}{% endif %}{% unless forloop.last %}, {% endunless -%}
       {%- endfor -%}
     </p>
     {%- endif %}
-    <p class="meta"><time datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date: '%b %-d, %Y' }}</time>{% if page.venue %} · {{ page.venue | escape }}{% endif %}</p>
-    {%- if page.links %}
+    <p class="meta"><time datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date: '%b %-d, %Y' }}</time>{% if page.venue and page.byline_in_body != true %} · {{ page.venue | escape }}{% endif %}</p>
+    {%- if page.links and page.byline_in_body != true %}
     <p class="proj-links">
       {%- for l in page.links -%}
       <span class="bl">[<a href="{{ l.url }}">{{ l.label | escape }}</a>]</span>{% unless forloop.last %}{{ " " }}{% endunless -%}
       {%- endfor -%}
     </p>
     {%- endif %}
-    {%- if page.versions %}
+    {%- if page.versions and page.byline_in_body != true %}
     <ul class="versions">
       {%- for v in page.versions %}
       <li>{{ v.label | escape }}: <a href="{{ v.url }}">{{ v.title | escape }}</a>, {{ v.venue | escape }}</li>
@@ -32,7 +32,7 @@ layout: academic
     </ul>
     {%- endif %}
   </header>
-  <div class="prose">
+  <div class="prose{% if page.byline_in_body %} byline-body{% endif %}">
     {%- if page.placeholder %}
     <div class="ph-note"><p><strong>Placeholder.</strong> The write-up for this project is coming.</p></div>
     {%- endif %}
