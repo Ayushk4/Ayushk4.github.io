@@ -152,10 +152,13 @@ h2{font-size:1.85rem;font-weight:400;letter-spacing:-.015em;line-height:1.2;marg
 .prose.byline-body > p:first-child{white-space:pre-line;color:var(--ink2)}
 .prose figure.banner img{max-width:240px;margin:0 auto;border:0;background:transparent}
 .prose figcaption{font-size:.9rem;color:var(--muted);margin-top:8px;line-height:1.5}
-.prose .tbl{overflow-x:auto;margin:0 0 16px}
+.prose .tbl,.prose .tbl-scroll{overflow-x:auto;max-width:100%;margin:0 0 16px}
+.prose .tbl-scroll:focus-visible{outline:2px solid var(--link);outline-offset:2px}
+.prose > table{display:block;max-width:100%;overflow-x:auto}
 .prose .tbl:focus-visible{outline:2px solid var(--link);outline-offset:2px}
 .prose table{border-collapse:collapse;width:100%;font-size:.95rem;font-variant-numeric:tabular-nums}
 .prose th,.prose td{text-align:left;padding:6px 12px 6px 0;border-bottom:1px solid var(--rule);white-space:nowrap}
+.prose th{white-space:normal;vertical-align:bottom}
 .prose thead th{font-weight:600;border-bottom:2px solid var(--rule)}
 .prose .tbl td+td,.prose .tbl th+th{text-align:right}
 .prose pre{background:var(--card);border:1px solid var(--rule);border-radius:10px;padding:14px 16px;white-space:pre-wrap;overflow-wrap:anywhere;font-size:.85rem;line-height:1.5;margin:0 0 16px}

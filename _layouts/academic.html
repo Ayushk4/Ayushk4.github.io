@@ -29,6 +29,15 @@
 {% include academic/footer.html %}
 <script>
 (function(){
+  var n=0;
+  document.querySelectorAll('.prose > table').forEach(function(t){
+    n++;var w=document.createElement('div');w.className='tbl-scroll';w.tabIndex=0;w.setAttribute('role','region');
+    var cap=t.nextElementSibling,em=cap&&cap.tagName==='P'&&cap.querySelector('em');
+    w.setAttribute('aria-label',em?em.textContent:'Table '+n);
+    t.parentNode.insertBefore(w,t);w.appendChild(t);
+  });
+})();
+(function(){
   var b=document.querySelector('[data-theme-toggle]');if(!b)return;
   var root=document.documentElement;
   function cur(){var t=root.getAttribute('data-theme');if(t)return t;return window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}
