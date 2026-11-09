@@ -3,7 +3,7 @@ layout: project
 title: "What do tokens know about their characters and how do they know it?"
 date: 2022-06-06
 permalink: /projects/tokens-characters/
-summary: "Probing what subword embeddings encode about their constituent characters, and how pretraining induces that information."
+summary: "Subword embeddings encode which characters a token contains (93.70 F1 for GPT-J against 48.36 for a control), across models and scripts. Two mechanisms explain how pretraining induces it: morphosyntax and tokenization variability."
 authors: ["Ayush Kaushal", "Kyle Mahowald"]
 venue: "NAACL 2022"
 links:

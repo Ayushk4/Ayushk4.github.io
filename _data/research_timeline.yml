@@ -22,15 +22,15 @@
   list: true  # render one list item per project instead of a paragraph
   items:
     - pre: ""
-      link: "4-bit LLaMA inference on a laptop CPU"
+      link: "4-bit LLaMA on a laptop CPU"
       page: /projects/llama-int4-quant/
       paper: "https://github.com/NolanoOrg/llama-int4-quant"
-      post: ", implemented on top of ggml and shown publicly on March 10, 2023, two weeks after LLaMA's release."
+      post: ": a public demonstration on March 10, 2023, two weeks after LLaMA's release, built on ggml, followed by a study showing that LLaMA-13B can be quantized to 3 bits with little additional loss over 4 bits."
     - pre: ""
       link: "LoRD"
       page: /projects/lord/
       paper: "https://openreview.net/forum?id=br49PQvuMp"
-      post: ": one-shot low-rank decomposition that compresses StarCoder 16B to 13.2B parameters with HumanEval pass@1 within 0.1 points of the original."
+      post: ": one-shot low-rank decomposition of code LLMs, showing that their linear layers tolerate up to 39.58% rank reduction with under 1% increase in perplexity. It compresses StarCoder 16B to 13.2B parameters in under 10 minutes on one A100, with HumanEval pass@1 within 0.1 points."
     - pre: ""
       link: "Hi-NOLIN"
       page: /projects/hi-nolin/
@@ -63,10 +63,10 @@
   logo: null
   items:
     - pre: ""
-      link: "Probed what subword embeddings encode about their constituent characters"
+      link: "Showed that subword embeddings encode which characters their tokens contain"
       page: /projects/tokens-characters/
       paper: "https://aclanthology.org/2022.naacl-main.179"
-      post: ", and traced how pretraining induces that information."
+      post: ", across models and scripts, and identified two mechanisms by which pretraining induces this: correlations between characters and parts of speech, and variability in how the same word is tokenized."
 
 - years: "2017–2021"
   place: IIT Kharagpur

@@ -14,6 +14,13 @@ done_at: Nolano
 # Source: the Nolano blog post "The Lord (Low Rank Decomposition) of the Code LLMs" (2023-08-20), lightly edited.
 ---
 
+## Findings
+
+- Code LLMs are low-rank decomposable. Across the StarCoder and CodeGen model families, the rank of linear layers can be reduced by up to 39.58% with less than a 1% increase in perplexity.
+- Compression is one-shot. StarCoder 16B is compressed to 13.2B parameters in under 10 minutes on a single A100, without retraining.
+- Compressed models run faster on standard dense kernels: up to 22.35% faster inference with a one-line change to Hugging Face's PyTorch inference code.
+- The gains compose with other methods. LoRD models remain compatible with near-lossless SpQR quantization, and QLoRA fine-tuning of a LoRD model uses up to 21.2% less memory than QLoRA on the original model.
+
 In the months before this post (August 2023), several open-source code LLMs were released in various sizes. Some are competitive with OpenAI's Codex and ChatGPT models, especially after fine-tuning, and there is growing interest in deploying them to power copilots on-premises and on individual devices. But these models have up to 16 billion parameters, need large amounts of memory, and are slow at inference.
 
 We released LoRDCoder models (v0) on Hugging Face: compressed versions of the open-source StarCoder LLM, based on low rank decomposition (LoRD). The design was partly inspired by the effectiveness of low-rank adapters (LoRA), and it has several advantages over pruning and quantization:

@@ -3,7 +3,7 @@ layout: project
 title: "llama-int4-quant: 4-bit LLaMA Inference on a Laptop CPU"
 date: 2023-03-09
 permalink: /projects/llama-int4-quant/
-summary: "LLaMA with 4-bit weights generating text on a MacBook CPU in C/C++, shown publicly on March 10, 2023 (UTC), two weeks after LLaMA was announced."
+summary: "A public demonstration, two weeks after LLaMA's release, that LLaMA runs with 4-bit weights on a laptop CPU, followed by a study showing LLaMA-13B can be quantized to 3 bits with little additional loss."
 authors: ["Ayush Kaushal"]
 venue: "Nolano"
 links:
@@ -14,7 +14,7 @@ byline_in_body: true  # the post's first lines carry author, venue and links, so
 **Ayush Kaushal** · Nolano · March 2023
 [Code (archived)](https://github.com/NolanoOrg/llama-int4-quant) · [Demo videos](#demo) · [Follow-up write-up](https://nolanoorg.substack.com/p/int-4-llama-is-not-enough-int-3-and)
 
-Meta announced LLaMA on February 24, 2023. On March 9, LLaMA-7B was generating text on a MacBook CPU from 4-bit weights, using a C/C++ implementation I wrote on top of Georgi Gerganov's [ggml](https://github.com/ggerganov/ggml) library. Nolano posted videos of it running that evening. The repository called itself a proof of concept, not for production use, and that is what it was: a demonstration that a 7B-parameter LLaMA model could run on a laptop, without a GPU and without PyTorch at inference time.
+Meta announced LLaMA on February 24, 2023. On March 9, LLaMA-7B was generating text on a MacBook CPU from 4-bit weights, using a C/C++ implementation I wrote on top of Georgi Gerganov's [ggml](https://github.com/ggerganov/ggml) library. Nolano posted videos of it running that evening. It demonstrated that a 7B-parameter LLaMA model could run on a laptop, without a GPU and without PyTorch at inference time.
 
 ## What it did
 
@@ -44,7 +44,7 @@ Nolano posted five videos of the implementation running on X between 03:06 and 0
 | 03:19 | [x.com/NolanoOrg/status/1634031068574621702](https://x.com/NolanoOrg/status/1634031068574621702) |
 | 03:21 | [x.com/NolanoOrg/status/1634031719652237315](https://x.com/NolanoOrg/status/1634031719652237315) |
 
-## What I built, and what it built on
+## What I contributed, and what it built on
 
 ggml already had what LLaMA needed for low-bit inference: a tensor library with CPU kernels and, on its experimental `gq` branch, 4-bit quantization formats with SIMD routines (developed between February 21 and 27, 2023). That branch had been used for 4-bit GPT-2, GPT-J and Whisper. It had no support for LLaMA's architecture.
 
@@ -74,9 +74,17 @@ All times are UTC, from the public git histories.
 
 By early March, others had run LLaMA locally in PyTorch: in 32-bit on CPU, and in 8-bit and 4-bit on GPUs. What this project added was 4-bit inference on a laptop CPU in C/C++.
 
-## What came next
+## Below 4 bits
 
-**Lower bit widths.** On March 13 we published [Int-4 LLaMa is not enough: Int-3 and beyond](https://nolanoorg.substack.com/p/int-4-llama-is-not-enough-int-3-and). It applied GPTQ to LLaMA-7B and 13B at 3 and 4 bits, in both of ggml's 4-bit storage formats (with and without a stored zero offset) and with several block sizes.
+Within days of the demo, we studied how far LLaMA's weights could be compressed. We applied GPTQ to LLaMA-7B and 13B in both of ggml's storage formats: one with a fixed zero offset (Q4_0) and one with a stored zero offset (Q4_1). We tested block sizes of 32, 64 and 128 weights, used 128 WikiText sequences of 2,048 tokens for calibration, and evaluated on WikiText and PTB.
+
+- GPTQ improved on round-to-nearest quantization in nearly all settings. Round-to-nearest gave usable 4-bit models but could not reach 3 bits; GPTQ could.
+- At 4 bits, the block size could grow beyond the default 32 with little loss, cutting the memory for weights by about 15% even for the 7B model.
+- LLaMA-13B could be quantized to 3 bits, with larger blocks, at little additional loss over 4 bits, cutting weight memory by 30% to 35%. For 7B, the drop at 3 bits was much larger.
+- 2 bits was not usable for 13B with GPTQ.
+- One outlier: for 7B in the fixed-offset format at 4 bits, GPTQ was worse than round-to-nearest across seeds. We hypothesized that a few outlier blocks were to blame, and left this untested.
+
+## What came next
 
 **Moving to llama.cpp.** By mid-March, llama.cpp ran LLaMA at nearly the same speed and output quality on a MacBook, and also supported Linux and Windows. Our next project, InstructLLaMa.cpp (March 16), was built on it, and llama-int4-quant was archived so that development would consolidate in one place.
 

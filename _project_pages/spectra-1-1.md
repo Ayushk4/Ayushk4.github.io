@@ -3,7 +3,7 @@ layout: project
 title: "Scaling Laws and Efficient Inference for Ternary Language Models"
 date: 2025-06-28
 permalink: /projects/spectra-1-1/
-summary: "Scaling laws for ternary language models, the TriTera suite trained on 1.2T tokens, lossless 2-bit and 1.6-bit weight packing, and TriRun GPU kernels."
+summary: "A scaling law for ternary language models; TriTera models trained on 1.2T tokens that approach LLaMA-1 7B on MMLU and ARC; a necessary and sufficient condition for lossless ternary packing, with a 1.6-bit scheme within 1% of the entropy limit; and GPU kernels near the 8× memory-bound speedup."
 venue: "ACL 2025"
 links:
   - {label: Paper, url: "https://aclanthology.org/2025.acl-long.1294/"}
@@ -89,7 +89,7 @@ Here N is the parameter count in millions and D is the token count in billions. 
 
 For FloatLMs, the parameter and data exponents are almost equal, so adding parameters or adding data has a similar effect. For TriLMs, the data term decays much faster than the parameter term.
 
-### Reading the fit
+### What the exponents imply
 
 A faster-decaying data term has a specific meaning: for a fixed model size, a TriLM approaches its parameter-limited loss after relatively few tokens. To see what this implies for allocating compute, note that doubling either the parameters or the tokens doubles training compute, which grows in proportion to N × D. The figure below compares the loss reduction Equation 2 predicts from each choice.
 
@@ -98,7 +98,7 @@ A faster-decaying data term has a specific meaning: for a fixed model size, a Tr
 
 Within the fitted range, doubling the tokens gives the larger predicted drop only at the smallest budget (20B tokens, for models of 190M parameters and up) and for the 1.1B model at 40B tokens: 5 of the 20 grid points. Everywhere else, doubling the parameters gives the larger drop. In the same spirit, the training-compute-optimal allocation implied by Equation 2 grows the parameter count roughly as C^0.72. Equation 3 gives C^0.49 for FloatLMs.
 
-The paper summarizes the asymmetric exponents as TriLMs benefiting more from data than from parameters. The more precise reading is the one above: the data-limited part of the loss vanishes quickly.
+The asymmetry is the finding. In ternary models, the data-limited part of the loss vanishes quickly, so additional tokens are most valuable early in training, and the parameter-limited term dominates after that. For 16-bit models trained the same way, the two terms decay at nearly the same rate.
 
 Why, then, train small ternary models on 1.2T tokens? Because the goal is not training-compute optimality. Inference cost grows with model size, so when a model will serve many requests, a smaller model trained far past the training-optimal point is cheaper overall, as Sardana et al. (2024) argue. Ternary weights reduce serving cost further.
 
