@@ -16,7 +16,11 @@ layout: academic
       {%- endfor -%}
     </p>
     {%- endif %}
+    {%- if page.date_label and page.venue and page.byline_in_body != true %}
+    <p class="meta">{{ page.venue | escape }} · {{ page.date_label | escape }} <time datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date: '%B %-d, %Y' }}</time></p>
+    {%- else %}
     <p class="meta"><time datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date: '%b %-d, %Y' }}</time>{% if page.venue and page.byline_in_body != true %} · {{ page.venue | escape }}{% endif %}</p>
+    {%- endif %}
     {%- if page.links and page.byline_in_body != true %}
     <p class="proj-links">
       {%- for l in page.links -%}

@@ -3,7 +3,7 @@ layout: project
 title: "Efficient Encoders for Streaming Sequence Tagging"
 date: 2023-01-23
 permalink: /projects/streaming-encoders/
-summary: "HEAR: a hybrid unidirectional-bidirectional encoder with adaptive restarts that avoids re-encoding the full prefix at every new token."
+summary: "HEAR: a hybrid unidirectional-bidirectional encoder with adaptive restarts that cuts streaming compute by 58.9% on average while improving streaming accuracy."
 authors: ["Ayush Kaushal", "Aditya Gupta", "Shyam Upadhyay", "Manaal Faruqui"]
 venue: "EACL 2023"
 links:

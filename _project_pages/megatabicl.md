@@ -3,7 +3,7 @@ layout: project
 title: "MegaTabICL: Efficient Scaling of Tabular Foundation Model Pretraining"
 date: 2026-09-29
 permalink: /projects/megatabicl/
-summary: "An exact reimplementation of TabICLv2 pretraining at 3.86× lower stage-1 cost, used for a billion-parameter compute-optimal scaling study."
+summary: "Why tabular foundation model pretraining is expensive, a pretraining framework and stabilized BF16 recipe that cut TabICLv2's stage-1 cost 3.86×, and, to our knowledge, the first billion-parameter compute-optimal scaling study of these models."
 authors: ["Ayush Kaushal", "Daria Yasafova", "Irina Rish"]
 venue: "NeurIPS 2026 Workshop AXIOM"
 links:
@@ -16,9 +16,12 @@ byline_in_body: true  # the post's first lines carry authors, venue and links, s
 
 ## Summary
 
-- **The problem.** Pretraining a 28M-parameter TabICLv2, a frontier tabular foundation model with an open recipe, costs 24.5 H100-days. We trace most of that cost not to the recipe but to training practices inherited from other modalities. The tabular pretraining workload breaks three of their assumptions.
-- **MegaTabICL.** Our implementation reproduces the TabICLv2 recipe exactly, apart from a stabilized BF16 recipe, while removing those bottlenecks. It runs stage 1, which is over 80% of pretraining cost, 3.86× cheaper on 4×H100, and trains a 1B-parameter model in less compute than the original 28M run needed.
-- **The scaling study.** With it, we trained 24 models from 5M to 1B parameters at six compute budgets, to our knowledge the first billion-parameter scaling study of a state-of-the-art tabular prior. The compute-optimal model size grows with budget. Extrapolated to TabICLv2's own stage-1 budget, the fits put it at 0.2B parameters, 7× the size TabICLv2 trains.
+This paper makes four contributions:
+
+1. **A characterization of the workload.** Pretraining a 28M-parameter TabICLv2, a frontier tabular foundation model with an open recipe, costs 24.5 H100-days. We show that most of this cost comes from training practices inherited from other modalities, not from the recipe itself. The tabular pretraining workload breaks three of their assumptions: data generation is heavy-tailed, input shapes change every step, and compute concentrates in low-parameter layers.
+2. **MegaTabICL, a pretraining framework built for this workload.** It addresses each of the three properties and matches the reference training trajectory within seed-to-seed variation. It cuts the cost of stage 1, which is over 80% of pretraining, by 3.86× on 4×H100, and trains a 1B-parameter model in less compute than the original 28M run needed.
+3. **A stabilized BF16 recipe.** Training TabICLv2 in BF16 is unstable, and model quality does not recover. We traced the cause to its scalable-softmax layer and fixed it by changing that layer's precision and optimizer. The recipe accounts for a 1.9× speedup on its own.
+4. **A compute-optimal scaling study.** We trained 24 models from 5M to 1B parameters at six compute budgets. To our knowledge, this is the first billion-parameter scaling study of a state-of-the-art tabular prior. The compute-optimal model size grows with budget; extrapolated to TabICLv2's own stage-1 budget, the fits put it at 0.2B parameters, 7× the size TabICLv2 trains.
 
 ![Stage-1 cost against wall-clock time, and accuracy against compute by model size](/assets/projects/megatabicl/paper_fig1.png)
 *From the paper. Left: stage-1 cost in H100-days against wall-clock days on 1, 2 and 4 H100s, for the reference TabICLv2 code and MegaTabICL at three model sizes. Right: real-world development-set accuracy against pretraining compute for each model size, with fitted power laws (dashed beyond the measured range).*
@@ -34,11 +37,11 @@ Language modelling met the same barrier with two kinds of infrastructure:
 - **Frameworks** that make frontier-scale training tractable, such as Megatron-LM, GPT-NeoX and OLMo.
 - **Faithful reimplementations** that recover a baseline at a fraction of the compute, such as Cramming and modded-nanogpt.
 
-TFMs so far have only the second kind, at nano scale or as speedruns on fixed, cached priors. MegaTabICL is an attempt at the first.
+TFMs so far have only the second kind, at nano scale or as speedruns on fixed, cached priors. MegaTabICL supplies the first: a framework designed around the TFM pretraining workload.
 
 ## Three properties of the workload
 
-The cost of TFM pretraining comes largely from assumptions that hold for language modelling but not here. We characterize the workload through three properties. For each, we identify the assumption it breaks and a remedy that leaves the recipe unchanged.
+The cost of TFM pretraining comes largely from assumptions that hold for language modelling but not here. We characterize the workload through three properties. For each, we identify the assumption it breaks and a remedy that does not change what the model learns.
 
 ### 1. Data generation is CPU-bound and heavy-tailed
 
@@ -81,13 +84,20 @@ At every model size, the two cell-level components hold under 5% of the paramete
 - **No fused attention kernels.** Their attention head dimension of 16 is below the minimum of 64 that FlashAttention-class fused kernels support. Fused kernels can serve only the in-context-learning transformer, about 17% of the step.
 - **A dispatch-bound optimizer.** Parameters are fragmented into many small tensors: at 28M parameters, 78% of tensors hold 2.5% of the parameters. A per-tensor optimizer loop is therefore bound by kernel launches. Grouping the optimizer update by tensor shape, which we verified to be bit-exact, cut the optimizer step from 158.9 ms to 14.2 ms.
 
-### A precision issue
+## A stabilized BF16 recipe
 
-Switching all layers from TF32 to BF16 made training unstable without recovery. We traced this to QASSMax, the query-aware scalable softmax TabICLv2 uses to keep attention from flattening over long contexts. Its learned multiplier grows during training, and in BF16 the model degrades: gradient clipping prevents NaNs but not the loss of accuracy. Computing QASSMax in FP32 and moving its parameters from Muon to AdamW fixes this. This BF16 recipe is the only intended deviation from the reference computation.
+TabICLv2 trains in TF32. Switching all layers to BF16 made training unstable, and it did not recover. We traced the instability to QASSMax, the query-aware scalable softmax that TabICLv2 uses to keep attention from flattening over long contexts. QASSMax's learned multiplier grows during training. In BF16, gradient clipping prevents the run from diverging to NaNs, but model quality degrades and does not recover.
 
-## Is it the same training run?
+Our recipe changes two things:
 
-Every other change is either bit-exact, meaning validated to produce identical numbers, or exact up to floating-point reassociation, meaning numbers differ only through kernel fusion, kernel selection or summation order. We checked the end result three ways:
+- **Precision:** QASSMax is computed in FP32, and every other layer runs under BF16 autocast.
+- **Optimizer:** QASSMax's parameters are trained with AdamW instead of Muon.
+
+With these changes, BF16 training follows the reference trajectory (next section), and the recipe contributes a 1.9× speedup on its own. These are the only changes to TabICLv2's numerics. Every other technique in MegaTabICL is either bit-exact or exact up to floating-point reassociation.
+
+## Validating against the reference
+
+A cheaper pretraining run is only useful if it trains the same model. "Bit-exact" means a change was validated to produce identical numbers. "Exact up to floating-point reassociation" means numbers differ only through kernel fusion, kernel selection or summation order. Because the BF16 recipe does change the numerics, we validated the end result against the reference code in three ways:
 
 - **Training loss.** On three matched seeds consuming identical tables for 50K steps, the training-loss gap between MegaTabICL and the reference averages 0.0025. Across seeds within the reference implementation, the gap averages 0.041.
 - **Held-out loss.** On held-out tables from the prior, the gap between implementations stays within the seed-to-seed band, at most 0.005 in cross-entropy.
@@ -113,7 +123,7 @@ Removing any single technique makes training slower. Shape handling and data-gen
 
 These savings carry to larger models. A 1B-parameter model, 37× the size of TabICLv2's Base, completes the full 500K-step stage 1 in 17.35 H100-days (4.34 days on 4×H100), less than the 20.96 the reference code needs for 28M parameters.
 
-## What it enables: a compute-optimal scaling study
+## A billion-parameter compute-optimal scaling study
 
 Language modelling has scaling laws that say how to split a compute budget between model size and training data. For tabular foundation models, the largest previous studies trained up to 78M parameters on real data and up to 17M parameters on a closed prior. We used MegaTabICL to go more than an order of magnitude further.
 
@@ -143,9 +153,9 @@ Medium is 7.0× the size of Base at 1.31× the step time, and Large is 37× the 
 
 On the classification datasets of TALENT-Tiny, Large trained for 200K steps is the strongest run in the sweep (0.8193 accuracy, 0.8966 AUC). Compute-optimality tells a different story: Medium at 200K steps (2.88 H100-days) beats Large at 100K steps (3.47 H100-days) on accuracy, AUC and F1. The released TabICLv2, trained far longer and through two further stages, remains stronger overall at 0.8238. The gap narrows from 0.030 for Tiny at 20K steps to 0.0045 for Large at 200K.
 
-## What reimplementing TabICLv2 exactly turned up
+## Differences between TabICLv2's paper and its released code
 
-Matching the reference run exactly required following the released code, which differs from the paper in several places:
+Matching the reference training trajectory meant following TabICLv2's released code. In doing so, we found that the code differs from the paper in several places:
 
 - The cautious weight decay described in the paper is not applied in the release. The code uses standard weight decay with a coefficient of 0.1, against 0.01 in the paper.
 - Muon is applied to every parameter, not only to 2D weight matrices.
@@ -161,7 +171,7 @@ We follow the code. These details matter to anyone trying to reproduce or extend
 - Compute is measured in H100-days on our implementation, not in FLOPs, so the compute-optimal sizes are tied to our efficiency profile.
 - The 0.2B optimum is an extrapolation beyond the measured budgets.
 
-We see this as a first pass. Extending to later stages, adding seeds and covering regression are the next steps.
+Next steps are extending MegaTabICL to the later stages, adding seeds and covering regression.
 
 ## Citation
 

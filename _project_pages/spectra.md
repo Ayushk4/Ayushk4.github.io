@@ -3,12 +3,14 @@ layout: project
 title: "Spectra: Surprising Effectiveness of Pretraining Ternary Language Models at Scale"
 title_note: "Earlier arXiv title: Spectra: A Comprehensive Study of Ternary, Quantized, and FP16 Language Models."
 date: 2024-07-17
-venue: "arXiv preprint"
-summary: "An open suite of 54 ternary, quantized and FP16 language models from 99M to 3.9B parameters, all trained on the same 300B tokens."
+venue: "ICLR 2025 (Spotlight)"
+date_label: "first released on arXiv on"  # header reads: venue · label <date>
+summary: "The first open suite of language models spanning multiple bit widths: 54 ternary, quantized and FP16 models from 99M to 3.9B parameters on the same 300B tokens. A 3.9B ternary model matches its FP16 counterpart across benchmarks while using fewer bits than an 830M FP16 model."
 image: /assets/projects/spectra/spectra-suite-logo.png
 image_alt: "Spectra Suite logo"
 links:
-  - {label: Paper, url: "https://arxiv.org/abs/2407.12327v1"}
+  - {label: Paper, url: "https://openreview.net/forum?id=TJo6aQb7mK"}
+  - {label: arXiv, url: "https://arxiv.org/abs/2407.12327"}
   - {label: Models, url: "https://huggingface.co/SpectraSuite"}
   - {label: Code, url: "https://github.com/NolanoOrg/SpectraSuite"}  # Nolano-hosted
 versions:

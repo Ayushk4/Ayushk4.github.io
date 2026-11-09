@@ -1,7 +1,7 @@
 # Research Timeline for the homepage, newest era first.
 # (Named research_timeline.yml because _data/timeline.yml already exists with older content.)
 #
-# Each era renders as one paragraph built from its items. An item renders as
+# Each era renders as one paragraph built from its items (or, with list: true, one list item each). An item renders as
 #   pre + link + post
 # where the link goes to `page` if set, otherwise to `paper`.
 # Items with a `todo` field are hidden until the todo is resolved and the field removed.
@@ -10,41 +10,42 @@
   place: Mila and Université de Montréal
   logo: null
   items:
-    - pre: "Developed "
+    - pre: "Showed that most of the cost of pretraining tabular foundation models comes from training practices inherited from other modalities, and built "
       link: "MegaTabICL"
       page: /projects/megatabicl/
       paper: "https://openreview.net/forum?id=WfamdVi3VV"
-      post: ", an exact reimplementation of TabICLv2 pretraining with 3.86× lower stage-1 cost, and used it for, to our knowledge, the first billion-parameter compute-optimal scaling study of tabular foundation models."
+      post: ": a pretraining framework and stabilized BF16 recipe that match TabICLv2's training trajectory at 3.86× lower stage-1 cost. With it, ran, to our knowledge, the first billion-parameter compute-optimal scaling study of tabular foundation models, which shows the compute-optimal model size growing with the training budget."
 
 - years: "2023–2026"
   place: Nolano
   logo: null
+  list: true  # render one list item per project instead of a paragraph
   items:
-    - pre: "Implemented "
-      link: "4-bit LLaMA inference on CPU"
+    - pre: ""
+      link: "4-bit LLaMA inference on a laptop CPU"
       page: /projects/llama-int4-quant/
       paper: "https://github.com/NolanoOrg/llama-int4-quant"
-      post: " on top of ggml (March 2023)."
-    - pre: "Proposed "
+      post: ", implemented on top of ggml and shown publicly on March 10, 2023, two weeks after LLaMA's release."
+    - pre: ""
       link: "LoRD"
       page: /projects/lord/
       paper: "https://openreview.net/forum?id=br49PQvuMp"
-      post: ", one-shot low-rank decomposition for compressing code LLMs."
+      post: ": one-shot low-rank decomposition that compresses StarCoder 16B to 13.2B parameters with HumanEval pass@1 within 0.1 points of the original."
     - pre: ""
       link: "Hi-NOLIN"
       page: /projects/hi-nolin/
       paper: null
-      post: ": English-Hindi continued pretraining of Pythia."
+      post: ": a 9B English-Hindi model trained on 3,072 GPUs of the Summit supercomputer. Continued pretraining added Hindi while improving English and code, and the model outperforms the larger Pythia 12B."
     - pre: ""
       link: "Spectra"
       page: /projects/spectra/
       paper: "https://openreview.net/forum?id=TJo6aQb7mK"
-      post: ": an open suite of ternary, quantized and FP16 language models trained on identical data, for controlled comparison of low-bit pretraining."
+      post: ": the first open suite of language models spanning multiple bit widths, showing that a 3.9B ternary model matches its FP16 counterpart across benchmarks while using fewer bits than an 830M FP16 model."
     - pre: ""
       link: "TriTera (Spectra 1.1)"
       page: /projects/spectra-1-1/
       paper: "https://aclanthology.org/2025.acl-long.1294/"
-      post: ": scaling laws and inference kernels for ternary language models."
+      post: ": scaling laws for ternary language models, ternary models trained on 1.2T tokens, lossless 1.6-bit and 2-bit weight packings now in llama.cpp, and GPU kernels that approach the 8× memory-bound speedup."
 
 # Google internship (May to Aug 2022) shown as its own era, though it was during the MS.
 - years: "2022"
@@ -55,7 +56,7 @@
       link: "HEAR"
       page: /projects/streaming-encoders/
       paper: "https://aclanthology.org/2023.eacl-main.31"
-      post: ", a hybrid unidirectional-bidirectional encoder with adaptive restarts, which avoids re-encoding the full prefix at every new token in streaming sequence tagging."
+      post: ", a hybrid unidirectional-bidirectional encoder with adaptive restarts for streaming sequence tagging. It reduces streaming compute by 58.9% on average across four tasks (up to 71.1%) while keeping offline accuracy and improving streaming exact match by up to 10 points."
 
 - years: "2021–2023"
   place: UT Austin

@@ -18,6 +18,15 @@ permalink: /
           {%- if era.logo %}<img class="tl-logo" src="{{ era.logo | relative_url }}" alt="" width="40" height="40">{% endif -%}
           {{ era.place | escape }}
         </h3>
+        {%- if era.list %}
+        <ul class="tl-items">
+          {%- for it in era.items %}
+          {%- unless it.todo %}
+          <li>{{ it.pre | escape }}{% include academic/link.html text=it.link page=it.page paper=it.paper %}{{ it.post | escape }}</li>
+          {%- endunless %}
+          {%- endfor %}
+        </ul>
+        {%- else %}
         <p>
           {%- for it in era.items -%}
           {%- unless it.todo -%}
@@ -25,6 +34,7 @@ permalink: /
           {%- endunless -%}
           {%- endfor -%}
         </p>
+        {%- endif %}
       </div>
     </li>
     {%- endfor %}

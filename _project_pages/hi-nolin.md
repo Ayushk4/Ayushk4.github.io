@@ -3,7 +3,7 @@ layout: project
 title: "Hi-NOLIN: English-Hindi Continued Pretraining of Pythia"
 date: 2023-10-30
 venue: "Open model release"
-summary: "An English-Hindi language model obtained by continued pretraining of Pythia from 7B to 9B parameters, released under Apache 2.0."
+summary: "A 9B English-Hindi model trained on 3,072 GPUs of the Summit supercomputer. Continued pretraining from Pythia added Hindi while improving English and code, outperforming the larger Pythia 12B."
 image: /assets/projects/hi-nolin/banner.jpg
 image_alt: "Stylized peacock illustration used as the Hi-NOLIN banner"
 links:

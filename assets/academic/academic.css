@@ -71,6 +71,9 @@ h2{font-size:1.85rem;font-weight:400;letter-spacing:-.015em;line-height:1.2;marg
 .tl-place{display:flex;align-items:center;gap:12px;font-size:1.1rem;font-weight:700;color:var(--ink);margin:0 0 8px}
 .tl-logo{width:40px;height:40px;border-radius:8px;border:1px solid var(--rule);object-fit:contain;background:#fff}
 .tl-card p{line-height:1.7}
+.tl-items{margin:0;padding-left:1.2em;line-height:1.7}
+.tl-items li{margin:0 0 8px}
+.tl-items li:last-child{margin-bottom:0}
 
 /* CV and news: plain lines */
 .cv{list-style:none;margin:0;padding:0}

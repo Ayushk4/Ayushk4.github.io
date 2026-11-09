@@ -2,7 +2,8 @@
 layout: project
 title: "LoRD: Low-Rank Decomposition of Monolingual Code LLMs for One-Shot Compression"
 date: 2023-08-20
-venue: "Model release"
+venue: "ICML 2024 Workshop on Foundation Models in the Wild"
+date_label: "models first released on"  # header reads: venue · label <date>
 summary: "StarCoder 16B compressed to 13B parameters by one-shot low-rank decomposition, with HumanEval pass@1 of 31.57% versus 31.67% for the original model."
 links:
   - {label: Paper, url: "https://arxiv.org/abs/2309.14021"}
@@ -52,7 +53,7 @@ We report LoRD-compressed versions of StarCoder 16B, which we call LoRDCoder, at
 
 </div>
 
-LoRDCoder can be compressed to 13 billion parameters with no drop in Pass@1, and to 12 billion parameters with a small drop.
+LoRDCoder at 14.9B parameters scores 1.5 points higher in pass@1 than the original StarCoder 16B (33.18 against 31.67). At 14.5B parameters pass@1 is unchanged, and at 13.2B it is within 0.1 points. Compressing further to 12.3B costs 2.5 points.
 
 ## LoRD and quantization
 
